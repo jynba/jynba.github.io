@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux的常用指令 | jyblog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="千里之行，始于足下">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.9c2ebae4.css" as="style"><link rel="preload" href="/assets/js/app.db55d802.js" as="script"><link rel="preload" href="/assets/js/3.305d8068.js" as="script"><link rel="preload" href="/assets/js/1.e6f1548f.js" as="script"><link rel="preload" href="/assets/js/10.e7654816.js" as="script"><link rel="prefetch" href="/assets/js/11.5aa4241e.js"><link rel="prefetch" href="/assets/js/12.1e3a10f1.js"><link rel="prefetch" href="/assets/js/13.fcbee6f3.js"><link rel="prefetch" href="/assets/js/14.34858c61.js"><link rel="prefetch" href="/assets/js/15.85755838.js"><link rel="prefetch" href="/assets/js/16.3c26fea8.js"><link rel="prefetch" href="/assets/js/17.6eda6c35.js"><link rel="prefetch" href="/assets/js/18.521300d2.js"><link rel="prefetch" href="/assets/js/19.6528e714.js"><link rel="prefetch" href="/assets/js/20.1ec64fda.js"><link rel="prefetch" href="/assets/js/21.a5a2151a.js"><link rel="prefetch" href="/assets/js/22.11f56e91.js"><link rel="prefetch" href="/assets/js/23.a7a5d1b0.js"><link rel="prefetch" href="/assets/js/24.a24581d1.js"><link rel="prefetch" href="/assets/js/25.ba061303.js"><link rel="prefetch" href="/assets/js/26.e9f31da3.js"><link rel="prefetch" href="/assets/js/27.d0169b2e.js"><link rel="prefetch" href="/assets/js/28.39949395.js"><link rel="prefetch" href="/assets/js/29.959b35b6.js"><link rel="prefetch" href="/assets/js/30.69ad4de8.js"><link rel="prefetch" href="/assets/js/31.3f2dfa95.js"><link rel="prefetch" href="/assets/js/32.2ba2a4b1.js"><link rel="prefetch" href="/assets/js/33.2ff9426b.js"><link rel="prefetch" href="/assets/js/34.9bcbd958.js"><link rel="prefetch" href="/assets/js/35.16bb5294.js"><link rel="prefetch" href="/assets/js/36.4f1dd0ca.js"><link rel="prefetch" href="/assets/js/37.8d66badc.js"><link rel="prefetch" href="/assets/js/38.16a87dcc.js"><link rel="prefetch" href="/assets/js/39.f4d5712a.js"><link rel="prefetch" href="/assets/js/4.2e02069b.js"><link rel="prefetch" href="/assets/js/40.06f0451c.js"><link rel="prefetch" href="/assets/js/41.4b45cdd0.js"><link rel="prefetch" href="/assets/js/42.629675c6.js"><link rel="prefetch" href="/assets/js/43.8bc7508e.js"><link rel="prefetch" href="/assets/js/44.a5d94fbe.js"><link rel="prefetch" href="/assets/js/45.ad15e193.js"><link rel="prefetch" href="/assets/js/5.5094ffee.js"><link rel="prefetch" href="/assets/js/6.c0926de1.js"><link rel="prefetch" href="/assets/js/7.9bb26620.js"><link rel="prefetch" href="/assets/js/8.be2c4769.js"><link rel="prefetch" href="/assets/js/9.0fd9cf9d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9c2ebae4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>jyblog</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>千里之行，始于足下</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>jy</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="jyblog" class="logo"> <span class="site-name">jyblog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      心得
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dom/" class="nav-link"><i class="undefined"></i>
+  Dom
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/miniprogram/" class="nav-link"><i class="undefined"></i>
+  miniprogram
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP协议的发展/" class="nav-link"><i class="undefined"></i>
+  HTTP协议的发展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS优先级/" class="nav-link"><i class="undefined"></i>
+  CSS优先级
+</a></li><li class="dropdown-item"><!----> <a href="/categories/OSI七层网络参考模型/" class="nav-link"><i class="undefined"></i>
+  OSI七层网络参考模型
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTPS/" class="nav-link"><i class="undefined"></i>
+  HTTPS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mysql/" class="nav-link"><i class="undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PNPM/" class="nav-link"><i class="undefined"></i>
+  PNPM
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  live2d的心酸泪
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/record.html" class="nav-link"><i class="undefined"></i>
+  记录点滴
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/saysomething.html" class="nav-link"><i class="undefined"></i>
+  吐槽
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/live.html" class="nav-link"><i class="undefined"></i>
+  成长史
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/about/guide.html" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/jynba" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/portrait.png" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    jy
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>35</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>30</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      心得
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dom/" class="nav-link"><i class="undefined"></i>
+  Dom
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/miniprogram/" class="nav-link"><i class="undefined"></i>
+  miniprogram
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP协议的发展/" class="nav-link"><i class="undefined"></i>
+  HTTP协议的发展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS优先级/" class="nav-link"><i class="undefined"></i>
+  CSS优先级
+</a></li><li class="dropdown-item"><!----> <a href="/categories/OSI七层网络参考模型/" class="nav-link"><i class="undefined"></i>
+  OSI七层网络参考模型
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTPS/" class="nav-link"><i class="undefined"></i>
+  HTTPS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mysql/" class="nav-link"><i class="undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PNPM/" class="nav-link"><i class="undefined"></i>
+  PNPM
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  live2d的心酸泪
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/record.html" class="nav-link"><i class="undefined"></i>
+  记录点滴
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/saysomething.html" class="nav-link"><i class="undefined"></i>
+  吐槽
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/live.html" class="nav-link"><i class="undefined"></i>
+  成长史
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/about/guide.html" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/jynba" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>Linux的常用指令</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>jy</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">Linux的常用指令</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>jy</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>10/11/2021</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>Linux_tips</span><span class="tag-item" data-v-1ff7123e>made_by_jy</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="linux"><a href="#linux" class="header-anchor">#</a> Linux</h1> <p>虚拟机(文件)</p> <p>克隆 （拷贝）   可迁移或删除</p> <p>快照 （返回快照A B C）</p> <ul><li><p>安装gcc</p> <p>yum -y install gcc gcc-c++ kernel-devel</p> <p>/ wget 加包的地址</p> <p>vi test.c</p> <p>i</p> <p>exc</p> <p>gcc test.c &amp;&amp; ./a.out</p></li> <li><p>安装图形界面系统</p> <p>yum -y groupinstall &quot;X Window System&quot;</p> <p>（安装GNOME）</p> <p>yum -y groupinstall &quot;GNOME Desktop&quot;</p> <p>(设置默认启动图形界面程序)</p> <p>systemctl set-default graphical.target</p> <p>reboot(重启虚拟机)</p></li> <li><p>输入 su root 命令 （切换到root账号）</p> <p>pwd显示当前目录</p> <p>ls显示目录列表 ls -l s*显示s开头的列表 ;</p> <p>ls -a 列出所有文件包括隐藏文件(.开头）</p></li> <li><p>vmtools（在虚拟机未打开centos前点）  需要有gcc</p></li></ul> <p>cd vm +tab 自动补全</p> <p>tar -zxvf xx.tar.gz 直接解压</p> <p>安装 ./vm +tab打开即可</p> <ul><li><p>共享文件夹  （Windows和centos之间）（虚拟机与主机互通）</p> <p>centos设置 选项 启用 添加文件</p> <p>在虚拟机的主文件夹的计算机中的mnt文件内</p> <ul><li>注意 ：实际开发中 虚拟机不在同一主机中 需要远程方式 Xftp</li></ul></li> <li><p>Linux目录结构(皆文件)</p> <p>/根目录</p> <p>/bin  (binary)</p> <p>/sbin (super user) 存放系统管理员使用的系统管理程序</p> <p>/home 存放普通用户的主目录</p> <p>/root  系统管理员的主目录</p> <p>/lib 系统开机所需最基本的动态连接共享库  （类似Windows的ddl文件</p> <p>/boot Linux启动的核心相关文件</p> <p>/lost +found 一般情况为空 非法关机时存放文件</p> <p>/etc 系统管理所需的配置文件和子目录 (eg:mysql my.comf)</p> <p>/usr 默认安装的文件存放 类似于 Windows的program files</p> <p>/proc 【不能动】 系统内存的映射 访问其来获取系统信息</p> <p>/srv 【不能动】service</p> <p>/sys【不能动】 2.6内核的文件系统</p> <p>/tmp 存放临时文件</p> <p>/dev 设备管理器 将硬件以文件存储</p> <p>/media 自动识别硬件设备后 挂载到这个目录</p> <p>/mnt 为了让用户临时挂载别的文件系统 将外部存储挂载到mnt sd:/myshare</p> <p>/opt 给主机额外安装软件存放的目录</p> <p>/var 存放log等不断扩充的东西</p> <p>/selinux 安全子系统</p></li></ul> <h3 id="远程操作"><a href="#远程操作" class="header-anchor">#</a> 远程操作</h3> <ul><li><p>Xshell （终端切换至远程的Linux ）命令的操作</p></li> <li><p>Xftp（文件传输和接收）</p> <p>Linux终端 ifconfig查看ip</p> <p>在Windows的cmd中ping ip查看连接</p></li></ul> <h3 id="vim"><a href="#vim" class="header-anchor">#</a> Vim</h3> <ul><li><p>Vim中的操作 (一般模式下)</p> <p>ctrl+s锁定 ctrl+q恢复</p> <p>u撤销 ctrl+r取消撤销</p> <p>yy拷贝当前行 （2yy拷贝两行） P粘贴</p> <p>dd 同理</p> <p>G最开头 gg最末未</p> <p>/单词 回车跳到对应行  n跳到下一个</p> <p>:set nu显示行数</p> <p>20+shift+g 跳到20行</p> <ul><li>非正常关闭 ctrl+z时</li></ul> <p>gf 重新回到vim编辑界面</p> <p>rm -rf .文件名.swp删除占用的文件(非正常关闭会产生swp)</p></li> <li><p>Linux关机重启 登录注销</p> <p>（可在Xshell中执行）</p> <p>关机 (shutdown -h now)（halt）</p> <p>重启(shutdown -r now或（输入1，表示一分钟）)（reboot）</p> <p>sync（保存到磁盘）(正常关机重启会默认先执行这一步)</p> <p>su (用户名)root 切换用户	logout返回上一个用户（无，则退出终端）(仅在无界面时有效)（bash: logout: 不是登录shell: 使用 `exit'）</p></li></ul> <h3 id="用户管理"><a href="#用户管理" class="header-anchor">#</a> 用户管理</h3> <ul><li><p>用户管理</p> <p>useradd 用户名 (添加用户) 成功后自动创建与用户同名的home目录</p> <p>useradd -d /home/自定义 用户名 (创建自定义目录名的用户</p> <p>（无组时 默认用户名为组）</p> <p>passwd 用户名 输入密码</p> <p>userdel 用户名(仅删除用户，不含目录)</p> <p>userdel -r 用户名 (删除用户及其目录)*</p> <ul><li><p>查询用户</p> <p>id 用户名</p></li> <li><p>切换用户</p> <p>su - 用户名（权限高到低无需密码）</p></li> <li><p>whoami返回当前用户名</p> <p>who am i返回登录时用户名+登录时间+端口</p></li></ul></li> <li><p>用户组</p> <p>分开设置权限 对共性的统一管理</p> <ul><li><p>groupadd 组名</p> <p>useradd -g 组名 用户名 （添加用户到指定组中）</p> <p>usermod -g 组名 用户名  (修改用户所在组)</p></li> <li><p>groupdel 组名</p></li></ul></li></ul> <p>/etc/passwd 文件 ：保留用户配置文件</p> <p>用户名:口令:用户标识号:组标识号:(注释性描述):主目录:登录shell</p> <p>/etc/shadow 文件：口令配置文件</p> <p>登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:标志</p> <p>/etc/group 文件：组的配置文件</p> <p>组名:口令:组标识号:组内用户列表</p> <p><strong>(系统文件 通过vim和cat打开)</strong></p> <h3 id="运行级别"><a href="#运行级别" class="header-anchor">#</a> 运行级别</h3> <ul><li><p>运行级别</p> <p>0：关机</p> <p>1：单用户（找回丢失密码）</p> <p>2：多用户无网络 X</p> <p>3：多用户有网路 √  multi-user.target</p> <p>4：系统未保留给用户 X</p> <p>5：图形界面 √ graphical.target</p> <p>6：系统重启</p> <p>常用3和5 可指定默认运行级别</p></li></ul> <p>init [0123456]切换不同运行级别</p> <p>systemctl get-default 查询默认运行级别</p> <p>systemctl set-default 设置默认运行级别</p> <p>graphical.target</p> <p>multi-user.target</p> <ul><li><p>找回root密码</p> <p>1.启动系统 e 进入编辑界面</p> <p>2.找Linux16所在行数后(utf-8后) 输入 init=/bin/sh 再输入ctrl+x进入单用户模式</p> <p>3.在光标闪烁位置输入 mount -o remount,rw/ 回车</p> <p>4.输入passwd 回车 ；输入密码 再次确认</p> <ol start="5"><li>输入 touch /.autorelabel 回车</li></ol></li></ul> <h2 id="指令"><a href="#指令" class="header-anchor">#</a> 指令</h2> <ul><li><p>帮助指令</p> <ul><li><p>man命令 （eg: man ls）(linux中选项可以组合 eg:ls -al/root )</p> <p>汉化版man为<a href="https://www.cnblogs.com/yanans/p/11990603.html" target="_blank" rel="noopener noreferrer">cman<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>教程</p> <p>info是man指令的详细内容</p></li> <li><p>help指令(help命令只能显示shell内部的命令帮助信息，外部命令用man)</p> <ul><li>whatis man查看信息 同man man</li></ul></li></ul></li> <li><p>文件目录类</p> <ul><li><p>pwd指令（显示当前绝对路径）</p></li> <li><p>ls指令</p></li> <li><p>cd指令（相对路径或绝对路径） cd ~回到家目录 cd ..回到上一级</p></li> <li><p>mkdir指令</p> <p>创建空目录 mkdir -p /home/animal/tiger 一次性创建多级目录</p></li> <li><p>rmdir指令</p> <ul><li>rmdir 删除空目录</li> <li>rm -rf删除非空    rm -rf /*</li></ul></li> <li><p>touch指令</p> <p>创建空文件</p></li> <li><p>cp指令</p> <p>cp 原文件 新目录/</p> <p>-r递归复制整个文件夹   cp -r /home/bbb /opt</p> <ul><li>强制覆盖\cp不提示</li></ul></li> <li><p>rm指令 删除指令</p> <ul><li>-r 递归删除整个 -f强制不提示</li></ul></li> <li><p>mv指令  移动文件/目录或重命名（相对路径(重命名) 绝对路径(移动)）</p> <ul><li>mv Hello.java /root/new.java移动并重命名</li></ul></li> <li><p>cat指令 只能查看不能修改(不同于vim)</p> <ul><li>cat -n (显示行号) 文件</li> <li>|more 管道命令  （显示一部分）</li></ul></li> <li><p>more指令 过滤器</p> <ul><li>space翻页 。enter下一行 。q离开 。</li> <li>ctrl+f下滚动一屏。ctrl+B返回上一屏</li> <li>=输出当前行号  :f 输出文件名和当前行行号</li></ul></li> <li><p>less指令 （比more更加强大）支持各种显示终端；动态加载 效率高</p> <ul><li>/字串：向下查找</li> <li>?字串：向上查找</li> <li>n向下 N向上</li></ul></li> <li><p>echo指令  输出内容到控制台</p> <ul><li>实例： 输出环境变量 $PATH 输出hello,world</li> <li>重定向：echo &quot;hello&quot; &gt; /home/Hello.java (*  &gt;覆写 &gt;&gt; 追加)</li></ul></li> <li><p>head指令</p> <ul><li><p>显示前10行内容</p></li> <li><p>-n 5 前五行</p></li></ul></li> <li><p>tail指令</p> <ul><li><p>同理</p></li> <li><p>-f 实时监控</p></li></ul></li> <li><p>（ &gt;和&gt;&gt;指令   &gt;覆写 &gt;&gt; 追加) 实现另类的拷贝 （搬运文件内容</p> <ul><li>ls -l &gt;文件</li> <li>ls -al &gt;文件</li> <li>cat 文件1 &gt; 文件2（文件1覆盖到文件2）</li> <li>echo “内容” &gt;&gt;文件(追加)</li></ul></li> <li><p>ln指令 软链接 （符号链接）类似快捷方式</p> <ul><li>ln -s [原文件或目录] [软链接名]</li> <li>（当使用pwd查看时仍看到的是软链接所在目录）</li> <li>ls -l 可查看 指向</li></ul></li> <li><p>history指令</p> <ul><li><p>history 10 显示最近10条</p></li> <li><p>!编号 执行相应指令</p></li></ul></li> <li><p>date和cal类</p></li></ul> <p><img src="/assets/img/date1.02c8eeb7.png" alt="图片"></p> <p><img src="/assets/img/date.4c022220.png" alt="图片"></p> <ul><li><p>find指令</p> <ul><li><p>​	最近访问时间	access time （-atime）</p> <p>​	最近更改时间	modify time （-mtime）</p> <p>​	最近状态改动时间 	change time（-ctime）</p> <p>其中 -atime (+-)n 表示天数</p> <p>n表示n天前的一天 内</p> <p>+n表示n天前</p> <p>-n表示在n天之内</p></li> <li><p>按用户 -user（eg:find /opt -user nobody）</p></li> <li><p>按文件名 -name（eg:find /home -name hello.txt)</p></li> <li><p>按文件大小 -size（find / -size +200M)</p> <p>找到后可用ls -l 显示 再用ls -lh转换为内存</p></li></ul></li> <li><p>locate指令 查询速度快 无需遍历整个系统（基于数据库</p> <ul><li>*第一次运行前用updatedb指令创建locate数据库</li></ul></li> <li><p>which指令</p> <ul><li>which ls查看某指令在哪个目录下</li></ul></li> <li><p>grep指令和管道符号|</p> <ul><li><p>grep过滤查找 （返回所在行）</p> <p>-i 忽略字母大小写</p> <p>-n显示匹配行号</p> <p>（eg: cat Hello.java grep -n &quot;Hello&quot;</p> <p>​		  grep -n &quot;Hello&quot; Hello.java</p> <p>​	）</p></li> <li><p>|表示前一个命令结果交给下一个命令处理</p></li></ul></li> <li><p>gzip/gunzip指令  （前者压缩文件；后者解压文件）</p></li> <li><p>zip/unzip指令  （前者压缩文件夹；后者解压文件夹）</p> <ul><li><p>zip: -r 递归压缩 (zip -r [压缩后文件夹目录] [原文件夹目录])</p> <p>eg:(zip -r myhome.zip /home/ )</p></li> <li><p>unzip: -d 指定解压后存放的目录(zip -r [解压后文件夹目录] [原文件夹目录])</p> <p>eg:（unzip -d /opt/tmp /home/myhome.zip）</p></li></ul></li> <li><p>tar指令</p> <ul><li><p>tar【选项】xxx.tar.gz（目录或文件）</p></li> <li><p>-c产生打包文件 -v显示详细信息 -f指定压缩后文件名 -z打包同时压缩 -x解包.tar文件</p></li> <li><p>压缩zcvf</p> <p>（tar -zcvf pc.tar.gz[定义包名] /home/cat.txt[要压缩的文件夹或文件]）</p></li> <li><p>解压zxvf</p> <p>（tar -zxvf  pc.tar.gz【要解压的文件】-C(转到指定目录) /opt/tmp2）</p></li></ul></li></ul></li></ul> <h3 id="组管理和权限管理"><a href="#组管理和权限管理" class="header-anchor">#</a> 组管理和权限管理</h3> <ul><li><p>组的介绍</p> <ul><li><p>所有者 所在组 其它组 改变用户所在组</p> <ul><li><p>所有者 chown修改文件所有者</p> <div class="language-linux line-numbers-mode"><pre class="language-text"><code>chown runoob:runoobgroup file1.txt
+chown root /var/run/httpd.pid
+chown -R runoob:runoobgroup *(当前目录与子目录)
+chown :512 /home/runoob
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li> <li><p>文件目录  查看 ls-ahl a隐藏文件 h转为内存表示方式 l列出(ll同ls -l)</p></li> <li><p>修改文件/目录所在组</p> <p>chgrp 组名 文件名</p> <p>在root中(eg: groupadd fruit touch a.txt  chgrp fruit a.txt)</p></li> <li><p>其他组(用户所在组外的组) 改变所在组</p> <p>usermod -g 新组名 用户名</p> <p>usermod -f 目录名 用户名 改变该用户登录的初始目录（权限范围）</p></li></ul></li></ul></li> <li><p>权限的基本介绍</p> <ul><li><p>drwxr-xr-x. 20 root root        3.3K 10月  5 13:01 .</p> <ul><li><p>前0-9位作用:</p> <p>第0 位</p> <p>-表示文件 d表示目录 b表示块设备(如硬盘)</p> <p>c表示字符设备(鼠标等) l表示链接</p> <p>**rwx 读写执行 **</p> <p>第1-3位（针对所有者）User</p> <p>第4-6位 （针对同用户组）Group</p> <p>第7-9位 （针对其他用户）Other</p></li> <li><p>rwx权限</p> <p>在文件中 w指可修改文件内容(不可删除，需有目录w权限)</p> <p>在目录中 r指可将目录列出；w指可目录内创建+删除+重命名目录 ；x指可进入目录</p> <p>其中权限可用数字表示r=4 w=2 x=1 因此r+w+x=7</p></li> <li><p>其他说明</p> <p>20 文件:硬连接数 目录：子目录数</p> <p>root 用户</p> <p>root 组</p> <p>3.3k 文件大小(字节)</p> <p>10月  5 13:01 最后修改日期</p> <p>. 文件名</p></li></ul></li> <li><p>修改权限 chmod chown chgrp 目录(-r)</p> <ul><li><p>chmod u=rwx,g=rx,o=x 文件/目录名 (= + -增加减少)</p> <p>chmod o+w 文件/目录名</p> <p>u所有者 g所在组 o其他组 a所有人</p></li> <li><p>第二种方式</p> <p>chmod u=rwx,g=rx,o=x 文件目录名</p> <p>chmod 751 文件目录名</p></li></ul></li></ul> <p><strong>总结</strong></p> <p>chgrp针对文件所在组</p> <p>chown针对文件所有者，组</p> <p>chmod针对文件权限</p> <p>usermod -g针对用户所在组</p> <p>groupadd useradd</p></li></ul> <h3 id="crond-任务调度-周期"><a href="#crond-任务调度-周期" class="header-anchor">#</a> crond 任务调度（周期）</h3> <ul><li><p>指令 crontab</p> <ul><li><p>两种方式：</p> <ul><li><p>定时调用脚本shell （如 完成对mysql备份）</p> <ul><li><p>案例一（写一个存时间的脚本）</p> <p>1.vim /home/my.sh 写入 date &gt;&gt; /home/mycal</p> <p>2.给my.sh增加执行权限</p> <p>3.crontab -e 增加 */1 * * * * /home/my.sh</p></li> <li><p>案例二 (数据库备份)</p> <p>指令为 ： mysqldump -u root -p密码(jymysql) db1(数据库) &gt; /home/db.bak</p> <p>1.crontab -e</p> <p>2.0 2 * * * mysqldump -u root -pjymysql db1 &gt; /home/db.bak</p></li></ul></li> <li><p>定时调用简单任务 (单条指令：ls -l /etc/ &gt; /tmp/to.txt)</p></li></ul></li> <li><p>-e 编辑任务调度</p> <p>*/1 * * * * date &gt;&gt; /tmp/mydate</p></li> <li><p>-r 终止任务调度</p></li> <li><p>-l 列出当前有哪些任务调度</p></li> <li><p>sevice crond restart 重启任务调度</p> <p><img src="/assets/img/mail.3cd09f1d.png" alt="图片"></p></li></ul></li></ul> <h3 id="at定时任务-一次性"><a href="#at定时任务-一次性" class="header-anchor">#</a> at定时任务（一次性）</h3> <ul><li><p>ps -ef | grep atd 查看当前进程中的atd是否在运行</p></li> <li><p>每隔60s执行任务队列</p></li> <li><p>at[选项] [时间]</p> <ul><li><p>时间定义方法:</p> <ul><li>hh:mm</li> <li>midnight noon teatime(16:00)</li> <li>12pm</li> <li>mm/dd/yy (04:00 2021-10-1)</li> <li>now+时间</li> <li>today tomorrow</li></ul></li> <li><p>指令</p> <p>atq=at -l 列出任务</p> <p>atrm=at -d 删除任务</p> <p>-m完成后给用户发邮件</p> <p>-v显示任务被执行时间 -V显示版本信息</p> <p>-f&lt;文件&gt;从指定文件读入任务</p> <p>-q&lt;队列&gt;使用指定队列</p> <p>-t&lt;时间参数&gt;以时间参数形式提交运行的任务</p></li> <li><p>操作时</p> <p>Ctrl+backspace 退格</p> <p>Ctrl+C中止</p> <p>Ctrl+D结束</p></li></ul> <p>（无法查看任务内容？）</p></li></ul> <p>p91 -107</p> <h3 id="shell"><a href="#shell" class="header-anchor">#</a> Shell</h3> <p>命令行解释器 为用户提供向Linux内核发送请求以便运行界面系统级程序</p> <ol><li><p>vim hello.sh</p></li> <li><div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+命令行
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></li> <li><p>chmod 使其带有可执行权限</p></li> <li><p>执行方式：</p> <ol><li>./hello.sh</li> <li>/root/shcode/hello.sh（绝对路径）</li> <li>（sh hello.sh 不需执行权限也可执行）</li></ol></li></ol> <ul><li><p>Shell变量</p> <ul><li><p>系统变量和用户自定义变量</p> <ul><li><p>系统变量</p> <p>$HOME $PWD $SHELL $USER</p> <p>set显示当前shell中所有变量</p></li></ul></li> <li><p>基本语法及快速入门</p> <ul><li><ol><li><p>定义变量 变量名=值（注意：=后无空格）</p></li> <li><p>撤销变量 unset 变量</p></li> <li><p>声明静态变量 readonly变量（注意：不能unset）</p></li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#案例1：定义变量A（无空格）</span>
+<span class="token assign-left variable">A</span><span class="token operator">=</span><span class="token number">100</span>
+<span class="token comment">#输出变量前要加$</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$A</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;A=<span class="token variable">$A</span>&quot;</span>
+<span class="token comment">#案例2：撤销A</span>
+<span class="token builtin class-name">unset</span> A
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;A=<span class="token variable">$A</span>&quot;</span>
+<span class="token comment">#案例3：声明静态变量B=2，不能unset</span>
+<span class="token builtin class-name">readonly</span> <span class="token assign-left variable">B</span><span class="token operator">=</span><span class="token number">2</span>
+<span class="token comment"># unset B</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;B=<span class="token variable">$B</span>&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></li> <li><p>shell定义变量</p> <ol><li>由字母数字下划线组成 一般大写；不能以数字开头</li> <li>等于号两侧无空格</li></ol></li> <li><p>将<strong>命令</strong>返回值赋给变量</p> <ol><li>A=<code>date</code>反引号</li> <li>A=$(date)等价于反引号</li></ol></li> <li><p>设置环境变量</p> <ol><li><p>基本语法</p> <p>export 变量名=变量值（将shell变量输出为环境变量/全局变量）</p> <p>source配置文件（让修改后的配置信息立即生效）</p> <p>echo $变量名（查询环境变量的值）</p></li> <li><p>快速入门</p> <ol><li>在/etc/profile中定义TPOMCAT_HOME环境变量</li> <li>查看TOMCAT_HOME的值</li> <li>在另一个shell程序中使用TOMCAT_HOME</li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token builtin class-name">export</span> <span class="token assign-left variable">TOMCAT_HOME</span><span class="token operator">=</span>/opt/tomcat
+<span class="token builtin class-name">source</span> /etc/profile
+<span class="token builtin class-name">echo</span> <span class="token variable">$TOMCAT_HOME</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>Shell脚本的多行注释</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>:<span class="token operator">&lt;&lt;</span><span class="token operator">!</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Hello&quot;</span>
+<span class="token operator">!</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li></ol></li> <li><p>位置参数变量</p> <p>./myshell.sh 100 200 (传参)</p> <ol><li><p>基本语法</p> <p>$n(n为数字 $0代表本身 $1-$9代表1-9个参数) 10以上需要用 ${10}</p> <p>$* (表示命令行中所有参数（看成一个整体）)</p> <p>$@ (表示命令行中所有参数（把每个参数区分对待）)</p> <p>$# (所有参数的个数)</p></li> <li><p>位置参数变量</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;0=<span class="token variable">$0</span> 1=<span class="token variable">$1</span> 2=<span class="token variable">$2</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;所有参数=<span class="token variable">$*</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$@</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;参数的个数=<span class="token variable">$#</span>&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>输出结果</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>0=./var.sh 1=10 2=20
+所有参数=10 20
+10 20
+参数的个数=2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ol></li> <li><p>预定义变量</p> <p>$$ 当前进程号</p> <p>$! 后台运行的最后一个进程号</p> <p>$? 最后一次执行命令的返回状态 0为正确 非0不正确</p> <p>eg:</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;当前执行的进程id=<span class="token variable">$$</span>&quot;</span>
+<span class="token comment">#以后台的方式执行一个脚本，并获取他的进程号</span>
+/root/shcode/myshell.sh <span class="token operator">&amp;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;最后一个后台方式运行的进程id=<span class="token variable">$!</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;执行的结构是=<span class="token variable">$?</span>&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li> <li><p>运算符</p> <p>三种方式（注意expr运算符间要有空格）</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable"><span class="token variable">$((</span><span class="token number">1</span><span class="token operator">+</span><span class="token number">1</span><span class="token variable">))</span></span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;$[2+2]&quot;</span>
+<span class="token function">expr</span> <span class="token number">3</span> <span class="token punctuation">\</span>* <span class="token number">3</span>
+<span class="token comment">#expr乘号应该为\*</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>``等价于$()</p></li> <li><p>条件判断</p> <p>[ condition ]（<strong>注意条件判断式 [ ] 左右有空格</strong>）</p> <p>#非空返回true 可用$?验证(0为true &gt;1为false)</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#案例1 比较字符串 =</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">&quot;ok&quot;</span> <span class="token operator">=</span> <span class="token string">&quot;ok&quot;</span> <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;equal&quot;</span>
+<span class="token keyword">fi</span>
+<span class="token comment">#案例2 比较数字 -gt -lt -eq (可合并) -ne  </span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token number">23</span> -le <span class="token number">32</span> <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;大于&quot;</span>
+<span class="token keyword">fi</span>
+<span class="token comment">#案例3 判断文件权限 -r -w -x 判断文件存在-f(常规文件) -e(文件存在) -d(目录)</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> -f /root/shcode/a.txt <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;存在&quot;</span>
+<span class="token keyword">fi</span>
+<span class="token comment">#案例4 [  ]空为假 非空为真</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> jy <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;HH&quot;</span> 
+<span class="token keyword">fi</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div></li> <li><p>多分支</p> <ol><li>if 和elif和else</li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$1</span> -ge <span class="token number">60</span> <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;及格&quot;</span>
+:<span class="token operator">&lt;&lt;</span><span class="token operator">!</span>
+<span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token variable">$1</span> -lt <span class="token number">60</span> <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;不及格&quot;</span>
+<span class="token keyword">fi</span>
+<span class="token operator">!</span>
+<span class="token keyword">else</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;不及格&quot;</span>
+<span class="token keyword">fi</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>（有if才要用then，else不用）</p> <ol start="2"><li>case</li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#案例1 三重case情况</span>
+<span class="token keyword">case</span> <span class="token variable">$1</span> <span class="token keyword">in</span> 
+<span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;周一&quot;</span>
+<span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token string">&quot;2&quot;</span><span class="token punctuation">)</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;周二&quot;</span>
+<span class="token punctuation">;</span><span class="token punctuation">;</span>
+*<span class="token punctuation">)</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;other&quot;</span>
+<span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword">esac</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></li></ul></li> <li><p>循环</p> <ol><li>for  in</li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#案例1 打印命令行输入的参数（看出$@ 和 $*的区别）</span>
+<span class="token comment">#注意$*把输入的参数当作一个整体，因此只输出一次</span>
+<span class="token keyword">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token string">&quot;<span class="token variable">$*</span>&quot;</span>
+<span class="token keyword">do</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;num is <span class="token variable">$i</span>&quot;</span>
+<span class="token keyword">done</span>
+<span class="token comment">#使用$@把输入的参数分别对待 有几个参数 输出几句</span>
+<span class="token keyword">for</span> <span class="token for-or-select variable">j</span> <span class="token keyword">in</span> <span class="token string">&quot;<span class="token variable">$@</span>&quot;</span>
+<span class="token keyword">do</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;nownum is <span class="token variable">$j</span>&quot;</span>
+<span class="token keyword">done</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>输出</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>num is 1 2 3 4 5
+nownum is 1
+nownum is 2
+nownum is 3
+nownum is 4
+nownum is 5
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="2"><li><p>for()  （注意$[]）（for的&gt;&lt;同c）</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment">#案例2 for 从1加到100</span>
+<span class="token assign-left variable">SUM</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token keyword">for</span> <span class="token variable"><span class="token punctuation">((</span> i<span class="token operator">=</span><span class="token number">1</span> <span class="token punctuation">;</span> i<span class="token operator">&lt;=</span><span class="token number">100</span> <span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">))</span></span>
+<span class="token keyword">do</span>
+        <span class="token assign-left variable">SUM</span><span class="token operator">=</span>$<span class="token punctuation">[</span><span class="token variable">$SUM</span>+<span class="token variable">$i</span><span class="token punctuation">]</span>
+<span class="token keyword">done</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;SUM=<span class="token variable">$SUM</span>&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>while [  ]</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token keyword">while</span> <span class="token punctuation">[</span> <span class="token variable">$i</span> -le <span class="token variable">$1</span> <span class="token punctuation">]</span>
+<span class="token keyword">do</span>
+<span class="token assign-left variable">i</span><span class="token operator">=</span>$<span class="token punctuation">[</span><span class="token variable">$i</span>+1<span class="token punctuation">]</span> <span class="token punctuation">(</span>注意i++要这么<span class="token punctuation">)</span> 
+<span class="token keyword">done</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></li></ol></li></ul></li> <li><p>read读取控制台输入</p> <p>read [选项] (参数)</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#案例1 /-p 指定读取值时的提示符</span>
+<span class="token builtin class-name">read</span> -p <span class="token string">&quot;请输入一个NUM1=&quot;</span> NUM1
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;你输入的NUM1=<span class="token variable">$NUM1</span>&quot;</span>
+<span class="token comment">#案例2 /t 限制等待时间</span>
+<span class="token builtin class-name">read</span> -t <span class="token number">10</span> -p <span class="token string">&quot;请输入一个NUM2=&quot;</span> NUM2
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;你输入的NUM2=<span class="token variable">$NUM2</span>&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li> <li><p>函数</p> <ul><li><p>系统函数</p> <p>basename 返回完整路径最后/的部分 获取文件名</p> <p>basename /home/aaa/test.txt （可加 .txt 返回test）返回test.txt</p> <p>dirname函数</p> <p>dirname /home/aaa/test.txt  返回 /home/aaa</p></li> <li><p>自定义函数</p> <p>[ function ] funname[()]</p> <p>{</p> <p>​		Action;</p> <p>​		[return int;]</p> <p>}</p> <p>调用 funname [值]</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#案例1 计算输入的两个参数的和 getSum</span>
+<span class="token keyword">function</span> <span class="token function-name function">getSum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token assign-left variable">SUM</span><span class="token operator">=</span>$<span class="token punctuation">[</span><span class="token variable">$n1</span>+<span class="token variable">$n2</span><span class="token punctuation">]</span>
+	<span class="token builtin class-name">echo</span> <span class="token string">&quot;和为=<span class="token variable">$SUM</span>&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">#输入两个值</span>
+<span class="token builtin class-name">read</span> -p <span class="token string">&quot;请输入一个值n1=&quot;</span> n1
+<span class="token builtin class-name">read</span> -p <span class="token string">&quot;请输入一个值n2=&quot;</span> n2
+<span class="token comment">#调用函数</span>
+getSum <span class="token variable">$n1</span> <span class="token variable">$n2</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></li></ul></li> <li><p>数据库备份案例</p> <ul><li>备份命令格式：mysqldump -h主机名  -P端口 -u用户名 -p密码 --database 数据库名 &gt; 文件名.sql</li> <li>备份压缩：mysqldump -h主机名  -P端口 -u用户名 -p密码 --database 数据库名 | gzip  &gt; 文件名.sql.gz</li> <li>备份同个库多个表：mysqldump -h主机名  -P端口 -u用户名 -p密码 --database 数据库名   表1   表2 ....   &gt; 文件名.sql</li> <li>同时备份多个库：mysqldump -h主机名  -P端口 -u用户名 -p密码   --databases  数据库名1  数据库名2   数据库名3  &gt; 文件名.sql</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>mysqldump -uroot -pjymysql --host=localhost -q -R --databases db1 | gzip &gt; /data/backup/db/1.sql.gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>实例：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#备份目录</span>
+<span class="token assign-left variable">BACKUP</span><span class="token operator">=</span>/data/backup/db
+<span class="token comment">#当前时间</span>
+<span class="token assign-left variable">DATETIME</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d_%H%M%S<span class="token variable">)</span></span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$DATETIME</span>
+<span class="token comment">#数据库地址</span>
+<span class="token assign-left variable">HOST</span><span class="token operator">=</span>localhost
+<span class="token assign-left variable">DB_USER</span><span class="token operator">=</span>root
+<span class="token assign-left variable">DB_PW</span><span class="token operator">=</span>jymysql
+<span class="token assign-left variable">DATABASE</span><span class="token operator">=</span>db1
+<span class="token comment">#备份创建目录（如不存在，则创建）</span>
+<span class="token punctuation">[</span> <span class="token operator">!</span> -d <span class="token string">&quot;<span class="token variable">${BACKUP}</span>/<span class="token variable">${DATETIME}</span>&quot;</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> -p <span class="token string">&quot;<span class="token variable">${BACKUP}</span>/<span class="token variable">${DATETIME}</span>&quot;</span>
+
+<span class="token comment">#备份数据库</span>
+mysqldump -u<span class="token variable">${DB_USER}</span> -p<span class="token variable">${DB_PW}</span> -h<span class="token variable">${HOST}</span> -q -R <span class="token variable">${DATABASE}</span> <span class="token operator">|</span> <span class="token function">gzip</span> <span class="token operator">&gt;</span><span class="token variable">${BACKUP}</span>/<span class="token variable">${DATETIME}</span>/<span class="token variable">$DATETIME</span>.sql.gz
+
+<span class="token comment">#将文件处理成tar.gz</span>
+<span class="token builtin class-name">cd</span> <span class="token variable">${BACKUP}</span>
+<span class="token function">tar</span> -zcvf <span class="token variable">$DATETIME</span>.tar.gz <span class="token variable">${DATETIME}</span>
+<span class="token comment">#将目录删除</span>
+<span class="token function">rm</span> -rf <span class="token variable">${DATETIME}</span>
+<span class="token function">find</span> <span class="token variable">${BACKUP}</span> -atime +10 -name <span class="token string">&quot;*.tar.gz&quot;</span> -exec <span class="token function">rm</span> -rf<span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;备份数据库<span class="token variable">${DATABASE}</span> 成功！&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div></li></ul> <h3 id="磁盘进程分区"><a href="#磁盘进程分区" class="header-anchor">#</a> 磁盘进程分区</h3> <p>p58-p81</p> <h3 id="安装篇"><a href="#安装篇" class="header-anchor">#</a> 安装篇</h3> <ul><li><p>rpm包的管理</p> <ul><li><p>rpm -qa|grep xx（可查询当前已安装的文件）</p> <p>firefox-78.14.0-1.el7.centos.x86_64</p> <p>​			78.14.0-1版本号 el7.centos.x86_64适合的操作系统 （如i686、i386则表示32位			系统，noarch表示通用）</p></li> <li><p>rpm -qi 软件包名 查询软件包信息；</p> <p>rpm -ql软件包名 查询包中文件</p> <p>rpm -qf 文件全路径</p> <p>rpm -ivh RPM包全路径名称 i=install v=verbose提示 h=hash进度条</p> <p>rpm -e RPM包 删除软件包</p></li></ul></li> <li><p>yum shell前端软件包管理器     基于RPM包管理</p> <p>yum (-y) install</p></li> <li><p>Tomcat</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>（用yum安装后路径会在/var/lib；还要安装webapps和）
+systemctl start tomcat
+systemctl status tomcat
+systemctl restart tomcat
+systemctl stop tomcat
+打开防火墙
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --reload
+firewall-cmd --query-port=8080/tcp
+通过ip:8080即可查看到tomcat网址
+cd /var/lib/webapps 编写html文件 
+通过ip:8080/html查看文件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div></li> <li><p>Java</p></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>下载后用Xftp传到Linux
+解压 tar 
+在/etc/profile中配置环境变量 
+jdk8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>运行java和gcc</li></ul> <p><img src="/assets/img/hello.042a212e.png" alt="图片"></p> <p>p82-89</p> <h3 id="番外"><a href="#番外" class="header-anchor">#</a> 番外</h3> <h4 id="在linux上安装mysql"><a href="#在linux上安装mysql" class="header-anchor">#</a> 在Linux上安装MySQL</h4> <p>(此处安装的是Redhat版本)</p> <div class="language-linux line-numbers-mode"><pre class="language-text"><code>wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+rpm -Uvh mysql57-community-release-el7-9.noarch.rpm
+vi /etc/yum.repos.d/mysql-community.repo(可选择把默认的8.0版本换成5.7 把enabled=0改成1)
+yum -y install mysql-community-server 
+# 安装完成
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li><p>MySQL改密码</p> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>systemctl status mysqld
+systemctl start mysqld
+grep 'temporary password' /var/log/mysqld.log(查看临时密码)
+登陆 mysql -uroot -p 粘贴
+
+#方法一 在MySQL中
+show variables like &quot;%validate%&quot;;
+set global validate_password_length=6(自己set)
+
+#方法二
+#在 /etc/my.cnf中的最后加上在两行
+plugin-load=validate_password.so
+validate-password=OFF
+...
+
+systemctl restart mysqld
+systemctl status mysqld
+alter user 'root'@'localhost' identified by '新密码';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div></li></ul></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后一次更新时间: </span> <span class="time">10/19/2021, 5:15:08 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#远程操作" class="sidebar-link reco-side-远程操作" data-v-70334359>远程操作</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#vim" class="sidebar-link reco-side-vim" data-v-70334359>Vim</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#用户管理" class="sidebar-link reco-side-用户管理" data-v-70334359>用户管理</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#运行级别" class="sidebar-link reco-side-运行级别" data-v-70334359>运行级别</a></li><li class="level-2" data-v-70334359><a href="/blogs/linux/Linux.html#指令" class="sidebar-link reco-side-指令" data-v-70334359>指令</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#组管理和权限管理" class="sidebar-link reco-side-组管理和权限管理" data-v-70334359>组管理和权限管理</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#crond-任务调度-周期" class="sidebar-link reco-side-crond-任务调度-周期" data-v-70334359>crond 任务调度（周期）</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#at定时任务-一次性" class="sidebar-link reco-side-at定时任务-一次性" data-v-70334359>at定时任务（一次性）</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#shell" class="sidebar-link reco-side-shell" data-v-70334359>Shell</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#磁盘进程分区" class="sidebar-link reco-side-磁盘进程分区" data-v-70334359>磁盘进程分区</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#安装篇" class="sidebar-link reco-side-安装篇" data-v-70334359>安装篇</a></li><li class="level-3" data-v-70334359><a href="/blogs/linux/Linux.html#番外" class="sidebar-link reco-side-番外" data-v-70334359>番外</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:290px;display:none;" data-v-5775ee02>
+      欢迎来到jy的博客
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="250" height="320" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-cursor"></canvas><!----><div class="RibbonAnimation"></div></div></div>
+    <script src="/assets/js/app.db55d802.js" defer></script><script src="/assets/js/3.305d8068.js" defer></script><script src="/assets/js/1.e6f1548f.js" defer></script><script src="/assets/js/10.e7654816.js" defer></script>
+  </body>
+</html>

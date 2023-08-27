@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>什么是JWT? | jyblog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="千里之行，始于足下">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.9c2ebae4.css" as="style"><link rel="preload" href="/assets/js/app.db55d802.js" as="script"><link rel="preload" href="/assets/js/3.305d8068.js" as="script"><link rel="preload" href="/assets/js/1.e6f1548f.js" as="script"><link rel="preload" href="/assets/js/37.8d66badc.js" as="script"><link rel="prefetch" href="/assets/js/10.e7654816.js"><link rel="prefetch" href="/assets/js/11.5aa4241e.js"><link rel="prefetch" href="/assets/js/12.1e3a10f1.js"><link rel="prefetch" href="/assets/js/13.fcbee6f3.js"><link rel="prefetch" href="/assets/js/14.34858c61.js"><link rel="prefetch" href="/assets/js/15.85755838.js"><link rel="prefetch" href="/assets/js/16.3c26fea8.js"><link rel="prefetch" href="/assets/js/17.6eda6c35.js"><link rel="prefetch" href="/assets/js/18.521300d2.js"><link rel="prefetch" href="/assets/js/19.6528e714.js"><link rel="prefetch" href="/assets/js/20.1ec64fda.js"><link rel="prefetch" href="/assets/js/21.a5a2151a.js"><link rel="prefetch" href="/assets/js/22.11f56e91.js"><link rel="prefetch" href="/assets/js/23.a7a5d1b0.js"><link rel="prefetch" href="/assets/js/24.a24581d1.js"><link rel="prefetch" href="/assets/js/25.ba061303.js"><link rel="prefetch" href="/assets/js/26.e9f31da3.js"><link rel="prefetch" href="/assets/js/27.d0169b2e.js"><link rel="prefetch" href="/assets/js/28.39949395.js"><link rel="prefetch" href="/assets/js/29.959b35b6.js"><link rel="prefetch" href="/assets/js/30.69ad4de8.js"><link rel="prefetch" href="/assets/js/31.3f2dfa95.js"><link rel="prefetch" href="/assets/js/32.2ba2a4b1.js"><link rel="prefetch" href="/assets/js/33.2ff9426b.js"><link rel="prefetch" href="/assets/js/34.9bcbd958.js"><link rel="prefetch" href="/assets/js/35.16bb5294.js"><link rel="prefetch" href="/assets/js/36.4f1dd0ca.js"><link rel="prefetch" href="/assets/js/38.16a87dcc.js"><link rel="prefetch" href="/assets/js/39.f4d5712a.js"><link rel="prefetch" href="/assets/js/4.2e02069b.js"><link rel="prefetch" href="/assets/js/40.06f0451c.js"><link rel="prefetch" href="/assets/js/41.4b45cdd0.js"><link rel="prefetch" href="/assets/js/42.629675c6.js"><link rel="prefetch" href="/assets/js/43.8bc7508e.js"><link rel="prefetch" href="/assets/js/44.a5d94fbe.js"><link rel="prefetch" href="/assets/js/45.ad15e193.js"><link rel="prefetch" href="/assets/js/5.5094ffee.js"><link rel="prefetch" href="/assets/js/6.c0926de1.js"><link rel="prefetch" href="/assets/js/7.9bb26620.js"><link rel="prefetch" href="/assets/js/8.be2c4769.js"><link rel="prefetch" href="/assets/js/9.0fd9cf9d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9c2ebae4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>jyblog</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>千里之行，始于足下</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>jy</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="jyblog" class="logo"> <span class="site-name">jyblog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      心得
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dom/" class="nav-link"><i class="undefined"></i>
+  Dom
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/miniprogram/" class="nav-link"><i class="undefined"></i>
+  miniprogram
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP协议的发展/" class="nav-link"><i class="undefined"></i>
+  HTTP协议的发展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS优先级/" class="nav-link"><i class="undefined"></i>
+  CSS优先级
+</a></li><li class="dropdown-item"><!----> <a href="/categories/OSI七层网络参考模型/" class="nav-link"><i class="undefined"></i>
+  OSI七层网络参考模型
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTPS/" class="nav-link"><i class="undefined"></i>
+  HTTPS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mysql/" class="nav-link"><i class="undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PNPM/" class="nav-link"><i class="undefined"></i>
+  PNPM
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  live2d的心酸泪
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/record.html" class="nav-link"><i class="undefined"></i>
+  记录点滴
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/saysomething.html" class="nav-link"><i class="undefined"></i>
+  吐槽
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/live.html" class="nav-link"><i class="undefined"></i>
+  成长史
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/about/guide.html" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/jynba" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/portrait.png" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    jy
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>35</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>30</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      心得
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dom/" class="nav-link"><i class="undefined"></i>
+  Dom
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/miniprogram/" class="nav-link"><i class="undefined"></i>
+  miniprogram
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP协议的发展/" class="nav-link"><i class="undefined"></i>
+  HTTP协议的发展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS优先级/" class="nav-link"><i class="undefined"></i>
+  CSS优先级
+</a></li><li class="dropdown-item"><!----> <a href="/categories/OSI七层网络参考模型/" class="nav-link"><i class="undefined"></i>
+  OSI七层网络参考模型
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTPS/" class="nav-link"><i class="undefined"></i>
+  HTTPS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mysql/" class="nav-link"><i class="undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PNPM/" class="nav-link"><i class="undefined"></i>
+  PNPM
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  live2d的心酸泪
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/record.html" class="nav-link"><i class="undefined"></i>
+  记录点滴
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/saysomething.html" class="nav-link"><i class="undefined"></i>
+  吐槽
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/live.html" class="nav-link"><i class="undefined"></i>
+  成长史
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/about/guide.html" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/jynba" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>什么是JWT?</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>jy</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">什么是JWT?</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>jy</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>8/24/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>HTTPjwt</span></i></div></div> <div class="theme-reco-content content__default"><h3 id="什么是-jwt"><a href="#什么是-jwt" class="header-anchor">#</a> 什么是 JWT？</h3> <p>JSON Web Token (JWT)是一个开放标准(RFC 7519)，它定义了一种紧凑的、自包含的方式，用于作为 JSON 对象在各方之间安全地传输信息。该信息可以被验证和信任，因为它是数字签名的。</p> <h3 id="什么时候你应该用-json-web-token"><a href="#什么时候你应该用-json-web-token" class="header-anchor">#</a> 什么时候你应该用 JSON Web Token?</h3> <p>下列场景中使用 JSON Web Token 是很有用的：</p> <ul><li>Authorization (授权) : 这是使用 JWT 的最常见场景。一旦用户登录，后续每个请求都将包含 JWT，允许用户访问该令牌允许的路由、服务和资源。<strong>单点登录</strong>是现在广泛使用的 JWT 的一个特性，因为它的开销很小，并且可以轻松地跨域使用。(参考学校管理系统)</li> <li>Information Exchange (信息交换) : 对于安全的在各方之间传输信息而言，JSON Web Tokens 无疑是一种很好的方式。因为 JWT 可以被签名，例如，用公钥/私钥对，你可以确定发送人就是它们所说的那个人。另外，由于签名是使用头和有效负载计算的，您还可以验证内容没有被篡改。</li></ul> <h3 id="json-web-token-的结构是什么样的"><a href="#json-web-token-的结构是什么样的" class="header-anchor">#</a> JSON Web Token 的结构是什么样的</h3> <p>JSON Web Token 由三部分组成，它们之间用圆点(.)连接。这三部分分别是：</p> <ul><li>Header
+<ul><li>Header header 典型的由两部分组成：token 的类型（“JWT”）和算法名称（比如：HMAC SHA256 或者 RSA 等等）。</li></ul></li> <li>Payload
+<ul><li>JWT 的第二部分是 payload，它包含声明（要求）。声明是关于实体(通常是用户)和其他数据的声明。声明有三种类型: registered, public 和 private。</li></ul></li> <li>Signature
+<ul><li>签名是用于验证消息在传递过程中有没有被更改，并且，对于使用私钥签名的 token，它还可以验证 JWT 的发送方是否为它所称的发送方。</li></ul></li></ul> <h3 id="json-web-tokens-是如何工作的"><a href="#json-web-tokens-是如何工作的" class="header-anchor">#</a> JSON Web Tokens 是如何工作的</h3> <p>如果 token 是在授权头（Authorization header）中发送的，那么跨源资源共享(CORS)将不会成为问题，因为它不使用 cookie</p> <h3 id="基于-token-的身份认证-与-基于服务器的身份认证"><a href="#基于-token-的身份认证-与-基于服务器的身份认证" class="header-anchor">#</a> 基于 Token 的身份认证 与 基于服务器的身份认证</h3> <p>HTTP 协议是无状态的，也就是说，如果我们已经认证了一个用户，那么他下一次请求的时候，服务器不知道我是谁，我们必须再次认证</p> <ul><li><p>传统的做法是将已经认证过的用户信息存储在服务器上，比如 Session。用户下次请求的时候带着 Session ID，然后服务器以此检查用户是否认证过</p> <p>这种基于服务器的身份认证方式存在一些问题：</p> <ul><li>Sessions : 每次用户认证通过以后，服务器需要创建一条记录保存用户信息，通常是在内存中，随着认证通过的用户越来越多，服务器的在这里的开销就会越来越大。</li> <li>Scalability : 由于 Session 是在内存中的，这就带来一些扩展性的问题。</li> <li>CORS : 当我们想要扩展我们的应用，让我们的数据被多个移动设备使用时，我们必须考虑跨资源共享问题。当使用 AJAX 调用从另一个域名下获取资源时，我们可能会遇到禁止请求的问题。</li> <li>CSRF : 用户很容易受到 CSRF 攻击</li></ul></li> <li><p>Session 是在服务器端的，而 JWT 是在客户端的。</p> <p>基于 Token 的身份认证是如何工作的 基于 Token 的身份认证是无状态的，服务器或者 Session 中不会存储任何用户信息。</p> <p>没有会话信息意味着应用程序可以根据需要扩展和添加更多的机器，而不必担心用户登录的位置。</p> <p>虽然这一实现可能会有所不同，但其主要流程如下：</p> <p>-用户携带用户名和密码请求访问 -服务器校验用户凭据 -应用提供一个 token 给客户端 -客户端存储 token，并且在随后的每一次请求中都带着它 -服务器校验 token 并返回数据</p></li> <li><p>用 Token 的好处 - 无状态和可扩展性：Tokens 存储在客户端。完全无状态，可扩展。我们的负载均衡器可以将用户传递到任意服务器，因为在任何地方都没有状态或会话信息。 - 安全：Token 不是 Cookie</p> <ul><li>有助于防止 CSRF 攻击。即使在你的实现中将 token 存储到客户端的 Cookie 中，这个 Cookie 也只是一种存储机制，而非身份认证机制。</li> <li>token 在一段时间以后会过期，这个时候用户需要重新登录。</li></ul></li></ul> <h3 id="jwt-的使用方式"><a href="#jwt-的使用方式" class="header-anchor">#</a> JWT 的使用方式</h3> <p>客户端收到服务器返回的 JWT，可以储存在 Cookie 里面，也可以储存在 localStorage。</p> <p>此后，客户端每次与服务器通信，都要带上这个 JWT。你可以把它放在 Cookie 里面自动发送，但是这样不能跨域，所以更好的做法是<strong>放在 HTTP 请求的头信息<code>Authorization</code>字段里面</strong>。</p> <ul><li>JWT 的<strong>最大缺点</strong>是，由于服务器不保存 session 状态，因此无法在使用过程中废止某个 token，或者更改 token 的权限。也就是说，一旦 JWT 签发了，在到期之前就会始终有效，除非服务器部署额外的逻辑。</li></ul> <h2 id="cookie-和-token-的区别"><a href="#cookie-和-token-的区别" class="header-anchor">#</a> cookie 和 token 的区别</h2> <p><strong>Cookie：</strong></p> <ol><li><strong>存储位置：</strong> Cookie 是存储在客户端浏览器中的小文本文件。每当浏览器发送请求到同一域名下的服务器时，它会自动将相应的 Cookie 信息附加到请求头中。</li> <li><strong>大小限制：</strong> 单个 Cookie 的大小通常有限制，通常在几 KB 到几十 KB 之间，不同浏览器可能有不同的限制。</li> <li><strong>跨域限制：</strong> Cookie 默认情况下只能在设置它的域名下使用，跨域请求不会自动携带 Cookie。</li> <li><strong>安全性：</strong> Cookie 可以设置为 HttpOnly，防止被 JavaScript 访问，提高安全性。</li></ol> <p><strong>Token：</strong></p> <ol><li><strong>存储位置：</strong> Token 是存储在客户端（通常是内存中）的令牌，通常以字符串形式传递在请求的头部中，或者通过查询参数等方式传递给服务器。</li> <li><strong>大小限制：</strong> Token 的大小没有明确限制，但过大的 Token 可能会导致网络传输效率下降。</li> <li><strong>跨域限制：</strong> Token 可以在跨域请求中手动传递，通常通过设置请求头的方式传递。</li> <li><strong>安全性：</strong> Token 可以采用加密算法来保证安全性，但它可能需要开发者自己来实现。Token 也可以设置过期时间，有时会自动刷新，增加安全性。</li></ol></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后一次更新时间: </span> <span class="time">8/27/2023, 2:13:00 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-3" data-v-70334359><a href="/blogs/net/jwt.html#什么是-jwt" class="sidebar-link reco-side-什么是-jwt" data-v-70334359>什么是 JWT？</a></li><li class="level-3" data-v-70334359><a href="/blogs/net/jwt.html#什么时候你应该用-json-web-token" class="sidebar-link reco-side-什么时候你应该用-json-web-token" data-v-70334359>什么时候你应该用 JSON Web Token?</a></li><li class="level-3" data-v-70334359><a href="/blogs/net/jwt.html#json-web-token-的结构是什么样的" class="sidebar-link reco-side-json-web-token-的结构是什么样的" data-v-70334359>JSON Web Token 的结构是什么样的</a></li><li class="level-3" data-v-70334359><a href="/blogs/net/jwt.html#json-web-tokens-是如何工作的" class="sidebar-link reco-side-json-web-tokens-是如何工作的" data-v-70334359>JSON Web Tokens 是如何工作的</a></li><li class="level-3" data-v-70334359><a href="/blogs/net/jwt.html#基于-token-的身份认证-与-基于服务器的身份认证" class="sidebar-link reco-side-基于-token-的身份认证-与-基于服务器的身份认证" data-v-70334359>基于 Token 的身份认证 与 基于服务器的身份认证</a></li><li class="level-3" data-v-70334359><a href="/blogs/net/jwt.html#jwt-的使用方式" class="sidebar-link reco-side-jwt-的使用方式" data-v-70334359>JWT 的使用方式</a></li><li class="level-2" data-v-70334359><a href="/blogs/net/jwt.html#cookie-和-token-的区别" class="sidebar-link reco-side-cookie-和-token-的区别" data-v-70334359>cookie 和 token 的区别</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:290px;display:none;" data-v-5775ee02>
+      欢迎来到jy的博客
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="250" height="320" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-cursor"></canvas><!----><div class="RibbonAnimation"></div></div></div>
+    <script src="/assets/js/app.db55d802.js" defer></script><script src="/assets/js/3.305d8068.js" defer></script><script src="/assets/js/1.e6f1548f.js" defer></script><script src="/assets/js/37.8d66badc.js" defer></script>
+  </body>
+</html>

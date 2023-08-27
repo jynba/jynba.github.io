@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTTPA缓存机制 | jyblog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="千里之行，始于足下">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.9c2ebae4.css" as="style"><link rel="preload" href="/assets/js/app.db55d802.js" as="script"><link rel="preload" href="/assets/js/3.305d8068.js" as="script"><link rel="preload" href="/assets/js/1.e6f1548f.js" as="script"><link rel="preload" href="/assets/js/21.a5a2151a.js" as="script"><link rel="prefetch" href="/assets/js/10.e7654816.js"><link rel="prefetch" href="/assets/js/11.5aa4241e.js"><link rel="prefetch" href="/assets/js/12.1e3a10f1.js"><link rel="prefetch" href="/assets/js/13.fcbee6f3.js"><link rel="prefetch" href="/assets/js/14.34858c61.js"><link rel="prefetch" href="/assets/js/15.85755838.js"><link rel="prefetch" href="/assets/js/16.3c26fea8.js"><link rel="prefetch" href="/assets/js/17.6eda6c35.js"><link rel="prefetch" href="/assets/js/18.521300d2.js"><link rel="prefetch" href="/assets/js/19.6528e714.js"><link rel="prefetch" href="/assets/js/20.1ec64fda.js"><link rel="prefetch" href="/assets/js/22.11f56e91.js"><link rel="prefetch" href="/assets/js/23.a7a5d1b0.js"><link rel="prefetch" href="/assets/js/24.a24581d1.js"><link rel="prefetch" href="/assets/js/25.ba061303.js"><link rel="prefetch" href="/assets/js/26.e9f31da3.js"><link rel="prefetch" href="/assets/js/27.d0169b2e.js"><link rel="prefetch" href="/assets/js/28.39949395.js"><link rel="prefetch" href="/assets/js/29.959b35b6.js"><link rel="prefetch" href="/assets/js/30.69ad4de8.js"><link rel="prefetch" href="/assets/js/31.3f2dfa95.js"><link rel="prefetch" href="/assets/js/32.2ba2a4b1.js"><link rel="prefetch" href="/assets/js/33.2ff9426b.js"><link rel="prefetch" href="/assets/js/34.9bcbd958.js"><link rel="prefetch" href="/assets/js/35.16bb5294.js"><link rel="prefetch" href="/assets/js/36.4f1dd0ca.js"><link rel="prefetch" href="/assets/js/37.8d66badc.js"><link rel="prefetch" href="/assets/js/38.16a87dcc.js"><link rel="prefetch" href="/assets/js/39.f4d5712a.js"><link rel="prefetch" href="/assets/js/4.2e02069b.js"><link rel="prefetch" href="/assets/js/40.06f0451c.js"><link rel="prefetch" href="/assets/js/41.4b45cdd0.js"><link rel="prefetch" href="/assets/js/42.629675c6.js"><link rel="prefetch" href="/assets/js/43.8bc7508e.js"><link rel="prefetch" href="/assets/js/44.a5d94fbe.js"><link rel="prefetch" href="/assets/js/45.ad15e193.js"><link rel="prefetch" href="/assets/js/5.5094ffee.js"><link rel="prefetch" href="/assets/js/6.c0926de1.js"><link rel="prefetch" href="/assets/js/7.9bb26620.js"><link rel="prefetch" href="/assets/js/8.be2c4769.js"><link rel="prefetch" href="/assets/js/9.0fd9cf9d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9c2ebae4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>jyblog</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>千里之行，始于足下</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>jy</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="jyblog" class="logo"> <span class="site-name">jyblog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      心得
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dom/" class="nav-link"><i class="undefined"></i>
+  Dom
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/miniprogram/" class="nav-link"><i class="undefined"></i>
+  miniprogram
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP协议的发展/" class="nav-link"><i class="undefined"></i>
+  HTTP协议的发展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS优先级/" class="nav-link"><i class="undefined"></i>
+  CSS优先级
+</a></li><li class="dropdown-item"><!----> <a href="/categories/OSI七层网络参考模型/" class="nav-link"><i class="undefined"></i>
+  OSI七层网络参考模型
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTPS/" class="nav-link"><i class="undefined"></i>
+  HTTPS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mysql/" class="nav-link"><i class="undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PNPM/" class="nav-link"><i class="undefined"></i>
+  PNPM
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  live2d的心酸泪
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/record.html" class="nav-link"><i class="undefined"></i>
+  记录点滴
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/saysomething.html" class="nav-link"><i class="undefined"></i>
+  吐槽
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/live.html" class="nav-link"><i class="undefined"></i>
+  成长史
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/about/guide.html" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/jynba" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/portrait.png" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    jy
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>35</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>30</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      心得
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dom/" class="nav-link"><i class="undefined"></i>
+  Dom
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/miniprogram/" class="nav-link"><i class="undefined"></i>
+  miniprogram
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP协议的发展/" class="nav-link"><i class="undefined"></i>
+  HTTP协议的发展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS优先级/" class="nav-link"><i class="undefined"></i>
+  CSS优先级
+</a></li><li class="dropdown-item"><!----> <a href="/categories/OSI七层网络参考模型/" class="nav-link"><i class="undefined"></i>
+  OSI七层网络参考模型
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTPS/" class="nav-link"><i class="undefined"></i>
+  HTTPS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mysql/" class="nav-link"><i class="undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PNPM/" class="nav-link"><i class="undefined"></i>
+  PNPM
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  live2d的心酸泪
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/record.html" class="nav-link"><i class="undefined"></i>
+  记录点滴
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/saysomething.html" class="nav-link"><i class="undefined"></i>
+  吐槽
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/live.html" class="nav-link"><i class="undefined"></i>
+  成长史
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/about/guide.html" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/jynba" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>HTTPA缓存机制</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>jy</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">HTTPA缓存机制</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>jy</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>8/24/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>HTTPcache</span></i></div></div> <div class="theme-reco-content content__default"><h3 id="http-缓存机制"><a href="#http-缓存机制" class="header-anchor">#</a> HTTP 缓存机制</h3> <p>HTTP 缓存机制是一种用于在客户端和服务器之间减少数据传输的策略，它可以通过将一些资源（如文本、图像、样式表等）存储在客户端或中间代理服务器上，以便在后续请求中可以更快地获取这些资源。HTTP 缓存机制有助于提高网站性能和减少网络流量。</p> <p><code>Cache-Control</code> 是 HTTP 头部的一个字段，它可以用来指定资源的缓存策略。<code>Cache-Control</code> 头部中的不同指令可以控制缓存的行为。其中，<code>no-store</code> 和 <code>no-cache</code> 是两个常用的指令，它们有一些区别：</p> <ol><li><p><strong>no-store</strong>：</p> <p><code>Cache-Control: no-store</code> 指令表示不允许缓存服务器或客户端存储任何关于请求/响应的内容。这意味着每次请求都要直接与服务器进行交互，无法使用本地缓存或代理服务器缓存。这个指令适用于敏感信息，如个人身份信息或银行账户等，以确保数据不会被保存在缓存中，从而增加安全性。</p></li> <li><p><strong>no-cache</strong>：</p> <p><code>Cache-Control: no-cache</code> 指令表示可以缓存内容，但在使用之前需要向服务器验证资源是否仍然有效。即使缓存中有资源的副本，客户端或代理服务器在使用之前都必须向服务器发送请求以验证资源的有效性。如果资源仍然有效，服务器将返回一个 304 Not Modified 响应，告诉客户端使用缓存的版本。这个指令适用于需要频繁验证资源的情况，以确保获取的是最新的版本。</p></li></ol> <p><strong>状态码 304 表示协商缓存</strong></p> <p>默认情况下，浏览器的缓存策略会根据响应的 HTTP 头部信息来决定是否缓存资源以及缓存的方式。浏览器根据响应的头部信息中的 <code>Cache-Control</code>、<code>Expires</code>、<code>ETag</code> 等字段来判断是否应该缓存资源以及如何使用缓存。以下是一些常见的默认行为：</p> <ol><li><strong>Cache-Control: public</strong>： 如果服务器在响应中设置了 <code>Cache-Control: public</code>，表示资源可以被公共缓存（包括浏览器缓存和代理服务器缓存）。这通常适用于不包含敏感信息的资源，如静态文件、图像等。</li> <li><strong>Cache-Control: private</strong>： 如果服务器在响应中设置了 <code>Cache-Control: private</code>，<strong>表示资源只能被客户端缓存，而不能被代理服务器缓存</strong>。这适用于包含用户<strong>个人信息的资源</strong>，防止敏感信息被代理服务器缓存。</li> <li><strong>Cache-Control: no-cache</strong>： 如果服务器设置了 <code>Cache-Control: no-cache</code>，表示浏览器可以缓存资源，但<strong>在使用之前需要向服务器验证资源是否仍然有效</strong>。这会导致浏览器每次请求都会向服务器发送请求，以验证资源的有效性。</li> <li><strong>Expires 头部</strong>： 如果响应中包含了 <code>Expires</code> 头部，它指定了资源过期的日期和时间。浏览器会比较当前时间和过期时间，如果资源还未过期，浏览器就会使用缓存的版本。然而，<code>Expires</code> 头部不是很灵活，因为它依赖于服务器和客户端时间的同步。</li></ol> <h4 id="客户端缓存和服务端缓存"><a href="#客户端缓存和服务端缓存" class="header-anchor">#</a> 客户端缓存和服务端缓存</h4> <ul><li><strong>资源的动态性：</strong> 如果资源经常变化，客户端缓存可能无法始终提供最新的内容，此时服务端缓存可能更合适。</li> <li><strong>用户体验：</strong> 对于需要快速响应的用户操作，客户端缓存能够提供更快的加载速度。</li> <li><strong>服务器负载：</strong> 如果服务器处理大量请求并且资源计算密集，服务端缓存可以减轻服务器负载。</li> <li><strong>缓存有效性管理：</strong> 需要注意及时更新客户端和服务端缓存，确保缓存的数据始终准确。</li></ul> <p>Expires: response header 里的过期时间，浏览器再次加载资源时，如果在这个过期时间内，则命中强缓仔 Cache-Control: 当值设为 max-age=300 时，则代表在这个请求正确返回时间 (浏览器也会记录下来)的 5 分钟内再次加载资源，就会命中强缓存。
+cache-control 除了该字段外，还有下面几个比较常用的设置值:
+-no-cache: 不使用本地缓存。需要使用缓存协商，先与服务器确认返回的响应是否被更改，如果之前的响应中存
+在 ETag，那么请求的时候会与服务端验证，如果资源未被更改，则可以避免重新下载.-no-store: 直接禁止浏览器缓存数据，每次用户请求该资源，都会向服务器发送一个请求，每次都会下载完整的资源。
+-public: 可以被所有的用户缓存，包括终端用户和 CDN 等中间代理服务器
+-private: 只能被终端用户的浏览器缓存，不允许 CDN 等中继缓存服务器对其缓存.
+Expires:设置以分钟为单位的绝对过期时间,设置相对过期时间,max-age 指明以秒为单位的缓存时</p> <h3 id="浏览器缓存过程"><a href="#浏览器缓存过程" class="header-anchor">#</a> 浏览器缓存过程</h3> <p><img src="/assets/img/1693034257366.f27a5d66.png" alt="缓存过程">
+1 浏览器第一次加载资源，服务器返回 200，浏览器将资源文件从服务器上请求下载下来，并把 response header 及该请求的返回时间一并缓存;</p> <p>2.下一次加载资源时，先比较当前时间和上一次返回 200 时的时间差，如果没有超过 cache-control 设置的 max-age，则没有过期，命中强缓存，不发请求直接从本地缓存读取该文件(如果浏览器不支持 HTTP1.1，则用 expires 判断是否过期);如果时间过期，则向服务器发送 header 带有 lf-None-Match 和 lf-Modified-Since 的请求</p> <p>3.服务器收到请求后，优先根据 Etag 的值判断被请求的文件有没有做修改，Etag 值一致则没有修改，命中协商缓存，返回 304;如果不一致则有改动，直接返回新的资源文件带上新的 Etag 值并返回 200;</p> <p>4.如果服务器收到的请求没有 Etag 值，则将 If-Modified-Since 和被请求文件的最后修改时间做比对商缓存，返回 304;不一致则返回新的 last-modified 和文件并返回 200;</p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后一次更新时间: </span> <span class="time">8/27/2023, 2:13:00 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-3" data-v-70334359><a href="/blogs/net/http_cache.html#http-缓存机制" class="sidebar-link reco-side-http-缓存机制" data-v-70334359>HTTP 缓存机制</a></li><li class="level-3" data-v-70334359><a href="/blogs/net/http_cache.html#浏览器缓存过程" class="sidebar-link reco-side-浏览器缓存过程" data-v-70334359>浏览器缓存过程</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:290px;display:none;" data-v-5775ee02>
+      欢迎来到jy的博客
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="250" height="320" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-cursor"></canvas><!----><div class="RibbonAnimation"></div></div></div>
+    <script src="/assets/js/app.db55d802.js" defer></script><script src="/assets/js/3.305d8068.js" defer></script><script src="/assets/js/1.e6f1548f.js" defer></script><script src="/assets/js/21.a5a2151a.js" defer></script>
+  </body>
+</html>

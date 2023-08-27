@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTTPS 原理 | jyblog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="千里之行，始于足下">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.9c2ebae4.css" as="style"><link rel="preload" href="/assets/js/app.db55d802.js" as="script"><link rel="preload" href="/assets/js/3.305d8068.js" as="script"><link rel="preload" href="/assets/js/1.e6f1548f.js" as="script"><link rel="preload" href="/assets/js/22.11f56e91.js" as="script"><link rel="prefetch" href="/assets/js/10.e7654816.js"><link rel="prefetch" href="/assets/js/11.5aa4241e.js"><link rel="prefetch" href="/assets/js/12.1e3a10f1.js"><link rel="prefetch" href="/assets/js/13.fcbee6f3.js"><link rel="prefetch" href="/assets/js/14.34858c61.js"><link rel="prefetch" href="/assets/js/15.85755838.js"><link rel="prefetch" href="/assets/js/16.3c26fea8.js"><link rel="prefetch" href="/assets/js/17.6eda6c35.js"><link rel="prefetch" href="/assets/js/18.521300d2.js"><link rel="prefetch" href="/assets/js/19.6528e714.js"><link rel="prefetch" href="/assets/js/20.1ec64fda.js"><link rel="prefetch" href="/assets/js/21.a5a2151a.js"><link rel="prefetch" href="/assets/js/23.a7a5d1b0.js"><link rel="prefetch" href="/assets/js/24.a24581d1.js"><link rel="prefetch" href="/assets/js/25.ba061303.js"><link rel="prefetch" href="/assets/js/26.e9f31da3.js"><link rel="prefetch" href="/assets/js/27.d0169b2e.js"><link rel="prefetch" href="/assets/js/28.39949395.js"><link rel="prefetch" href="/assets/js/29.959b35b6.js"><link rel="prefetch" href="/assets/js/30.69ad4de8.js"><link rel="prefetch" href="/assets/js/31.3f2dfa95.js"><link rel="prefetch" href="/assets/js/32.2ba2a4b1.js"><link rel="prefetch" href="/assets/js/33.2ff9426b.js"><link rel="prefetch" href="/assets/js/34.9bcbd958.js"><link rel="prefetch" href="/assets/js/35.16bb5294.js"><link rel="prefetch" href="/assets/js/36.4f1dd0ca.js"><link rel="prefetch" href="/assets/js/37.8d66badc.js"><link rel="prefetch" href="/assets/js/38.16a87dcc.js"><link rel="prefetch" href="/assets/js/39.f4d5712a.js"><link rel="prefetch" href="/assets/js/4.2e02069b.js"><link rel="prefetch" href="/assets/js/40.06f0451c.js"><link rel="prefetch" href="/assets/js/41.4b45cdd0.js"><link rel="prefetch" href="/assets/js/42.629675c6.js"><link rel="prefetch" href="/assets/js/43.8bc7508e.js"><link rel="prefetch" href="/assets/js/44.a5d94fbe.js"><link rel="prefetch" href="/assets/js/45.ad15e193.js"><link rel="prefetch" href="/assets/js/5.5094ffee.js"><link rel="prefetch" href="/assets/js/6.c0926de1.js"><link rel="prefetch" href="/assets/js/7.9bb26620.js"><link rel="prefetch" href="/assets/js/8.be2c4769.js"><link rel="prefetch" href="/assets/js/9.0fd9cf9d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9c2ebae4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>jyblog</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>千里之行，始于足下</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>jy</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="jyblog" class="logo"> <span class="site-name">jyblog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      心得
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dom/" class="nav-link"><i class="undefined"></i>
+  Dom
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/miniprogram/" class="nav-link"><i class="undefined"></i>
+  miniprogram
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP协议的发展/" class="nav-link"><i class="undefined"></i>
+  HTTP协议的发展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS优先级/" class="nav-link"><i class="undefined"></i>
+  CSS优先级
+</a></li><li class="dropdown-item"><!----> <a href="/categories/OSI七层网络参考模型/" class="nav-link"><i class="undefined"></i>
+  OSI七层网络参考模型
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTPS/" class="nav-link"><i class="undefined"></i>
+  HTTPS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mysql/" class="nav-link"><i class="undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PNPM/" class="nav-link"><i class="undefined"></i>
+  PNPM
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  live2d的心酸泪
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/record.html" class="nav-link"><i class="undefined"></i>
+  记录点滴
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/saysomething.html" class="nav-link"><i class="undefined"></i>
+  吐槽
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/live.html" class="nav-link"><i class="undefined"></i>
+  成长史
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/about/guide.html" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/jynba" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/portrait.png" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    jy
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>35</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>30</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      心得
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CSS/" class="nav-link"><i class="undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Dom/" class="nav-link"><i class="undefined"></i>
+  Dom
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/JavaScript/" class="nav-link"><i class="undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/miniprogram/" class="nav-link"><i class="undefined"></i>
+  miniprogram
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP协议的发展/" class="nav-link"><i class="undefined"></i>
+  HTTP协议的发展
+</a></li><li class="dropdown-item"><!----> <a href="/categories/CSS优先级/" class="nav-link"><i class="undefined"></i>
+  CSS优先级
+</a></li><li class="dropdown-item"><!----> <a href="/categories/OSI七层网络参考模型/" class="nav-link"><i class="undefined"></i>
+  OSI七层网络参考模型
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/categories/HTTPS/" class="nav-link"><i class="undefined"></i>
+  HTTPS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Express/" class="nav-link"><i class="undefined"></i>
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mysql/" class="nav-link"><i class="undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/categories/PNPM/" class="nav-link"><i class="undefined"></i>
+  PNPM
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      文档
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/theme-reco/" class="nav-link"><i class="undefined"></i>
+  live2d的心酸泪
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/record.html" class="nav-link"><i class="undefined"></i>
+  记录点滴
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/saysomething.html" class="nav-link"><i class="undefined"></i>
+  吐槽
+</a></li><li class="dropdown-item"><!----> <a href="/docs/theme-reco/live.html" class="nav-link"><i class="undefined"></i>
+  成长史
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/about/guide.html" class="nav-link"><i class="undefined"></i>
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/jynba" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>HTTPS 原理</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>jy</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">HTTPS 原理</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>jy</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>4/22/2023</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>CA</span><span class="tag-item" data-v-1ff7123e>HTTPS</span><span class="tag-item" data-v-1ff7123e>RSA</span><span class="tag-item" data-v-1ff7123e>AES</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="ssl-证书"><a href="#ssl-证书" class="header-anchor">#</a> SSL 证书</h2> <p>我们在访问浏览器的时候有时候会出现“你的连接不是专用连接”、或者“此站点的连接不安全”等情况，我们知道这是因为访问的站点是<strong>http</strong>而不是<strong>https</strong>，而浏览器识别后会显示不安全的情况。而 https 和 http 的区别主要在于有没有配置 ssl 证书，且有无加密，在服务器运营商那边配置了<strong>ssl 证书</strong>之后(会把 HTTP 默认端口:80 改为 HTTPS 默认端口:443)，将域名解析可以变成 https。而这背后的原理是怎么样的呢？</p> <p>首先正常的 TCP 三次握手是不变的。详情见之前的文章</p> <p>访问一个站点时，中间可能经过若干个中间节点（路由器转发数据包），很难保证中间是否存在窃听甚至篡改数据的中间者。http 协议本身并未涉及安全问题，是用明文形式传输。</p> <p>此时我们可以想想能否<strong>直接使用对称加密</strong>？对称加密的前提是要通信双方互相都有相同的对称密钥明文，通讯过程中由一方生成对称密钥的明文，再传输这显然是不现实的，因为对称密钥明文可能会被攻击者拦截。</p> <p><strong>不可抵赖性</strong>（不可篡改）：服务端将文件进行哈希加密后的密文（<strong>签名</strong>）用私钥加密；再将文件和密文都传过去； 自己用服务端的公钥解密，然后再对文件进行哈希，对比哈希后的密文，确定文件内容未被篡改。</p> <p>那如何获取到目标网站的公钥呢，进行 https 通信时，需要对方把公钥发给自己，但此时若是途径中间节点处，被篡改者调换成自己的公钥，然后用自己的私钥解密，则窃取了传输内容（接收方无法得知公钥是谁的）
+因此需要<strong>CA 机构</strong>，CA 机构用自己的私钥加密后传给服务器,这样附带有 CA 信息的密钥就没办法被中间篡改了。
+<strong>CA 机构</strong>有多级，操作系统中内置了最高级的 CA 机构，因此 CA 认证时会一级一级的认证（PKI 证书体系），最高级的 CA 机构会被用户信任。</p> <p>RSA 加密后，接下来的通讯是通过对称加密通信。</p> <p>总体的 HTTPS 原理如下图：
+客户端和服务端给对方传送一段随机数(client/server hello)以及确认 http 版本号（以保证生成的密钥不会每次都一样），再加上证书校验后客户端生成一个新的随机数 pre-master 三部分形成对称密钥，用服务器公钥加密后传回给服务器。 (服务器发生完证书还要告诉客户端 server hello done)
+通讯后推导出 Session Key 用于对称加密进行通讯
+<img src="/assets/img/2023-04-22-15-26-24.aca07ba6.png" alt="2023-04-22-15-26-24.png">（图片源自网络）</p> <p><a href="https://www.bilibili.com/video/BV11R4y1Y75L" target="_blank" rel="noopener noreferrer">参考视频 1<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://www.bilibili.com/video/BV1uY4y1D7Ng" target="_blank" rel="noopener noreferrer">参考视频 2<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
+视频里面说，CA 机构（不够被信任）加密后仍需向日志服务（受所有 CA 机构和服务端监督）提交证书详情，返回 SCT 数据，附带 SCT 数据的证书返回给服务端。服务端传输到客户端后，客户端会通过使用日志服务的公钥对 SCT 签名数据验证。（简而言之就是套了一层，不过此时是日志服务更权威）
+CT 机制日志信息记录所有的证书数据字符串，通过 Merkle tree 转为一段字符串，以确保信息不被篡改，达到去中心化。</p> <h2 id="des-加密"><a href="#des-加密" class="header-anchor">#</a> DES 加密</h2> <p>通过对<strong>对称密钥</strong>进行异或实现
+<strong>DES</strong>是一种将 64 比特的明文加密成 64 比特的密文的对称密码算法，它的密钥长度是 56 比特。转换为 56 位，2^56，容易被破解。
+<strong>3DES</strong>
+是为了增加 DES 的强度，将 DES 重复 3 次（加密-解密-加密）所得到的一种密码算法
+由于 DES 密钥的长度实质上是 56 比特，因此三重 DES 的密钥长度就是 56×3=168 比特, 加上用于错误检测的标志位 8x3, 共 192bit. 标准三重 DES 只会使用两个密钥所以 DES 密钥长度是 56x2 + 8x2=128</p> <p><strong>AES 加密</strong>，分组长度为 128 比特，密钥长度可以以 32 比特为单位在 128 比特到 256 比特的范围内进行选择（不过在 AES 的规格中，密钥长度只有 128、192 和 256 比特三种）。
+参考文章：[https://blog.csdn.net/AtlanSI/article/details/110631873]</p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后一次更新时间: </span> <span class="time">8/20/2023, 12:07:24 AM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/blogs/net/https.html#ssl-证书" class="sidebar-link reco-side-ssl-证书" data-v-70334359>SSL 证书</a></li><li class="level-2" data-v-70334359><a href="/blogs/net/https.html#des-加密" class="sidebar-link reco-side-des-加密" data-v-70334359>DES 加密</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:290px;display:none;" data-v-5775ee02>
+      欢迎来到jy的博客
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="250" height="320" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-cursor"></canvas><!----><div class="RibbonAnimation"></div></div></div>
+    <script src="/assets/js/app.db55d802.js" defer></script><script src="/assets/js/3.305d8068.js" defer></script><script src="/assets/js/1.e6f1548f.js" defer></script><script src="/assets/js/22.11f56e91.js" defer></script>
+  </body>
+</html>
