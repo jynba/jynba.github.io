@@ -12,14 +12,14 @@ hero:
     alt: logo
   actions:
     - theme: brand
-      text: 旧版博客(vuepress)
-      link: https://jynba.github.io/
-    - theme: alt
       text: 前端导航
       link: /resources/navigation/nav
     - theme: alt
       text: 时间轴
       link: /timeline/shuibi
+    - theme: brand
+      text: 项目经历
+      link: /projects/dxyy_project/
 features:
   - icon: ⚡️
     title: 积累实用工具

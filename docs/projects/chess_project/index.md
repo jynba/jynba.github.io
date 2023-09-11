@@ -1,49 +1,64 @@
-# GO定向越野—微信小程序
+# 基于大数据的象棋人工智能
 
-欢迎来到 GO定向越野—小程序 开源项目的文档！本项目旨在为校内和公司团建活动提供简便、富有体验的户外定向越野服务。
+目标：基于大数据的象棋人工智能。
+人类作为红方先走棋，AI 作为黑方根据人类走棋后的棋局状态做出相应的走棋策略，以尽可能战胜人类为依据。
 
-采用微信小程序云开发技术，结合腾讯位置服务 API 和 MQTT 协议通讯，为组织者和参与者提供开展定向运动的平台。该平台支持个性化定制的打卡点，实时共享位置信息，动态更新榜单数据，以及活跃的社区打卡体验等功能。
+## 项目演示链接
+
+中国象棋网页链接：
+https://chess.stm32-mqtt.top
+
+中国象棋 APP 下载链接:
+https://chess.stm32-mqtt.top/zhchess.apk
+
+![chess](https://raw.githubusercontent.com/jynba/chess_project/main/readme/chess.png)
 
 ## 主要工作
 
-### 1. MQTT 通讯
+- 前端：
+  使用框架：zh-chess、Element-plus
 
-- 通过EMQX平台接入 MQTT 协议实现通讯，使得活动中支持团队成员数十人同时共享位置。
-- 相比微信的共享位置功能，该项目在通讯方面无需添加好友，只需使用相同的频道即可互相通讯。
-- 异常处理：通过捕获异常并处理，实现断线重连机制，同时通过心跳包监测连接状态。
-- 防抖限制：对于重连请求做防抖限制，避免在短时间内多次连接，从而保证通讯稳定。
+导入 zh-chess 框架：npm i zh-chess canvas -D
 
-### 2. 安全通讯
+具体实现：在 onMounted 生命周期中实例化对象 game，监听 move、over 等状态，在 MoveCallback 回调中执行 update 方法更新棋盘
 
-- 引入 CryptoJS 工具包，采用 AES 算法对通讯进行加密传输，保障通讯安全性。
+- 数据处理
+  使用技术：Selenium。
 
-### 3. 优化用户体验
+棋谱数据来源：http://game.onegreen.net/chess/。
 
-- 添加防抖功能，防止频繁点击和通讯过程中的多次请求影响页面性能。
-- 通过此优化，提高了小程序的整体性能，为用户提供更好的体验。
+具体实现：使用 Selenium 模拟用户访问该棋谱网站并获得该页面 HTML 源代码，再通过正则表达式获取该局红黑双方下棋动作列表 movelist 并将收集到的数据写入 xlsx 文件。该网页数据获取完毕后，模拟点击网页上局棋谱，收集其他棋局数据，直至数据全部收集完毕。
 
-### 4. 资源管理与优化
+- 后端
+  框架选择：FastAPI （FastAPI 是一个用于构建 API 的现代、快速（高性能）的 web 框架）
 
-- 通过分包加载技术，压缩图片等方式解决小程序大小超过 2MB 的限制，保证应用正常运行。
+该项目中使用 FastAPI 编写了两个接口。
+1./predictChessAction/{chessboard_status} GET 请求
+• 作用：该接口接收一个棋局状态作为路径参数，用于预测下一步最可能的棋子移动。
+• 预测下一步棋子移动的实现细节：通过 Pyspark 使用 Spark 的强大统计功能来处理大规模数据集。
+① 创建 SparkSession，用于读取和处理数据。
+② 读取 chessboard.csv 文件，重命名列名为更有意义的名称：棋盘状态、预测的棋子移动、预测棋子移动后棋盘状态。
+③ 根据棋盘状态过滤数据，只保留匹配的行。
+④ 对过滤后的数据进行分组，统计每个预测棋子移动出现的次数并存储在 count 列。
+⑤ 根据 count 列降序排序，使出现次数最多的预测棋子移动排在最前。
+⑥ 将处理后的 DataFrame 转换为 JSON 格式返回。
+
+2./recordChessStatus POST 请求
+• 作用：该接口用于记录棋子移动后的棋盘状态。
+• 参数：json 类型：{
+"chessboardStatus": "string",
+"predictAction": "string",
+"chessboardStatusAfterPredictAction": "string",
+}
+• 后端成功收到参数后会将收到的数据写入 chessboard.csv 文件。
 
 ## 如何开始
 
-1. 克隆本仓库：`git clone https://github.com/jynba/dxyy_project.git`
-2. 进入项目目录：`cd dxyy_project`
-
-## 使用说明
-作品演示视频
-链接：https://pan.baidu.com/s/10vNRj9PqyQaLLDJPc3kXEQ?pwd=utwv 
-
-1. 打开微信小程序。
-2. 登录你的账号，或者创建一个新账号。
-3. 体验 GO定向越野—小程序 提供的定向越野活动功能，享受个性化的户外体验。
-
-![qrcode](https://raw.githubusercontent.com/jynba/dxyy_project/master/readme/qrcode.jpg)
+1. 克隆本仓库：`git clone https://github.com/jynba/chess_project.git`
+2. 进入项目目录：`cd chess_project`
 
 ## 贡献与许可
 
 欢迎贡献！如果你有改进或新功能的想法，请提交 pull request。
 
-本项目基于 [MIT 许可证](https://gpt.stm32-mqtt.top/LICENSE) 进行开源。
-
+本项目基于 MIT 许可证 进行开源。
