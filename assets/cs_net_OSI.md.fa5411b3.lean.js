@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as t,O as i}from"./chunks/framework.ed8d50c3.js";const u=JSON.parse('{"title":"OSI 七层网络参考模型","description":"","frontmatter":{},"headers":[],"relativePath":"cs/net/OSI.md","lastUpdated":1694439138000}'),o={name:"cs/net/OSI.md"},l=i("",3),s=[l];function r(_,n,c,d,h,S){return a(),t("div",null,s)}const I=e(o,[["render",r]]);export{u as __pageData,I as default};
