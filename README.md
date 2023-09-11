@@ -6,11 +6,17 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **7** 篇（上次更新: 2023-09-11）
+共计 **10** 篇（上次更新: 2023-09-11）
 
-## 2023 年 (共计 1 篇)
+## 2023 年 (共计 4 篇)
 
-1. 2023-09-11 —— [如何使用子域名 CNAME 到 github page?](https://github.com/jynba/jynba.github.io/issues/7)
+1. 2023-09-11 —— [如何中断已发出去的请求？AbortController/CancelToken.source](https://github.com/jynba/jynba.github.io/issues/10)
+
+2. 2023-09-11 —— [如何使用 JS 将驼峰转为横杠写法？(fooBarTest 变为 foo-bar-test)](https://github.com/jynba/jynba.github.io/issues/9)
+
+3. 2023-09-11 —— [如何使用 GeneralReadMe 自动同步 issue 到 readme](https://github.com/jynba/jynba.github.io/issues/8)
+
+4. 2023-09-11 —— [如何使用子域名 CNAME 到 github page?](https://github.com/jynba/jynba.github.io/issues/7)
 
 ## 2021 年 (共计 6 篇)
 
