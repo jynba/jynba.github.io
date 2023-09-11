@@ -1,0 +1,26 @@
+name: deployServer
+on:
+  push:
+    branches:
+      - main # main 分支有 push 行为时就触发这个 action
+
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: sftp
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: deploy file to server
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4 # Uses an action in the root directory
+        with:
+          username: 'root'
+          server: '${{ secrets.SERVER_IP }}' #ip或域名
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: 'docs/.vitepress/GRIT/*' # 对应我们项目build的文件夹路径
+          remote_path: '/home/ubuntu/docker/data/blog_back/nginx/html/'
+          sftpArgs: '-o ConnectTimeout=5'
+          # sftp_only: true
+          password: ${{secrets.SSH_PASSWORD_ROOT}}
+          # delete_remote_files: true

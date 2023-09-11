@@ -1,0 +1,31 @@
+{
+  "name": "vitepress-jyblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vitepress dev docs --port=5201",
+    "build": "vitepress build docs",
+    "build:github": "cross-env APP_BASE_PATH=/GRIT/ npm run build",
+    "preview": "vitepress preview docs",
+    "generate": "node scripts/generateReadme.js",
+    "prettier": "prettier --write \"README.md\" \"docs/timeline/shuibi.md\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mdit-vue/shared": "^0.12.0",
+    "cross-env": "^7.0.3",
+    "vitepress": "1.0.0-alpha.73",
+    "@types/node": "^20.5.9",
+    "sitemap": "^7.1.1",
+    "sass": "^1.66.1",
+    "mdit": "^0.0.1",
+    "@femm/prettier": "^1.0.1",
+    "fs-extra": "^11.1.0",
+    "octonode": "^0.10.2",
+    "prettier": "^2.8.2"
+  },
+  "prettier": "@femm/prettier"
+}
