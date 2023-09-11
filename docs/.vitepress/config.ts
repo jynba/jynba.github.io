@@ -9,7 +9,7 @@ export default defineConfig({
   title: 'GRIT',
   description: 'JY的前端小窝',
   outDir: '../dist',
-  base: process.env.APP_BASE_PATH || '/',
+  base: '/',
   lastUpdated: true, // 页面上展示最后更新的时间
   head,
 
@@ -26,7 +26,7 @@ export default defineConfig({
     logo: '/logo.ico', // 也是放在/public目录中
     nav,
     // 配置github地址
-    socialLinks: [{ icon: 'github', link: 'https://github.com/jynba/GRIT' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/jynba/' }],
 
     // 配置从导航栏进去后的侧边栏
     sidebar,

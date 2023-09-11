@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development vitepress dev docs --port=5201",
     "build": "vitepress build docs",
-    "build:github": "cross-env APP_BASE_PATH=/GRIT/ npm run build",
     "preview": "vitepress preview docs",
     "generate": "node scripts/generateReadme.js",
     "prettier": "prettier --write \"README.md\" \"docs/timeline/shuibi.md\""

@@ -2,7 +2,7 @@ const fs = require('fs-extra')
 const client = require('octonode').client()
 
 const USERNAME = 'jynba'
-const REPO_NAME = 'GRIT'
+const REPO_NAME = 'jynba.github.io'
 const REPO_URL = `${USERNAME}/${REPO_NAME}`
 
 const repo = client.repo(REPO_URL)
@@ -12,9 +12,9 @@ const MD_HEADER = `# jy-notes
 
 日常笔记记录（零零散散啥都记系列）
 
-> 更多博客内容可查看 [jy的前端小窝(新)](https://jynba.github.io/GRIT/) 或 [jy的小木屋(旧)](https://jynba.github.io)
+> 更多博客内容可查看 [jy的前端小窝(新)](https://jynba.github.io)
 >
-> [新写一篇小笔记](https://github.com/jynba/GRIT/issues/new)
+> [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 `
 
 const MD_FOOTER = `\n`
