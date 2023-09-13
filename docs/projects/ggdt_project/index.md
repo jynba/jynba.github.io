@@ -1,10 +1,13 @@
 # DGUT_Campus-navigation
 
 莞工地图
-目前用户量为 991 人（2023/9/11）(无宣传的情况下有这么多已经很不错了 QAQ)
-调用腾讯地图接口和插件
 
-![gh_23f543467c24_258](https://raw.githubusercontent.com/jynba/DGUT_Campus-navigation/main/image/gh_fd34d48c276b_258.jpg)
+- 目前用户量为 995 人（2023/9/13）(无宣传的情况下有这么多已经很不错了 QAQ)
+  ![x](https://raw.githubusercontent.com/jynba/DGUT_Campus-navigation/master/image/baf4f19d1cebe733de24786a3527d6f.png)
+- 原生微信小程序开发，调用腾讯地图接口和插件
+- github 地址：
+- 在线演示：
+  ![gh_23f543467c24_258](https://raw.githubusercontent.com/jynba/DGUT_Campus-navigation/main/image/gh_fd34d48c276b_258.jpg)
 
 ## **一、项目研究的目的与意义**
 
