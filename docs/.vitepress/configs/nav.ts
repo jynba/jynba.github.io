@@ -22,6 +22,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'Webpack', link: '/fe/webpack/webpack_basis' },
           { text: 'Vscode', link: '/fe/ide/vscode' },
           { text: '前端编程题', link: '/fe/js/coding_problem' },
+          { text: '微前端', link: '/fe/microFrontends/microFrontends' },
         ],
       },
     ],

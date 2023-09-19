@@ -24,7 +24,7 @@ keep-alive 是一个组件，这个组件中有三个属性，分别是 include�
 
 这里面有一个算法叫 LRU，如果有 key 就不停的取，如果超限了就采用 LRU 进行删除最近最久未使用的，从前面删除，LRU 就是将当前使用的往数组的后面移，在最前面的就是最久未使用的。
 
-**LRU 算法：最近最久使用算法** （维护一个最近最常使用的队列）
+**LRU 算法：最近最久未使用算法** （维护一个最近最常使用的队列）
 
 三、源码：
 
@@ -32,84 +32,82 @@ keep-alive 是一个组件，这个组件中有三个属性，分别是 include�
 
 ```js
 export default {
-	name: 'keep-alive',
-	abstract: true,
+  name: 'keep-alive',
+  abstract: true,
 
-	props: {
-		include: patternTypes,
-		exclude: patternTypes,
-		max: [String, Number],
-	},
+  props: {
+    include: patternTypes,
+    exclude: patternTypes,
+    max: [String, Number],
+  },
 
-	created() {
-		this.cache = Object.create(null); // 创建缓存列表
-		this.keys = []; // 创建缓存组件的key列表
-	},
+  created() {
+    this.cache = Object.create(null) // 创建缓存列表
+    this.keys = [] // 创建缓存组件的key列表
+  },
 
-	destroyed() {
-		for (const key in this.cache) {
-			// keep-alive销毁时,循环清空所有的缓存和key
-			pruneCacheEntry(this.cache, key, this.keys);
-		}
-	},
+  destroyed() {
+    for (const key in this.cache) {
+      // keep-alive销毁时,循环清空所有的缓存和key
+      pruneCacheEntry(this.cache, key, this.keys)
+    }
+  },
 
-	mounted() {
-		// 会监控include 和 include属性 进行组件的缓存处理
-		this.$watch('include', (val) => {
-			pruneCache(this, (name) => matches(val, name));
-		});
-		this.$watch('exclude', (val) => {
-			pruneCache(this, (name) => !matches(val, name));
-		});
-	},
+  mounted() {
+    // 会监控include 和 include属性 进行组件的缓存处理
+    this.$watch('include', (val) => {
+      pruneCache(this, (name) => matches(val, name))
+    })
+    this.$watch('exclude', (val) => {
+      pruneCache(this, (name) => !matches(val, name))
+    })
+  },
 
-	render() {
-		const slot = this.$slots.default; // 会默认拿插槽
-		const vnode: VNode = getFirstComponentChild(slot); // 只缓存第一个组件
-		const componentOptions: ?VNodeComponentOptions =
-			vnode && vnode.componentOptions;
-		if (componentOptions) {
-			// check pattern
-			const name: ?string = getComponentName(componentOptions); // 取出组件的名字
-			const { include, exclude } = this;
-			if (
-				// 判断是否缓存
-				// not included
-				(include && (!name || !matches(include, name))) ||
-				// excluded
-				(exclude && name && matches(exclude, name))
-			) {
-				return vnode;
-			}
-			const { cache, keys } = this;
-			const key: ?string =
-				vnode.key == null
-					? // same constructor may get registered as different local components
-					  // so cid alone is not enough (#3269)
-					  componentOptions.Ctor.cid +
-					  (componentOptions.tag ? `::${componentOptions.tag}` : '')
-					: vnode.key;
-			// 如果组件没key 就自己通过 组件的标签和key和cid 拼接一个key
-			if (cache[key]) {
-				// 如果缓存中有key
-				vnode.componentInstance = cache[key].componentInstance; // 直接拿到组件实例
-				// make current key freshest
-				remove(keys, key); // 删除当前的key // LRU 最近最久未使用法
-				keys.push(key); // 并将key放到缓存的最后面
-			} else {
-				cache[key] = vnode; // 缓存vnode
-				keys.push(key); // 将key 存入
-				// prune oldest entry
-				if (this.max && keys.length > parseInt(this.max)) {
-					// 缓存的太多超过了max就需要删除掉
+  render() {
+    const slot = this.$slots.default // 会默认拿插槽
+    const vnode: VNode = getFirstComponentChild(slot) // 只缓存第一个组件
+    const componentOptions: ?VNodeComponentOptions = vnode && vnode.componentOptions
+    if (componentOptions) {
+      // check pattern
+      const name: ?string = getComponentName(componentOptions) // 取出组件的名字
+      const { include, exclude } = this
+      if (
+        // 判断是否缓存
+        // not included
+        (include && (!name || !matches(include, name))) ||
+        // excluded
+        (exclude && name && matches(exclude, name))
+      ) {
+        return vnode
+      }
+      const { cache, keys } = this
+      const key: ?string =
+        vnode.key == null
+          ? // same constructor may get registered as different local components
+            // so cid alone is not enough (#3269)
+            componentOptions.Ctor.cid + (componentOptions.tag ? `::${componentOptions.tag}` : '')
+          : vnode.key
+      // 如果组件没key 就自己通过 组件的标签和key和cid 拼接一个key
+      if (cache[key]) {
+        // 如果缓存中有key
+        vnode.componentInstance = cache[key].componentInstance // 直接拿到组件实例
+        // make current key freshest
+        remove(keys, key) // 删除当前的key // LRU 最近最久未使用法
+        keys.push(key) // 并将key放到缓存的最后面
+      } else {
+        cache[key] = vnode // 缓存vnode
+        keys.push(key) // 将key 存入
+        // prune oldest entry
+        if (this.max && keys.length > parseInt(this.max)) {
+          // 缓存的太多超过了max就需要删除掉
 
-					pruneCacheEntry(cache, keys[0], keys, this._vnode); // 要删除第0个 但是现在渲染的就是第0个
-				}
-			}
+          pruneCacheEntry(cache, keys[0], keys, this._vnode) // 要删除第0个 但是现在渲染的就是第0个
+        }
+      }
 
-			vnode.data.keepAlive = true; // 并且标准keep-alive下的组件是一个缓存组件
-		}
-		return vnode || (slot && slot[0]); // 返回当前的虚拟节点
-	},
-};
+      vnode.data.keepAlive = true // 并且标准keep-alive下的组件是一个缓存组件
+    }
+    return vnode || (slot && slot[0]) // 返回当前的虚拟节点
+  },
+}
 ```

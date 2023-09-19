@@ -66,7 +66,7 @@ HTTP 协议是无状态的，也就是说，如果我们已经认证了一个用
 1. **存储位置：** Cookie 是存储在客户端浏览器中的小文本文件。每当浏览器发送请求到同一域名下的服务器时，它会自动将相应的 Cookie 信息附加到请求头中。
 2. **大小限制：** 单个 Cookie 的大小通常有限制，通常在几 KB 到几十 KB 之间，不同浏览器可能有不同的限制。
 3. **跨域限制：** Cookie 默认情况下只能在设置它的域名下使用，跨域请求不会自动携带 Cookie。
-4. **安全性：** Cookie 可以设置为 HttpOnly，防止被 JavaScript 访问，提高安全性。
+4. **安全性：** Cookie 可以设置为 HttpOnly，防止被 JavaScript 访问，提高安全性。设置 SameSite 来防止 CSRF 攻击
 
 **Token：**
 
@@ -74,3 +74,140 @@ HTTP 协议是无状态的，也就是说，如果我们已经认证了一个用
 2. **大小限制：** Token 的大小没有明确限制，但过大的 Token 可能会导致网络传输效率下降。
 3. **跨域限制：** Token 可以在跨域请求中手动传递，通常通过设置请求头的方式传递。
 4. **安全性：** Token 可以采用加密算法来保证安全性，但它可能需要开发者自己来实现。Token 也可以设置过期时间，有时会自动刷新，增加安全性。
+
+## 具体实现
+
+前端代码：
+
+```
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <span>账号</span> <input id="name" type="text">
+        </div>
+        <div>
+            <span>密码</span> <input id="password" type="password">
+        </div>
+        <button id="btn">登录</button>
+    </div>
+
+    <script>
+        const btn = document.querySelector('#btn')
+        const name = document.querySelector('#name')
+        const password = document.querySelector('#password')
+
+        btn.onclick = () => {
+            fetch('http://localhost:3000/api/login', {
+                body: JSON.stringify({
+                    name: name.value,
+                    password: password.value
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+            }).then(res => res.json()).then(res => {
+                localStorage.setItem('token', res.token)
+                location.href = './list.html'
+            })
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- 具体调用接口 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+
+<body>
+    <script>
+        console.log(localStorage.getItem('token'))
+        fetch('http://localhost:3000/api/list', {
+            headers: {
+                'Authorization':`Bearer ${localStorage.getItem('token')}`
+            }
+        }).then(res => res.json()).then(res => {
+            console.log(res)
+        })
+    </script>
+</body>
+
+</html>
+```
+
+后端代码：
+
+```
+import express from 'express';
+import jwt from 'jsonwebtoken';
+import cors from 'cors';
+const app = express();
+const secretKey = 'jynba' //加盐
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(cors())
+
+let user = { name: 'admin', password: '123456', id: 1 } //模拟用户信息
+
+app.post('/api/login', (req, res) => {
+    console.log(req.body)
+    if (req.body.name == user.name && req.body.password == user.password) {
+        res.json({
+            message: '登录成功',
+            code: 200,
+            token: jwt.sign({ id: user.id }, secretKey, { expiresIn: 60 * 60 * 24 }) //生成token
+        })
+    } else {
+        res.json({
+            message: '登录失败',
+            code: 400
+        })
+    }
+})
+
+
+app.get('/api/list', (req, res) => {
+    console.log(req.headers.authorization)
+    jwt.verify(req.headers.authorization as string, secretKey, (err, data) => { //验证token
+        if (err) {
+            res.json({
+                message: 'token失效',
+                code: 403
+            })
+        } else {
+            res.json({
+                message: '获取列表成功',
+                code: 200,
+                data: [
+                    { name: '张三', age: 18 },
+                    { name: '李四', age: 20 },
+                ]
+            })
+        }
+    })
+})
+
+app.listen(3000, () => {
+    console.log('server is running 3000');
+})
+```
