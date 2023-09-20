@@ -1,20 +1,16 @@
-# requestIdleCallback和requestAnimationFrame
+# requestIdleCallback 和 requestAnimationFrame
 
 ### 页面流畅与 FPS
 
 页面是一帧一帧绘制出来的，当每秒绘制的帧数（FPS）达到 60 时，页面是流畅的，小于这个值时，用户会感觉到卡顿。
 
-1s 60帧，所以每一帧分到的时间是 1000/60 ≈ 16 ms。所以我们书写代码时力求不让一帧的工作量超过 16ms。
+1s 60 帧，所以每一帧分到的时间是 1000/60 ≈ 16 ms。所以我们书写代码时力求不让一帧的工作量超过 16ms。
 
 ### Frame
 
 那么浏览器每一帧都需要完成哪些工作？
 
-
-
 ![image](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/5/22/16adf75ec9cc962d~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp)
-
-
 
 通过上图可看到，一帧内需要完成如下六个步骤的任务：
 
@@ -29,29 +25,23 @@
 
 **一帧内做了什么事呢**
 
-1.处理用户的事件，就是event 例如 click，input change 等。
+1.处理用户的事件，就是 event 例如 click，input change 等。
 
 2.执行定时器任务
 
 3.执行 requestAnimationFrame
 
-4.执行dom 的回流与重绘
+4.执行 dom 的回流与重绘
 
 5.计算更新图层的绘制指令
 
 6.绘制指令合并主线程 如果有空余时间会执行 `requestidlecallback`
 
-
-
 ### requestIdleCallback
 
 上面六个步骤完成后没超过 16 ms，说明时间有富余，此时就会执行 `requestIdleCallback` 里注册的任务。
 
-
-
 ![image](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/5/22/16adf75ec9c24938~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp)
-
-
 
 从上图也可看出，和 **`requestAnimationFrame` 每一帧必定会执行不同，`requestIdleCallback` 是捡浏览器空闲来执行任务。**
 
@@ -88,7 +78,7 @@ var handle = window.requestIdleCallback(callback[, options])
 
   - `timeout`。表示超过这个时间后，如果任务还没执行，则强制执行，不必等待空闲。
 
-> `IdleDeadline`对象参考MDN:[developer.mozilla.org/zh-CN/docs/…](https://link.juejin.cn?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FAPI%2FIdleDeadline)
+> `IdleDeadline`对象参考 MDN:[developer.mozilla.org/zh-CN/docs/…](https://link.juejin.cn?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FAPI%2FIdleDeadline)
 
 #### 示例
 
@@ -142,11 +132,7 @@ function work () {
 
 在没有 `requestAnimationFrame` 方法的时候，执行动画，我们可能使用 `setTimeout` 或 `setInterval` 来触发视觉变化；但是这种做法的问题是：回调函数执行的时间是不固定的，可能刚好就在末尾，或者直接就不执行了，经常会引起丢帧而导致页面卡顿。
 
-
-
 ![image](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/5/22/16adf75ec9bf5c8a~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp)
-
-
 
 归根到底发生上面这个问题的原因在于时机，也就是浏览器要知道何时对回调函数进行响应。**`setTimeout` 或 `setInterval` 是使用定时器来触发回调函数的，而定时器并无法保证能够准确无误的执行，有许多因素会影响它的运行时机，比如说：当有同步代码执行时，会先等同步代码执行完毕，异步队列中没有其他任务，才会轮到自己执行**。并且，我们知道每一次重新渲染的最佳时间大约是 16.6 ms，如果定时器的时间间隔过短，就会造成 [过度渲染](https://link.juejin.cn?target=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%3A%2F%2Fwww.zhangxinxu.com%2Fwordpress%2F2013%2F09%2Fcss3-animation-requestanimationframe-tween-%E5%8A%A8%E7%94%BB%E7%AE%97%E6%B3%95%2F)，增加开销；过长又会延迟渲染，使动画不流畅。
 
@@ -166,15 +152,12 @@ run();
 
 如果想要实现动画效果，每一次执行回调函数，必须要再次调用 `requestAnimationFrame` 方法；与 `setTimeout` 实现动画效果的方式是一样的，只不过不需要设置时间间隔。
 
-
-
 参考：https://juejin.cn/post/6844903848981577735
-
 
 这个跟`react` 的 `fiber` 的有什么关系?
 
-因为react也有该机制 但是react并没有用 `requestidlecallback`，说是这个东西经过测试可能会超过16ms，超过16ms绘制就会看起来很卡 所以react16是用的 `requestAnimationFrame + postMessage` 实现的
+因为 react 也有该机制 但是 react 并没有用 `requestidlecallback`，说是这个东西经过测试可能会超过 16ms，超过 16ms 绘制就会看起来很卡 所以 react16 是用的 `requestAnimationFrame + postMessage` 实现的
 
-那为什么不用`setTimeOut`` setTimeOut` 设置为0 也会有一个最小毫秒延迟4ms，所以是用了`postMessage`，react18又换成了`MessageChannel` 实现了队列方式去执行任务。
+那为什么不用` setTimeOut`` setTimeOut ` 设置为 0 也会有一个最小毫秒延迟 4ms，所以是用了`postMessage`，react18 又换成了`MessageChannel` 实现了队列方式去执行任务。
 
 参考：https://juejin.cn/post/7212603829572911159
