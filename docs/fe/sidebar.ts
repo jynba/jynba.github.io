@@ -62,6 +62,7 @@ const fe: DefaultTheme.SidebarItem[] = [
       { text: 'Vitepress', link: '/fe/vuepress/vitepress' },
       { text: '前端编程题', link: '/fe/js/coding_problem' },
       { text: '微前端', link: '/fe/microFrontends/microFrontends' },
+      { text:'无界_微前端框架',link:'/fe/microFrontends/wujie' },
       { text: 'requestIdleCallback和requestAnimationFrame', link: '/fe/microFrontends/rAF_rSC' },
     ],
   },
