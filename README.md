@@ -6,39 +6,41 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **21** 篇（上次更新: 2023-09-23）
+共计 **22** 篇（上次更新: 2023-09-24）
 
-## 2023 年 (共计 15 篇)
+## 2023 年 (共计 16 篇)
 
-1. 2023-09-23 —— [如何实现 add[2][3][4] = 9、add[4]+2 = 6 ?](https://github.com/jynba/jynba.github.io/issues/21)
+1. 2023-09-24 —— [前端工程化之代码提交规范（husky、commitizen、cz、lint-staged）配置](https://github.com/jynba/jynba.github.io/issues/22)
 
-2. 2023-09-23 —— [如何使用 draggable 实现拖拽上传图片](https://github.com/jynba/jynba.github.io/issues/20)
+2. 2023-09-23 —— [如何实现 add[2][3][4] = 9、add[4]+2 = 6 ?](https://github.com/jynba/jynba.github.io/issues/21)
 
-3. 2023-09-22 —— [什么是 Symbol.toPrimitive？](https://github.com/jynba/jynba.github.io/issues/19)
+3. 2023-09-23 —— [如何使用 draggable 实现拖拽上传图片](https://github.com/jynba/jynba.github.io/issues/20)
 
-4. 2023-09-21 —— [JS 中的 Proxy 和 Reflect 和 Object.defineProperty 是什么？](https://github.com/jynba/jynba.github.io/issues/18)
+4. 2023-09-22 —— [什么是 Symbol.toPrimitive？](https://github.com/jynba/jynba.github.io/issues/19)
 
-5. 2023-09-21 —— [什么是 WebAssembly(wasm)？](https://github.com/jynba/jynba.github.io/issues/17)
+5. 2023-09-21 —— [JS 中的 Proxy 和 Reflect 和 Object.defineProperty 是什么？](https://github.com/jynba/jynba.github.io/issues/18)
 
-6. 2023-09-20 —— [nginx 实现反向代理和负载均衡（待补充）](https://github.com/jynba/jynba.github.io/issues/16)
+6. 2023-09-21 —— [什么是 WebAssembly(wasm)？](https://github.com/jynba/jynba.github.io/issues/17)
 
-7. 2023-09-20 —— [DockerFile 的多阶段构建（待补充）](https://github.com/jynba/jynba.github.io/issues/15)
+7. 2023-09-20 —— [nginx 实现反向代理和负载均衡（待补充）](https://github.com/jynba/jynba.github.io/issues/16)
 
-8. 2023-09-20 —— [重装系统前需要注意什么？](https://github.com/jynba/jynba.github.io/issues/14)
+8. 2023-09-20 —— [DockerFile 的多阶段构建（待补充）](https://github.com/jynba/jynba.github.io/issues/15)
 
-9. 2023-09-11 —— [TypeScript 内置类型](https://github.com/jynba/jynba.github.io/issues/13)
+9. 2023-09-20 —— [重装系统前需要注意什么？](https://github.com/jynba/jynba.github.io/issues/14)
 
-10. 2023-09-11 —— [TreeShaking 是什么及其原理](https://github.com/jynba/jynba.github.io/issues/12)
+10. 2023-09-11 —— [TypeScript 内置类型](https://github.com/jynba/jynba.github.io/issues/13)
 
-11. 2023-09-11 —— [前端打包时的 cjs、es、umd 文件的区别](https://github.com/jynba/jynba.github.io/issues/11)
+11. 2023-09-11 —— [TreeShaking 是什么及其原理](https://github.com/jynba/jynba.github.io/issues/12)
 
-12. 2023-09-11 —— [如何中断已发出去的请求？AbortController/CancelToken.source](https://github.com/jynba/jynba.github.io/issues/10)
+12. 2023-09-11 —— [前端打包时的 cjs、es、umd 文件的区别](https://github.com/jynba/jynba.github.io/issues/11)
 
-13. 2023-09-11 —— [如何使用 JS 将驼峰转为横杠写法？(fooBarTest 变为 foo-bar-test)](https://github.com/jynba/jynba.github.io/issues/9)
+13. 2023-09-11 —— [如何中断已发出去的请求？AbortController/CancelToken.source](https://github.com/jynba/jynba.github.io/issues/10)
 
-14. 2023-09-11 —— [如何使用 GeneralReadMe 自动同步 issue 到 readme](https://github.com/jynba/jynba.github.io/issues/8)
+14. 2023-09-11 —— [如何使用 JS 将驼峰转为横杠写法？(fooBarTest 变为 foo-bar-test)](https://github.com/jynba/jynba.github.io/issues/9)
 
-15. 2023-09-11 —— [如何使用子域名 CNAME 到 github page?](https://github.com/jynba/jynba.github.io/issues/7)
+15. 2023-09-11 —— [如何使用 GeneralReadMe 自动同步 issue 到 readme](https://github.com/jynba/jynba.github.io/issues/8)
+
+16. 2023-09-11 —— [如何使用子域名 CNAME 到 github page?](https://github.com/jynba/jynba.github.io/issues/7)
 
 ## 2021 年 (共计 6 篇)
 
