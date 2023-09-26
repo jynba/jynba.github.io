@@ -8,7 +8,7 @@ hero:
   text: 风起于青萍之末
   tagline: fig. big accomplishments come from an accumulation of little achievements made one by one
   image:
-    src: portrait.svg
+    src: portrait.png
     alt: logo
   actions:
     - theme: brand
