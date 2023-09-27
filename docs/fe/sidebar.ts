@@ -36,22 +36,6 @@ const fe: DefaultTheme.SidebarItem[] = [
     ],
   },
   {
-    text: 'React',
-    collapsed: true,
-    items: [
-      { text: 'React 入门', link: '/fe/react/react_basis' },
-      { text: 'React 面向组件编程', link: '/fe/react/react_for_components' },
-      { text: 'React 脚手架', link: '/fe/react/react_cli' },
-      { text: 'React 网络请求', link: '/fe/react/react_network_request' },
-      { text: 'React Router5', link: '/fe/react/react_router5' },
-      { text: 'React UI 组件库', link: '/fe/react/react_ui' },
-      { text: 'Redux', link: '/fe/react/redux' },
-      { text: 'React Redux', link: '/fe/react/react_redux' },
-      { text: 'React 扩展', link: '/fe/react/react_extensions' },
-      { text: 'React Router6', link: '/fe/react/react_router6' },
-    ],
-  },
-  {
     text: 'Other',
     collapsed: true,
     items: [

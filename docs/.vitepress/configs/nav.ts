@@ -15,7 +15,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '扎马步',
         items: [
-          { text: 'HTML5 / CSS3', link: '/fe/css/css' },
+          { text: 'HTML5 / CSS3', link: '/fe/html/html' },
           { text: 'JavaScript', link: '/fe/js/what_is_js' },
           { text: 'Vue3', link: '/fe/vue/vue_core_basis' },
           { text: 'Git', link: '/fe/git/git' },
