@@ -12,14 +12,16 @@
 ### iframe 方案
 
 - 特点
-  接入比较简单
-  隔离非常稳完美
+
+  1. 接入比较简单
+  2. 隔离非常完美
 
 - 不足
-  dom 割裂感严重，弹框只能在 iframe
-  通讯非常麻烦,只能靠 postmessage，而且刷新 iframe url 状态丢失
-  前进后退按钮无效
-  白屏时间太长，对于 SPA 应用来说无法接受
+
+  1. dom 割裂感严重，弹框只能在 iframe
+  2. 通讯非常麻烦,只能靠 postmessage，而且刷新 iframe url 状态丢失
+  3. 前进后退按钮无效
+  4. 白屏时间太长，对于 SPA 应用来说无法接受
 
 ### qiankun 方案
 
@@ -37,7 +39,7 @@ qiankun 方案是基于 single-spa 的微前端方案。
   3. 无法同时激活多个子应用，也不支持子应用保活；
   4. 无法支持 vite 等 esmodule 脚本运行；
 
-底层原理 js 沙箱使用的是 proxy 进行快照然后用用 with(window){} 包裹起来 with 内的 window 其实就是 proxy.window 我们声明变量 var name = 'jy' 实际这个变量挂到了 proxy.window 并不是真正的 window
+底层原理 js 沙箱使用的是 proxy 进行快照然后用 with(window){} 包裹起来 with 内的 window 其实就是 proxy.window 我们声明变量 var name = 'jy' 实际这个变量挂到了 proxy.window 并不是真正的 window
 css 沙箱原理 第一个就是 shadowDom 隔离 第二个类似于 Vue 的 scoped [data-qiankun-426732]
 
 ### micro-app 方案
@@ -78,7 +80,7 @@ EMP 方案是基于 webpack 5 module federation 的微前端方案。
 
 ### 无界微前端 方案
 
-预览 demo wujie-micro.github.io/demo-main-v…\*\*
+预览 [demo](https://wujie-micro.github.io/doc/wujie/)
 
 - 特点
   1. 接入简单只需要四五行代码

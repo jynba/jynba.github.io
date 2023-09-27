@@ -44,6 +44,7 @@ const fe: DefaultTheme.SidebarItem[] = [
       { text: 'Vscode', link: '/fe/ide/vscode' },
       { text: 'Vuepress', link: '/fe/vuepress/vuepress' },
       { text: 'Vitepress', link: '/fe/vuepress/vitepress' },
+      { text: 'Jwt', link: '/fe/request/jwt' },
       { text: '前端编程题', link: '/fe/js/coding_problem' },
       { text: '微前端', link: '/fe/microFrontends/microFrontends' },
       { text:'无界_微前端框架',link:'/fe/microFrontends/wujie' },

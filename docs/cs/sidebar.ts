@@ -20,16 +20,8 @@ const cs = [
 				link: '/cs/net/OSI',
 			},
 			{
-				text: 'OSI七层网络参考模型',
-				link: '/cs/net/OSI',
-			},
-			{
 				text: '什么是 JWT?',
 				link: '/cs/net/jwt',
-			},
-			{
-				text: 'HTTPS原理',
-				link: '/cs/net/https',
 			},
 			{
 				text: 'HTTP 缓存机制',
