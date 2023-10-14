@@ -6,57 +6,59 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **30** 篇（上次更新: 2023-10-14）
+共计 **31** 篇（上次更新: 2023-10-14）
 
-## 2023 年 (共计 24 篇)
+## 2023 年 (共计 25 篇)
 
-1. 2023-10-14 —— [DOMContentLoaded 与 Load 详解](https://github.com/jynba/jynba.github.io/issues/30)
+1. 2023-10-14 —— [flex：1 意味着什么](https://github.com/jynba/jynba.github.io/issues/31)
 
-2. 2023-10-09 —— [vue3 主要的亮点功能](https://github.com/jynba/jynba.github.io/issues/29)
+2. 2023-10-14 —— [DOMContentLoaded 与 Load 详解](https://github.com/jynba/jynba.github.io/issues/30)
 
-3. 2023-10-05 —— [grpc 与 http2(待补充)](https://github.com/jynba/jynba.github.io/issues/28)
+3. 2023-10-09 —— [vue3 主要的亮点功能](https://github.com/jynba/jynba.github.io/issues/29)
 
-4. 2023-10-02 —— [网页离线缓存（待补充）](https://github.com/jynba/jynba.github.io/issues/27)
+4. 2023-10-05 —— [grpc 与 http2(待补充)](https://github.com/jynba/jynba.github.io/issues/28)
 
-5. 2023-09-28 —— [monorepo 和 submodule（待补充）](https://github.com/jynba/jynba.github.io/issues/26)
+5. 2023-10-02 —— [网页离线缓存（待补充）](https://github.com/jynba/jynba.github.io/issues/27)
 
-6. 2023-09-27 —— [浏览器一帧都会干些什么？](https://github.com/jynba/jynba.github.io/issues/25)
+6. 2023-09-28 —— [monorepo 和 submodule（待补充）](https://github.com/jynba/jynba.github.io/issues/26)
 
-7. 2023-09-26 —— [图片压缩系列](https://github.com/jynba/jynba.github.io/issues/24)
+7. 2023-09-27 —— [浏览器一帧都会干些什么？](https://github.com/jynba/jynba.github.io/issues/25)
 
-8. 2023-09-26 —— [微信小程序中骨架屏怎么用？骨架屏有什么好处？](https://github.com/jynba/jynba.github.io/issues/23)
+8. 2023-09-26 —— [图片压缩系列](https://github.com/jynba/jynba.github.io/issues/24)
 
-9. 2023-09-24 —— [前端工程化之代码提交规范（husky、commitizen、cz、lint-staged）配置](https://github.com/jynba/jynba.github.io/issues/22)
+9. 2023-09-26 —— [微信小程序中骨架屏怎么用？骨架屏有什么好处？](https://github.com/jynba/jynba.github.io/issues/23)
 
-10. 2023-09-23 —— [如何实现 add[2][3][4] = 9、add[4]+2 = 6 ?](https://github.com/jynba/jynba.github.io/issues/21)
+10. 2023-09-24 —— [前端工程化之代码提交规范（husky、commitizen、cz、lint-staged）配置](https://github.com/jynba/jynba.github.io/issues/22)
 
-11. 2023-09-23 —— [如何使用 draggable 实现拖拽上传图片](https://github.com/jynba/jynba.github.io/issues/20)
+11. 2023-09-23 —— [如何实现 add[2][3][4] = 9、add[4]+2 = 6 ?](https://github.com/jynba/jynba.github.io/issues/21)
 
-12. 2023-09-22 —— [什么是 Symbol.toPrimitive？](https://github.com/jynba/jynba.github.io/issues/19)
+12. 2023-09-23 —— [如何使用 draggable 实现拖拽上传图片](https://github.com/jynba/jynba.github.io/issues/20)
 
-13. 2023-09-21 —— [JS 中的 Proxy 和 Reflect 和 Object.defineProperty 是什么？](https://github.com/jynba/jynba.github.io/issues/18)
+13. 2023-09-22 —— [什么是 Symbol.toPrimitive？](https://github.com/jynba/jynba.github.io/issues/19)
 
-14. 2023-09-21 —— [什么是 WebAssembly(wasm)？](https://github.com/jynba/jynba.github.io/issues/17)
+14. 2023-09-21 —— [JS 中的 Proxy 和 Reflect 和 Object.defineProperty 是什么？](https://github.com/jynba/jynba.github.io/issues/18)
 
-15. 2023-09-20 —— [nginx 反向代理和负载均衡](https://github.com/jynba/jynba.github.io/issues/16)
+15. 2023-09-21 —— [什么是 WebAssembly(wasm)？](https://github.com/jynba/jynba.github.io/issues/17)
 
-16. 2023-09-20 —— [DockerFile 的多阶段构建（待补充）](https://github.com/jynba/jynba.github.io/issues/15)
+16. 2023-09-20 —— [nginx 反向代理和负载均衡](https://github.com/jynba/jynba.github.io/issues/16)
 
-17. 2023-09-20 —— [重装系统前需要注意什么？](https://github.com/jynba/jynba.github.io/issues/14)
+17. 2023-09-20 —— [DockerFile 的多阶段构建（待补充）](https://github.com/jynba/jynba.github.io/issues/15)
 
-18. 2023-09-11 —— [TypeScript 内置类型](https://github.com/jynba/jynba.github.io/issues/13)
+18. 2023-09-20 —— [重装系统前需要注意什么？](https://github.com/jynba/jynba.github.io/issues/14)
 
-19. 2023-09-11 —— [TreeShaking 是什么及其原理](https://github.com/jynba/jynba.github.io/issues/12)
+19. 2023-09-11 —— [TypeScript 内置类型](https://github.com/jynba/jynba.github.io/issues/13)
 
-20. 2023-09-11 —— [前端打包时的 cjs、es、umd 文件的区别](https://github.com/jynba/jynba.github.io/issues/11)
+20. 2023-09-11 —— [TreeShaking 是什么及其原理](https://github.com/jynba/jynba.github.io/issues/12)
 
-21. 2023-09-11 —— [如何中断已发出去的请求？AbortController/CancelToken.source](https://github.com/jynba/jynba.github.io/issues/10)
+21. 2023-09-11 —— [前端打包时的 cjs、es、umd 文件的区别](https://github.com/jynba/jynba.github.io/issues/11)
 
-22. 2023-09-11 —— [如何使用 JS 将驼峰转为横杠写法？(fooBarTest 变为 foo-bar-test)](https://github.com/jynba/jynba.github.io/issues/9)
+22. 2023-09-11 —— [如何中断已发出去的请求？AbortController/CancelToken.source](https://github.com/jynba/jynba.github.io/issues/10)
 
-23. 2023-09-11 —— [如何使用 GeneralReadMe 自动同步 issue 到 readme](https://github.com/jynba/jynba.github.io/issues/8)
+23. 2023-09-11 —— [如何使用 JS 将驼峰转为横杠写法？(fooBarTest 变为 foo-bar-test)](https://github.com/jynba/jynba.github.io/issues/9)
 
-24. 2023-09-11 —— [如何使用子域名 CNAME 到 github page?](https://github.com/jynba/jynba.github.io/issues/7)
+24. 2023-09-11 —— [如何使用 GeneralReadMe 自动同步 issue 到 readme](https://github.com/jynba/jynba.github.io/issues/8)
+
+25. 2023-09-11 —— [如何使用子域名 CNAME 到 github page?](https://github.com/jynba/jynba.github.io/issues/7)
 
 ## 2021 年 (共计 6 篇)
 
