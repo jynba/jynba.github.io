@@ -6,7 +6,11 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **35** 篇（上次更新: 2023-11-14）
+共计 **36** 篇（上次更新: 2024-03-18）
+
+## 2024 年 (共计 1 篇)
+
+1. 2024-03-18 —— [nginx proxy manger 中部署 ssl 证书出现问题： 安装 zope 包](https://github.com/jynba/jynba.github.io/issues/36)
 
 ## 2023 年 (共计 29 篇)
 
