@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as l}from"./chunks/framework.ed8d50c3.js";const b=JSON.parse('{"title":"CSS 那些事儿","description":"","frontmatter":{},"headers":[],"relativePath":"fe/css/css.md","lastUpdated":1710747938000}'),p={name:"fe/css/css.md"},e=l("",104),o=[e];function r(t,c,i,D,y,F){return a(),n("div",null,o)}const d=s(p,[["render",r]]);export{b as __pageData,d as default};
