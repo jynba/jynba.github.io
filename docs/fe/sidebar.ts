@@ -40,6 +40,7 @@ const fe: DefaultTheme.SidebarItem[] = [
     collapsed: true,
     items: [
       { text: 'Git指令', link: '/fe/git/git' },
+      { text: 'UniApp', link: '/fe/uniapp/uniapp' },
       { text: 'Webpack', link: '/fe/webpack/webpack_basis' },
       { text: 'Vscode', link: '/fe/ide/vscode' },
       { text: 'Vuepress', link: '/fe/vuepress/vuepress' },
@@ -47,7 +48,7 @@ const fe: DefaultTheme.SidebarItem[] = [
       { text: 'Jwt', link: '/fe/request/jwt' },
       { text: '前端编程题', link: '/fe/js/coding_problem' },
       { text: '微前端', link: '/fe/microFrontends/microFrontends' },
-      { text:'无界_微前端框架',link:'/fe/microFrontends/wujie' },
+      { text: '无界_微前端框架', link: '/fe/microFrontends/wujie' },
       { text: 'requestIdleCallback和requestAnimationFrame', link: '/fe/microFrontends/rAF_rSC' },
     ],
   },
