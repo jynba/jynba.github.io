@@ -6,23 +6,25 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **42** 篇（上次更新: 2024-04-08）
+共计 **43** 篇（上次更新: 2024-04-08）
 
-## 2024 年 (共计 7 篇)
+## 2024 年 (共计 8 篇)
 
-1. 2024-04-08 —— [在 vite 中通过 import.meta.glob 读取 modules 文件夹中的所有文件名称](https://github.com/jynba/jynba.github.io/issues/42)
+1. 2024-04-08 —— [如何通过一个配置将微信小程序的首屏加载速度提高一倍？](https://github.com/jynba/jynba.github.io/issues/43)
 
-2. 2024-03-26 —— [ElementUI 表单项关联校验](https://github.com/jynba/jynba.github.io/issues/41)
+2. 2024-04-08 —— [在 vite 中通过 import.meta.glob 读取 modules 文件夹中的所有文件名称](https://github.com/jynba/jynba.github.io/issues/42)
 
-3. 2024-03-25 —— [为什么 console.log 打印的对象(数组)和展开的内容不对应？](https://github.com/jynba/jynba.github.io/issues/40)
+3. 2024-03-26 —— [ElementUI 表单项关联校验](https://github.com/jynba/jynba.github.io/issues/41)
 
-4. 2024-03-25 —— [uni-app 中的 uni-easyinput 添加当 type 为 textarea 时的 disable-default-padding 属性](https://github.com/jynba/jynba.github.io/issues/39)
+4. 2024-03-25 —— [为什么 console.log 打印的对象(数组)和展开的内容不对应？](https://github.com/jynba/jynba.github.io/issues/40)
 
-5. 2024-03-18 —— [TS 中什么时候要用泛型？](https://github.com/jynba/jynba.github.io/issues/38)
+5. 2024-03-25 —— [uni-app 中的 uni-easyinput 添加当 type 为 textarea 时的 disable-default-padding 属性](https://github.com/jynba/jynba.github.io/issues/39)
 
-6. 2024-03-18 —— [如何为 GitHubPage 设置自定义域名？](https://github.com/jynba/jynba.github.io/issues/37)
+6. 2024-03-18 —— [TS 中什么时候要用泛型？](https://github.com/jynba/jynba.github.io/issues/38)
 
-7. 2024-03-18 —— [nginx proxy manger 中部署 ssl 证书出现问题： 安装 zope 包](https://github.com/jynba/jynba.github.io/issues/36)
+7. 2024-03-18 —— [如何为 GitHubPage 设置自定义域名？](https://github.com/jynba/jynba.github.io/issues/37)
+
+8. 2024-03-18 —— [nginx proxy manger 中部署 ssl 证书出现问题： 安装 zope 包](https://github.com/jynba/jynba.github.io/issues/36)
 
 ## 2023 年 (共计 29 篇)
 
