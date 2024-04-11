@@ -1,1 +1,0 @@
-import{_ as s,o as e,c as o,O as a}from"./chunks/framework.ed8d50c3.js";const b=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"fe/request/jwt.md","lastUpdated":1712643092000}'),n={name:"fe/request/jwt.md"},p=a("",77),t=[p];function l(r,i,c,d,k,u){return e(),o("div",null,t)}const D=s(n,[["render",l]]);export{b as __pageData,D as default};
