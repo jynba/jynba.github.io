@@ -6,49 +6,51 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **55** 篇（上次更新: 2024-06-06）
+共计 **56** 篇（上次更新: 2024-06-13）
 
-## 2024 年 (共计 20 篇)
+## 2024 年 (共计 21 篇)
 
-1. 2024-06-06 —— [搭建移动端组件库，在对比了 N 个移动端组件库后，我终于有了选择](https://github.com/jynba/jynba.github.io/issues/55)
+1. 2024-06-13 —— [一个浏览器缓存问题让我研究了两天！！！（PWA）](https://github.com/jynba/jynba.github.io/issues/56)
 
-2. 2024-06-05 —— [coderabbitai，一个管理 github 仓库 PR 的 ai 助手](https://github.com/jynba/jynba.github.io/issues/54)
+2. 2024-06-06 —— [搭建移动端组件库，在对比了 N 个移动端组件库后，我终于有了选择](https://github.com/jynba/jynba.github.io/issues/55)
 
-3. 2024-06-03 —— [类型转换之 toString 与 valueOf](https://github.com/jynba/jynba.github.io/issues/53)
+3. 2024-06-05 —— [coderabbitai，一个管理 github 仓库 PR 的 ai 助手](https://github.com/jynba/jynba.github.io/issues/54)
 
-4. 2024-05-30 —— [Vue 与 虚拟 DOM 的相爱相杀](https://github.com/jynba/jynba.github.io/issues/52)
+4. 2024-06-03 —— [类型转换之 toString 与 valueOf](https://github.com/jynba/jynba.github.io/issues/53)
 
-5. 2024-05-27 —— [如何快速上手 playwright 自动化测试？](https://github.com/jynba/jynba.github.io/issues/51)
+5. 2024-05-30 —— [Vue 与 虚拟 DOM 的相爱相杀](https://github.com/jynba/jynba.github.io/issues/52)
 
-6. 2024-05-20 —— [微信小程序版本更新后，旧缓存导致的线上问题](https://github.com/jynba/jynba.github.io/issues/50)
+6. 2024-05-27 —— [如何快速上手 playwright 自动化测试？](https://github.com/jynba/jynba.github.io/issues/51)
 
-7. 2024-05-13 —— [前端设置强制引导关注公众号](https://github.com/jynba/jynba.github.io/issues/49)
+7. 2024-05-20 —— [微信小程序版本更新后，旧缓存导致的线上问题](https://github.com/jynba/jynba.github.io/issues/50)
 
-8. 2024-05-13 —— [扫码普通二维码跳转携带参数进入小程序](https://github.com/jynba/jynba.github.io/issues/48)
+8. 2024-05-13 —— [前端设置强制引导关注公众号](https://github.com/jynba/jynba.github.io/issues/49)
 
-9. 2024-05-13 —— [请求配置 JWT，无感刷新 token](https://github.com/jynba/jynba.github.io/issues/47)
+9. 2024-05-13 —— [扫码普通二维码跳转携带参数进入小程序](https://github.com/jynba/jynba.github.io/issues/48)
 
-10. 2024-05-10 —— [微信小程序只需要实现打开小程序自动登录；此时的 wx.login 要放在哪个生命周期？](https://github.com/jynba/jynba.github.io/issues/46)
+10. 2024-05-13 —— [请求配置 JWT，无感刷新 token](https://github.com/jynba/jynba.github.io/issues/47)
 
-11. 2024-04-11 —— [Vue3 中的 template 中可含多个节点，但 transition 包裹时除外](https://github.com/jynba/jynba.github.io/issues/45)
+11. 2024-05-10 —— [微信小程序只需要实现打开小程序自动登录；此时的 wx.login 要放在哪个生命周期？](https://github.com/jynba/jynba.github.io/issues/46)
 
-12. 2024-04-09 —— [你不知道的 Array.from](https://github.com/jynba/jynba.github.io/issues/44)
+12. 2024-04-11 —— [Vue3 中的 template 中可含多个节点，但 transition 包裹时除外](https://github.com/jynba/jynba.github.io/issues/45)
 
-13. 2024-04-08 —— [如何通过一个配置将微信小程序的首屏加载速度提高一倍？](https://github.com/jynba/jynba.github.io/issues/43)
+13. 2024-04-09 —— [你不知道的 Array.from](https://github.com/jynba/jynba.github.io/issues/44)
 
-14. 2024-04-08 —— [在 vite 中通过 import.meta.glob 读取 modules 文件夹中的所有文件名称](https://github.com/jynba/jynba.github.io/issues/42)
+14. 2024-04-08 —— [如何通过一个配置将微信小程序的首屏加载速度提高一倍？](https://github.com/jynba/jynba.github.io/issues/43)
 
-15. 2024-03-26 —— [ElementUI 表单项关联校验](https://github.com/jynba/jynba.github.io/issues/41)
+15. 2024-04-08 —— [在 vite 中通过 import.meta.glob 读取 modules 文件夹中的所有文件名称](https://github.com/jynba/jynba.github.io/issues/42)
 
-16. 2024-03-25 —— [为什么 console.log 打印的对象(数组)和展开的内容不对应？](https://github.com/jynba/jynba.github.io/issues/40)
+16. 2024-03-26 —— [ElementUI 表单项关联校验](https://github.com/jynba/jynba.github.io/issues/41)
 
-17. 2024-03-25 —— [uni-app 中的 uni-easyinput 添加当 type 为 textarea 时的 disable-default-padding 属性](https://github.com/jynba/jynba.github.io/issues/39)
+17. 2024-03-25 —— [为什么 console.log 打印的对象(数组)和展开的内容不对应？](https://github.com/jynba/jynba.github.io/issues/40)
 
-18. 2024-03-18 —— [TS 中什么时候要用泛型？](https://github.com/jynba/jynba.github.io/issues/38)
+18. 2024-03-25 —— [uni-app 中的 uni-easyinput 添加当 type 为 textarea 时的 disable-default-padding 属性](https://github.com/jynba/jynba.github.io/issues/39)
 
-19. 2024-03-18 —— [如何为 GitHubPage 设置自定义域名？](https://github.com/jynba/jynba.github.io/issues/37)
+19. 2024-03-18 —— [TS 中什么时候要用泛型？](https://github.com/jynba/jynba.github.io/issues/38)
 
-20. 2024-03-18 —— [nginx proxy manger 中部署 ssl 证书出现问题： 安装 zope 包](https://github.com/jynba/jynba.github.io/issues/36)
+20. 2024-03-18 —— [如何为 GitHubPage 设置自定义域名？](https://github.com/jynba/jynba.github.io/issues/37)
+
+21. 2024-03-18 —— [nginx proxy manger 中部署 ssl 证书出现问题： 安装 zope 包](https://github.com/jynba/jynba.github.io/issues/36)
 
 ## 2023 年 (共计 29 篇)
 
