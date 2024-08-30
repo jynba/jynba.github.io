@@ -49,7 +49,7 @@ location /api/ {
     proxy_pass http://localhost:9000/;
 }
 ```
-截取到/api/ 将会转发到 http://localhost:9000/
+截取到/api/ 将会转发到 `http://localhost:9000/`
 
 - proxy_set_header
 

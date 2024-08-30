@@ -16,7 +16,7 @@ let user = {name: "John"};
 alert(user); // [object Object]
 alert(user.valueOf() === user); // true
 ```
-**注意：** 没有限制 toString() 是否返回字符串，或 Symbol.toPrimitive 方法是否为 "number" hint 返回数字。
+**注意：** 没有限制 toString() 是否返回字符串，或 Symbol.toPrimitive 方法是否为 "number" `hint` 返回数字。
 唯一强制性的事情是：这些方法必须返回一个原始值，而不是对象。
 ```js
  [Symbol.toPrimitive](hint) {
@@ -34,10 +34,10 @@ valueOf() {
 ### 总结
 转换算法是：
 
-调用 obj[Symbol.toPrimitive](hint) 如果这个方法存在，
+调用 `obj[Symbol.toPrimitive](hint)` 如果这个方法存在，
 否则，如果 hint 是 "string"
 
-尝试调用 obj.toString() 或 obj.valueOf()，无论哪个存在。
+尝试调用 `obj.toString()` 或 `obj.valueOf()`，无论哪个存在。
 否则，如果 hint 是 "number" 或者 "default"
 
-尝试调用 obj.valueOf() 或 obj.toString()，无论哪个存在。
+尝试调用 `obj.valueOf()` 或 `obj.toString()`，无论哪个存在。
