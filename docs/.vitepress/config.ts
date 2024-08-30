@@ -1,6 +1,3 @@
-import { createWriteStream } from 'node:fs'
-import { resolve } from 'node:path'
-import { SitemapStream } from 'sitemap'
 import { head, nav, sidebar, algolia } from './configs'
 import { defineConfig, PageData } from 'vitepress'
 const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
@@ -48,19 +45,7 @@ export default defineConfig({
     lastUpdatedText: '上次更新',
   },
   /* 生成站点地图 */
-  transformHtml: (_, id, { pageData }) => {
-    if (!/[\\/]404\.html$/.test(id))
-      links.push({
-        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-        lastmod: pageData.lastUpdated,
-      })
-  },
-  buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname: 'https://notes.fe-mm.com/' })
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
-    sitemap.pipe(writeStream)
-    links.forEach((link) => sitemap.write(link))
-    sitemap.end()
-    await new Promise((r) => writeStream.on('finish', r))
+  sitemap: {
+    hostname: 'https://jyblog.cvcvcvcv.com/',
   },
 })

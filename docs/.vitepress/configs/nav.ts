@@ -7,7 +7,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   },
   {
     text: '时间轴',
-    link: '/timeline/shuibi',
+    link: '/timeline/',
   },
   {
     text: '前端学习',
