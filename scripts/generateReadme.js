@@ -1,5 +1,6 @@
-const fs = require('fs-extra')
-const client = require('octonode').client()
+import fs from 'fs-extra'
+import octonode from 'octonode'
+const client = octonode.client()
 
 const USERNAME = 'jynba'
 const REPO_NAME = 'jynba.github.io'
@@ -48,7 +49,7 @@ function generateIssues({ year, total_count, items }) {
   return str + issueStr
 }
 
-;(async () => {
+; (async () => {
   try {
     // 获取仓库信息
     const [infoResult] = await repo.infoAsync()
@@ -90,15 +91,6 @@ function generateIssues({ year, total_count, items }) {
       })
       .catch(() => {
         console.log('README.md 文件创建失败')
-      })
-
-    // 写入 /docs/timeline/index.md 文件
-    fs.writeFile('docs/timeline/shuibi.md', md, 'utf8')
-      .then(() => {
-        console.log('docs/timeline/shuibi.md 文件创建成功')
-      })
-      .catch(() => {
-        console.log('docs/timeline/shuibi.md 文件创建失败')
       })
   } catch (error) {
     console.log('catch error :>> ', error)
