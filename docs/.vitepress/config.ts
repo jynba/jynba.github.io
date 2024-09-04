@@ -34,7 +34,7 @@ export default defineConfig({
     },
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2023-present jynba',
+      copyright: 'Copyright ©jy | 备案号：<a href="https://beian.miit.gov.cn/">粤ICP备2024200418号-1</a>',
     },
     docFooter: {
       prev: '上一篇',
