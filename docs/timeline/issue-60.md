@@ -1,9 +1,10 @@
-### Octokit，一个用于与 GitHub API ### 交互的工具
+### Octokit，一个用于与 GitHub API 交互的工具
 
   :::tip 原文地址
   [Octokit，一个用于与 GitHub API 交互的工具 | GitHub](https://github.com/jynba/jynba.github.io/issues/60)
   :::
   [源码地址](https://github.com/octokit/octokit.js)
+
 [文档地址](https://docs.github.com/zh/rest/guides/scripting-with-the-rest-api-and-javascript?apiVersion=2022-11-28)
 
 > 如果想使用 JavaScript 编写一个脚本来与 GitHub 的 REST API 进行交互，GitHub 建议使用 Octokit.js SDK。 Octokit.js 由 GitHub 维护。 SDK 实现了最佳做法，可让你更轻松地通过 JavaScript 与 REST API 进行交互。 Octokit.js 适用于所有新式浏览器、Node.js 和 Deno。 有关 Octokit.js 的详细信息，请参阅 [Octokit.js 自述文件](https://github.com/octokit/octokit.js/#readme)。
