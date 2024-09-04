@@ -4,6 +4,18 @@
     "collapsed": false,
     "items": [
       {
+        "text": "Nginx Proxy Manager，一个强大的Nginx可视化管理平台",
+        "link": "/timeline/issue-62"
+      },
+      {
+        "text": "\"type\": \"module 引发的报错",
+        "link": "/timeline/issue-61"
+      },
+      {
+        "text": "Octokit，一个用于与 GitHub API 交互的工具",
+        "link": "/timeline/issue-60"
+      },
+      {
         "text": "微信小程序we分析中的实时日志",
         "link": "/timeline/issue-57"
       },
