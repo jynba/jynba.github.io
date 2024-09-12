@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "测试",
+        "link": "/timeline/issue-63"
+      },
+      {
         "text": "Nginx Proxy Manager，一个强大的Nginx可视化管理平台",
         "link": "/timeline/issue-62"
       },
