@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "【git】当你想对某次commit补充内容，但是不想再次新增commit提交",
+        "link": "/timeline/issue-65"
+      },
+      {
         "text": "微信小程序中IOS的回弹机制导致页面滑动",
         "link": "/timeline/issue-64"
       },
