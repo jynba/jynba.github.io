@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "Git Submodule是什么？如何使用？",
+        "link": "/timeline/issue-66"
+      },
+      {
         "text": "【git】当你想对某次commit补充内容，但是不想再次新增commit提交",
         "link": "/timeline/issue-65"
       },

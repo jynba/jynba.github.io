@@ -4,63 +4,65 @@
 
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **58** 篇（上次更新: 2024-12-02）
+共计 **59** 篇（上次更新: 2024-12-16）
 
-## 2024 年 (共计 27 篇)
+## 2024 年 (共计 28 篇)
 
-1. 2024-12-02 —— [【git】当你想对某次commit补充内容，但是不想再次新增commit提交](/timeline/issue-65)
+1. 2024-12-16 —— [Git Submodule是什么？如何使用？](/timeline/issue-66)
 
-2. 2024-10-21 —— [微信小程序中IOS的回弹机制导致页面滑动](/timeline/issue-64)
+2. 2024-12-02 —— [【git】当你想对某次commit补充内容，但是不想再次新增commit提交](/timeline/issue-65)
 
-3. 2024-09-02 —— [Nginx Proxy Manager，一个强大的Nginx可视化管理平台](/timeline/issue-62)
+3. 2024-10-21 —— [微信小程序中IOS的回弹机制导致页面滑动](/timeline/issue-64)
 
-4. 2024-08-30 —— ["type": "module 引发的报错](/timeline/issue-61)
+4. 2024-09-02 —— [Nginx Proxy Manager，一个强大的Nginx可视化管理平台](/timeline/issue-62)
 
-5. 2024-08-30 —— [Octokit，一个用于与 GitHub API 交互的工具](/timeline/issue-60)
+5. 2024-08-30 —— ["type": "module 引发的报错](/timeline/issue-61)
 
-6. 2024-07-23 —— [微信小程序we分析中的实时日志](/timeline/issue-57)
+6. 2024-08-30 —— [Octokit，一个用于与 GitHub API 交互的工具](/timeline/issue-60)
 
-7. 2024-06-13 —— [一个浏览器缓存问题让我研究了两天！！！（PWA）](/timeline/issue-56)
+7. 2024-07-23 —— [微信小程序we分析中的实时日志](/timeline/issue-57)
 
-8. 2024-06-06 —— [搭建移动端组件库，在对比了N个移动端组件库后，我终于有了选择](/timeline/issue-55)
+8. 2024-06-13 —— [一个浏览器缓存问题让我研究了两天！！！（PWA）](/timeline/issue-56)
 
-9. 2024-06-05 —— [coderabbitai，一个管理github仓库PR的ai助手](/timeline/issue-54)
+9. 2024-06-06 —— [搭建移动端组件库，在对比了N个移动端组件库后，我终于有了选择](/timeline/issue-55)
 
-10. 2024-06-03 —— [类型转换之toString与valueOf](/timeline/issue-53)
+10. 2024-06-05 —— [coderabbitai，一个管理github仓库PR的ai助手](/timeline/issue-54)
 
-11. 2024-05-30 —— [Vue 与 虚拟DOM 的相爱相杀](/timeline/issue-52)
+11. 2024-06-03 —— [类型转换之toString与valueOf](/timeline/issue-53)
 
-12. 2024-05-27 —— [如何快速上手 playwright 自动化测试？](/timeline/issue-51)
+12. 2024-05-30 —— [Vue 与 虚拟DOM 的相爱相杀](/timeline/issue-52)
 
-13. 2024-05-20 —— [微信小程序版本更新后，旧缓存导致的线上问题](/timeline/issue-50)
+13. 2024-05-27 —— [如何快速上手 playwright 自动化测试？](/timeline/issue-51)
 
-14. 2024-05-13 —— [前端设置强制引导关注公众号](/timeline/issue-49)
+14. 2024-05-20 —— [微信小程序版本更新后，旧缓存导致的线上问题](/timeline/issue-50)
 
-15. 2024-05-13 —— [扫码普通二维码跳转携带参数进入小程序](/timeline/issue-48)
+15. 2024-05-13 —— [前端设置强制引导关注公众号](/timeline/issue-49)
 
-16. 2024-05-13 —— [请求配置JWT，无感刷新token](/timeline/issue-47)
+16. 2024-05-13 —— [扫码普通二维码跳转携带参数进入小程序](/timeline/issue-48)
 
-17. 2024-05-10 —— [微信小程序只需要实现打开小程序自动登录；此时的wx.login要放在哪个生命周期？](/timeline/issue-46)
+17. 2024-05-13 —— [请求配置JWT，无感刷新token](/timeline/issue-47)
 
-18. 2024-04-11 —— [Vue3中的template中可含多个节点，但 transition 包裹时除外](/timeline/issue-45)
+18. 2024-05-10 —— [微信小程序只需要实现打开小程序自动登录；此时的wx.login要放在哪个生命周期？](/timeline/issue-46)
 
-19. 2024-04-09 —— [你不知道的Array.from](/timeline/issue-44)
+19. 2024-04-11 —— [Vue3中的template中可含多个节点，但 transition 包裹时除外](/timeline/issue-45)
 
-20. 2024-04-08 —— [如何通过一个配置将微信小程序的首屏加载速度提高一倍？](/timeline/issue-43)
+20. 2024-04-09 —— [你不知道的Array.from](/timeline/issue-44)
 
-21. 2024-04-08 —— [在vite中通过 import.meta.glob 读取modules文件夹中的所有文件名称](/timeline/issue-42)
+21. 2024-04-08 —— [如何通过一个配置将微信小程序的首屏加载速度提高一倍？](/timeline/issue-43)
 
-22. 2024-03-26 —— [ElementUI表单项关联校验](/timeline/issue-41)
+22. 2024-04-08 —— [在vite中通过 import.meta.glob 读取modules文件夹中的所有文件名称](/timeline/issue-42)
 
-23. 2024-03-25 —— [为什么console.log打印的对象(数组)和展开的内容不对应？](/timeline/issue-40)
+23. 2024-03-26 —— [ElementUI表单项关联校验](/timeline/issue-41)
 
-24. 2024-03-25 —— [uni-app中的uni-easyinput添加当type为textarea时的disable-default-padding属性](/timeline/issue-39)
+24. 2024-03-25 —— [为什么console.log打印的对象(数组)和展开的内容不对应？](/timeline/issue-40)
 
-25. 2024-03-18 —— [TS中什么时候要用泛型？](/timeline/issue-38)
+25. 2024-03-25 —— [uni-app中的uni-easyinput添加当type为textarea时的disable-default-padding属性](/timeline/issue-39)
 
-26. 2024-03-18 —— [如何为GitHubPage设置自定义域名？](/timeline/issue-37)
+26. 2024-03-18 —— [TS中什么时候要用泛型？](/timeline/issue-38)
 
-27. 2024-03-18 —— [nginx proxy manger中部署ssl证书出现问题： 安装 zope包](/timeline/issue-36)
+27. 2024-03-18 —— [如何为GitHubPage设置自定义域名？](/timeline/issue-37)
+
+28. 2024-03-18 —— [nginx proxy manger中部署ssl证书出现问题： 安装 zope包](/timeline/issue-36)
 
 ## 2023 年 (共计 29 篇)
 
