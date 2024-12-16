@@ -6,63 +6,65 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **58** 篇（上次更新: 2024-12-02）
+共计 **59** 篇（上次更新: 2024-12-16）
 
-## 2024 年 (共计 27 篇)
+## 2024 年 (共计 28 篇)
 
-1. 2024-12-02 —— [【git】当你想对某次 commit 补充内容，但是不想再次新增 commit 提交](https://github.com/jynba/jynba.github.io/issues/65)
+1. 2024-12-16 —— [Git Submodule 是什么？如何使用？](https://github.com/jynba/jynba.github.io/issues/66)
 
-2. 2024-10-21 —— [微信小程序中 IOS 的回弹机制导致页面滑动](https://github.com/jynba/jynba.github.io/issues/64)
+2. 2024-12-02 —— [【git】当你想对某次 commit 补充内容，但是不想再次新增 commit 提交](https://github.com/jynba/jynba.github.io/issues/65)
 
-3. 2024-09-02 —— [Nginx Proxy Manager，一个强大的 Nginx 可视化管理平台](https://github.com/jynba/jynba.github.io/issues/62)
+3. 2024-10-21 —— [微信小程序中 IOS 的回弹机制导致页面滑动](https://github.com/jynba/jynba.github.io/issues/64)
 
-4. 2024-08-30 —— ["type": "module 引发的报错](https://github.com/jynba/jynba.github.io/issues/61)
+4. 2024-09-02 —— [Nginx Proxy Manager，一个强大的 Nginx 可视化管理平台](https://github.com/jynba/jynba.github.io/issues/62)
 
-5. 2024-08-30 —— [Octokit，一个用于与 GitHub API 交互的工具](https://github.com/jynba/jynba.github.io/issues/60)
+5. 2024-08-30 —— ["type": "module 引发的报错](https://github.com/jynba/jynba.github.io/issues/61)
 
-6. 2024-07-23 —— [微信小程序 we 分析中的实时日志](https://github.com/jynba/jynba.github.io/issues/57)
+6. 2024-08-30 —— [Octokit，一个用于与 GitHub API 交互的工具](https://github.com/jynba/jynba.github.io/issues/60)
 
-7. 2024-06-13 —— [一个浏览器缓存问题让我研究了两天！！！（PWA）](https://github.com/jynba/jynba.github.io/issues/56)
+7. 2024-07-23 —— [微信小程序 we 分析中的实时日志](https://github.com/jynba/jynba.github.io/issues/57)
 
-8. 2024-06-06 —— [搭建移动端组件库，在对比了 N 个移动端组件库后，我终于有了选择](https://github.com/jynba/jynba.github.io/issues/55)
+8. 2024-06-13 —— [一个浏览器缓存问题让我研究了两天！！！（PWA）](https://github.com/jynba/jynba.github.io/issues/56)
 
-9. 2024-06-05 —— [coderabbitai，一个管理 github 仓库 PR 的 ai 助手](https://github.com/jynba/jynba.github.io/issues/54)
+9. 2024-06-06 —— [搭建移动端组件库，在对比了 N 个移动端组件库后，我终于有了选择](https://github.com/jynba/jynba.github.io/issues/55)
 
-10. 2024-06-03 —— [类型转换之 toString 与 valueOf](https://github.com/jynba/jynba.github.io/issues/53)
+10. 2024-06-05 —— [coderabbitai，一个管理 github 仓库 PR 的 ai 助手](https://github.com/jynba/jynba.github.io/issues/54)
 
-11. 2024-05-30 —— [Vue 与 虚拟 DOM 的相爱相杀](https://github.com/jynba/jynba.github.io/issues/52)
+11. 2024-06-03 —— [类型转换之 toString 与 valueOf](https://github.com/jynba/jynba.github.io/issues/53)
 
-12. 2024-05-27 —— [如何快速上手 playwright 自动化测试？](https://github.com/jynba/jynba.github.io/issues/51)
+12. 2024-05-30 —— [Vue 与 虚拟 DOM 的相爱相杀](https://github.com/jynba/jynba.github.io/issues/52)
 
-13. 2024-05-20 —— [微信小程序版本更新后，旧缓存导致的线上问题](https://github.com/jynba/jynba.github.io/issues/50)
+13. 2024-05-27 —— [如何快速上手 playwright 自动化测试？](https://github.com/jynba/jynba.github.io/issues/51)
 
-14. 2024-05-13 —— [前端设置强制引导关注公众号](https://github.com/jynba/jynba.github.io/issues/49)
+14. 2024-05-20 —— [微信小程序版本更新后，旧缓存导致的线上问题](https://github.com/jynba/jynba.github.io/issues/50)
 
-15. 2024-05-13 —— [扫码普通二维码跳转携带参数进入小程序](https://github.com/jynba/jynba.github.io/issues/48)
+15. 2024-05-13 —— [前端设置强制引导关注公众号](https://github.com/jynba/jynba.github.io/issues/49)
 
-16. 2024-05-13 —— [请求配置 JWT，无感刷新 token](https://github.com/jynba/jynba.github.io/issues/47)
+16. 2024-05-13 —— [扫码普通二维码跳转携带参数进入小程序](https://github.com/jynba/jynba.github.io/issues/48)
 
-17. 2024-05-10 —— [微信小程序只需要实现打开小程序自动登录；此时的 wx.login 要放在哪个生命周期？](https://github.com/jynba/jynba.github.io/issues/46)
+17. 2024-05-13 —— [请求配置 JWT，无感刷新 token](https://github.com/jynba/jynba.github.io/issues/47)
 
-18. 2024-04-11 —— [Vue3 中的 template 中可含多个节点，但 transition 包裹时除外](https://github.com/jynba/jynba.github.io/issues/45)
+18. 2024-05-10 —— [微信小程序只需要实现打开小程序自动登录；此时的 wx.login 要放在哪个生命周期？](https://github.com/jynba/jynba.github.io/issues/46)
 
-19. 2024-04-09 —— [你不知道的 Array.from](https://github.com/jynba/jynba.github.io/issues/44)
+19. 2024-04-11 —— [Vue3 中的 template 中可含多个节点，但 transition 包裹时除外](https://github.com/jynba/jynba.github.io/issues/45)
 
-20. 2024-04-08 —— [如何通过一个配置将微信小程序的首屏加载速度提高一倍？](https://github.com/jynba/jynba.github.io/issues/43)
+20. 2024-04-09 —— [你不知道的 Array.from](https://github.com/jynba/jynba.github.io/issues/44)
 
-21. 2024-04-08 —— [在 vite 中通过 import.meta.glob 读取 modules 文件夹中的所有文件名称](https://github.com/jynba/jynba.github.io/issues/42)
+21. 2024-04-08 —— [如何通过一个配置将微信小程序的首屏加载速度提高一倍？](https://github.com/jynba/jynba.github.io/issues/43)
 
-22. 2024-03-26 —— [ElementUI 表单项关联校验](https://github.com/jynba/jynba.github.io/issues/41)
+22. 2024-04-08 —— [在 vite 中通过 import.meta.glob 读取 modules 文件夹中的所有文件名称](https://github.com/jynba/jynba.github.io/issues/42)
 
-23. 2024-03-25 —— [为什么 console.log 打印的对象(数组)和展开的内容不对应？](https://github.com/jynba/jynba.github.io/issues/40)
+23. 2024-03-26 —— [ElementUI 表单项关联校验](https://github.com/jynba/jynba.github.io/issues/41)
 
-24. 2024-03-25 —— [uni-app 中的 uni-easyinput 添加当 type 为 textarea 时的 disable-default-padding 属性](https://github.com/jynba/jynba.github.io/issues/39)
+24. 2024-03-25 —— [为什么 console.log 打印的对象(数组)和展开的内容不对应？](https://github.com/jynba/jynba.github.io/issues/40)
 
-25. 2024-03-18 —— [TS 中什么时候要用泛型？](https://github.com/jynba/jynba.github.io/issues/38)
+25. 2024-03-25 —— [uni-app 中的 uni-easyinput 添加当 type 为 textarea 时的 disable-default-padding 属性](https://github.com/jynba/jynba.github.io/issues/39)
 
-26. 2024-03-18 —— [如何为 GitHubPage 设置自定义域名？](https://github.com/jynba/jynba.github.io/issues/37)
+26. 2024-03-18 —— [TS 中什么时候要用泛型？](https://github.com/jynba/jynba.github.io/issues/38)
 
-27. 2024-03-18 —— [nginx proxy manger 中部署 ssl 证书出现问题： 安装 zope 包](https://github.com/jynba/jynba.github.io/issues/36)
+27. 2024-03-18 —— [如何为 GitHubPage 设置自定义域名？](https://github.com/jynba/jynba.github.io/issues/37)
+
+28. 2024-03-18 —— [nginx proxy manger 中部署 ssl 证书出现问题： 安装 zope 包](https://github.com/jynba/jynba.github.io/issues/36)
 
 ## 2023 年 (共计 29 篇)
 
