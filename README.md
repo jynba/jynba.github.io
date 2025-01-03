@@ -6,7 +6,11 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **59** 篇（上次更新: 2024-12-16）
+共计 **60** 篇（上次更新: 2025-01-03）
+
+## 2025 年 (共计 1 篇)
+
+1. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
 
 ## 2024 年 (共计 28 篇)
 
