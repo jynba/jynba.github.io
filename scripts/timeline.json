@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "vim的常用命令",
+        "link": "/timeline/issue-69"
+      },
+      {
         "text": "如何使用docker部署nginx网站及docker的实用命令",
         "link": "/timeline/issue-68"
       },

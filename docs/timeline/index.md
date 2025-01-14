@@ -4,13 +4,15 @@
 
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **61** 篇（上次更新: 2025-01-06）
+共计 **62** 篇（上次更新: 2025-01-14）
 
-## 2025 年 (共计 2 篇)
+## 2025 年 (共计 3 篇)
 
-1. 2025-01-06 —— [如何使用docker部署nginx网站及docker的实用命令](/timeline/issue-68)
+1. 2025-01-14 —— [vim的常用命令](/timeline/issue-69)
 
-2. 2025-01-03 —— [git stash的一些实用命令](/timeline/issue-67)
+2. 2025-01-06 —— [如何使用docker部署nginx网站及docker的实用命令](/timeline/issue-68)
+
+3. 2025-01-03 —— [git stash的一些实用命令](/timeline/issue-67)
 
 ## 2024 年 (共计 28 篇)
 

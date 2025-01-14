@@ -6,13 +6,15 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **61** 篇（上次更新: 2025-01-06）
+共计 **62** 篇（上次更新: 2025-01-14）
 
-## 2025 年 (共计 2 篇)
+## 2025 年 (共计 3 篇)
 
-1. 2025-01-06 —— [如何使用 docker 部署 nginx 网站及 docker 的实用命令](https://github.com/jynba/jynba.github.io/issues/68)
+1. 2025-01-14 —— [vim 的常用命令](https://github.com/jynba/jynba.github.io/issues/69)
 
-2. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
+2. 2025-01-06 —— [如何使用 docker 部署 nginx 网站及 docker 的实用命令](https://github.com/jynba/jynba.github.io/issues/68)
+
+3. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
 
 ## 2024 年 (共计 28 篇)
 
