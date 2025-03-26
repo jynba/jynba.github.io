@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "动态新增/删除表单，如何绑定ref使得校验规则生效",
+        "link": "/timeline/issue-70"
+      },
+      {
         "text": "vim的常用命令",
         "link": "/timeline/issue-69"
       },
