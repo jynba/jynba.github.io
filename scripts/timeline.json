@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "如何引导关注公众号？冷启动热启动场景、自定义样式？",
+        "link": "/timeline/issue-71"
+      },
+      {
         "text": "动态新增/删除表单，如何绑定ref使得校验规则生效",
         "link": "/timeline/issue-70"
       },

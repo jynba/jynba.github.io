@@ -6,17 +6,19 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **63** 篇（上次更新: 2025-03-26）
+共计 **64** 篇（上次更新: 2025-03-28）
 
-## 2025 年 (共计 4 篇)
+## 2025 年 (共计 5 篇)
 
-1. 2025-03-26 —— [动态新增/删除表单，如何绑定 ref 使得校验规则生效](https://github.com/jynba/jynba.github.io/issues/70)
+1. 2025-03-28 —— [如何引导关注公众号？冷启动热启动场景、自定义样式？](https://github.com/jynba/jynba.github.io/issues/71)
 
-2. 2025-01-14 —— [vim 的常用命令](https://github.com/jynba/jynba.github.io/issues/69)
+2. 2025-03-26 —— [动态新增/删除表单，如何绑定 ref 使得校验规则生效](https://github.com/jynba/jynba.github.io/issues/70)
 
-3. 2025-01-06 —— [如何使用 docker 部署 nginx 网站及 docker 的实用命令](https://github.com/jynba/jynba.github.io/issues/68)
+3. 2025-01-14 —— [vim 的常用命令](https://github.com/jynba/jynba.github.io/issues/69)
 
-4. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
+4. 2025-01-06 —— [如何使用 docker 部署 nginx 网站及 docker 的实用命令](https://github.com/jynba/jynba.github.io/issues/68)
+
+5. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
 
 ## 2024 年 (共计 28 篇)
 
