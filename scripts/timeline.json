@@ -4,8 +4,8 @@
     "collapsed": false,
     "items": [
       {
-        "text": "import.meta是什么？vite中有哪些import.meta特性？",
-        "link": "/timeline/issue-73"
+        "text": "import.meta是什么？vite中有哪些import.meta特性?",
+        "link": "/timeline/issue-74"
       },
       {
         "text": "什么是null原型对象？它有什么作用？",

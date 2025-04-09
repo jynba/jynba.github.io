@@ -8,7 +8,7 @@
 
 ## 2025 年 (共计 7 篇)
 
-1. 2025-04-09 —— [import.meta是什么？vite中有哪些import.meta特性？](/timeline/issue-73)
+1. 2025-04-09 —— [import.meta是什么？vite中有哪些import.meta特性?](/timeline/issue-74)
 
 2. 2025-04-09 —— [什么是null原型对象？它有什么作用？](/timeline/issue-72)
 

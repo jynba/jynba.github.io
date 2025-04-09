@@ -10,7 +10,7 @@
 
 ## 2025 年 (共计 7 篇)
 
-1. 2025-04-09 —— [import.meta 是什么？vite 中有哪些 import.meta 特性？](https://github.com/jynba/jynba.github.io/issues/73)
+1. 2025-04-09 —— [import.meta 是什么？vite 中有哪些 import.meta 特性?](https://github.com/jynba/jynba.github.io/issues/74)
 
 2. 2025-04-09 —— [什么是 null 原型对象？它有什么作用？](https://github.com/jynba/jynba.github.io/issues/72)
 
