@@ -1,0 +1,36 @@
+import{_ as s,c as n,o as a,a5 as i}from"./chunks/framework.CByBVyi2.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"timeline/issue-69.md","filePath":"timeline/issue-69.md","lastUpdated":1744189267000}'),l={name:"timeline/issue-69.md"},p=i(`<h3 id="什么是-vim" tabindex="-1">什么是 vim？ <a class="header-anchor" href="#什么是-vim" aria-label="Permalink to &quot;什么是 vim？&quot;">​</a></h3><div class="tip custom-block"><p class="custom-block-title">原文地址</p><p><a href="https://github.com/jynba/jynba.github.io/issues/69" target="_blank" rel="noreferrer">vim的常用命令 | GitHub</a></p></div><p>Vim 是从 vi 发展出来的一个文本编辑器。代码补全、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。 简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具。</p><h3 id="vim的常用命令" tabindex="-1">vim的常用命令 <a class="header-anchor" href="#vim的常用命令" aria-label="Permalink to &quot;vim的常用命令&quot;">​</a></h3><div class="language-md vp-adaptive-theme line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold;"># 命令模式</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 操作相关</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">i -- 切换到输入模式，在光标当前位置开始输入文本。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">a -- 进入插入模式，在光标下一个位置开始输入文本。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">o：在当前行的下方插入一个新行，并进入插入模式。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">x -- 删除当前光标所在处的字符。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">u -- 撤销上一次操作。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ctrl + r -- 重做上一次撤销的操作。（u和Ctrl+r就是天生一对）</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">dd -- 剪切当前行。（注意是剪切）</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">yy -- 复制当前行。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">p（小写） -- 粘贴剪贴板内容到光标下方。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">P（大写）-- 粘贴剪贴板内容到光标上方。</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 底线命令相关</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:w -- 保存文件。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:q -- 退出 Vim 编辑器。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:q! -- 强制退出Vim 编辑器，不保存修改。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">ZZ 等价于 :wq</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:w [</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF;--shiki-light-text-decoration:underline;--shiki-dark-text-decoration:underline;">filename</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">] 另存为文件</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:r [</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF;--shiki-light-text-decoration:underline;--shiki-dark-text-decoration:underline;">filename</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">] 追加文件的内容到当前</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 移动光标相关</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">H 移动到这个屏幕的第一行(常用)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">gg 相当于1G 移动到这个档案的第一行</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">G 移动到这个档案的最后一行(常用)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">n&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">Enter</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt; n 为数字。光标向下移动 n 行(常用)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 搜索相关</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">/word 向光标之下寻找一个名称为 word 的字符串</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">?word 向光标之上寻找一个字符串名称为 word 的字符串</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">n 重复前一个搜寻的动作，向下搜索</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">N 与 n 刚好相反，向上搜索</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">/word或者?word 配合 n 及 N</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold;"># 输入模式</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">// 在命令模式下按下 i 就进入了输入模式，使用 Esc 键可以返回到普通模式</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div>`,5),e=[p];function t(r,h,k,E,c,d){return a(),n("div",null,e)}const o=s(l,[["render",t]]);export{m as __pageData,o as default};
