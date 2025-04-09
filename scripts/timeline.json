@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "什么是null原型对象？它有什么作用？",
+        "link": "/timeline/issue-72"
+      },
+      {
         "text": "如何引导关注公众号？冷启动热启动场景、自定义样式？",
         "link": "/timeline/issue-71"
       },
