@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "【源码学习】vite-plugin-package-config",
+        "link": "/timeline/issue-75"
+      },
+      {
         "text": "import.meta是什么？vite中有哪些import.meta特性?",
         "link": "/timeline/issue-74"
       },

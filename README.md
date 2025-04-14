@@ -6,23 +6,25 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **66** 篇（上次更新: 2025-04-09）
+共计 **67** 篇（上次更新: 2025-04-14）
 
-## 2025 年 (共计 7 篇)
+## 2025 年 (共计 8 篇)
 
-1. 2025-04-09 —— [import.meta 是什么？vite 中有哪些 import.meta 特性?](https://github.com/jynba/jynba.github.io/issues/74)
+1. 2025-04-14 —— [【源码学习】vite-plugin-package-config](https://github.com/jynba/jynba.github.io/issues/75)
 
-2. 2025-04-09 —— [什么是 null 原型对象？它有什么作用？](https://github.com/jynba/jynba.github.io/issues/72)
+2. 2025-04-09 —— [import.meta 是什么？vite 中有哪些 import.meta 特性?](https://github.com/jynba/jynba.github.io/issues/74)
 
-3. 2025-03-28 —— [如何引导关注公众号？冷启动热启动场景、自定义样式？](https://github.com/jynba/jynba.github.io/issues/71)
+3. 2025-04-09 —— [什么是 null 原型对象？它有什么作用？](https://github.com/jynba/jynba.github.io/issues/72)
 
-4. 2025-03-26 —— [动态新增/删除表单，如何绑定 ref 使得校验规则生效](https://github.com/jynba/jynba.github.io/issues/70)
+4. 2025-03-28 —— [如何引导关注公众号？冷启动热启动场景、自定义样式？](https://github.com/jynba/jynba.github.io/issues/71)
 
-5. 2025-01-14 —— [vim 的常用命令](https://github.com/jynba/jynba.github.io/issues/69)
+5. 2025-03-26 —— [动态新增/删除表单，如何绑定 ref 使得校验规则生效](https://github.com/jynba/jynba.github.io/issues/70)
 
-6. 2025-01-06 —— [如何使用 docker 部署 nginx 网站及 docker 的实用命令](https://github.com/jynba/jynba.github.io/issues/68)
+6. 2025-01-14 —— [vim 的常用命令](https://github.com/jynba/jynba.github.io/issues/69)
 
-7. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
+7. 2025-01-06 —— [如何使用 docker 部署 nginx 网站及 docker 的实用命令](https://github.com/jynba/jynba.github.io/issues/68)
+
+8. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
 
 ## 2024 年 (共计 28 篇)
 
