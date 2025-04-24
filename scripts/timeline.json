@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "小程序如何连接MQTT服务器(配置反向代理)",
+        "link": "/timeline/issue-77"
+      },
+      {
         "text": "服务器上配置校验文件，最简单方便的方法（nginx配置返回content）",
         "link": "/timeline/issue-76"
       },
