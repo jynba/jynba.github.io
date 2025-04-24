@@ -16,7 +16,7 @@ hero:
       link: /resources/navigation/nav
     - theme: alt
       text: 时间轴
-      link: /timeline/shuibi
+      link: /timeline
     - theme: brand
       text: 项目经历
       link: /projects/dxyy_project/
