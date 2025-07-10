@@ -4,31 +4,33 @@
 
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **70** 篇（上次更新: 2025-06-19）
+共计 **71** 篇（上次更新: 2025-07-10）
 
-## 2025 年 (共计 11 篇)
+## 2025 年 (共计 12 篇)
 
-1. 2025-06-19 —— [git worktree是什么？如何用它减少绝大部分的git stash的使用](/timeline/issue-78)
+1. 2025-07-10 —— [tapd状态流转通知钉钉——zapier，一个好用的无代码流程自动化工具](/timeline/issue-79)
 
-2. 2025-04-24 —— [小程序如何连接MQTT服务器(配置反向代理)](/timeline/issue-77)
+2. 2025-06-19 —— [git worktree是什么？如何用它减少绝大部分的git stash的使用](/timeline/issue-78)
 
-3. 2025-04-24 —— [服务器上配置校验文件，最简单方便的方法（nginx配置返回content）](/timeline/issue-76)
+3. 2025-04-24 —— [小程序如何连接MQTT服务器(配置反向代理)](/timeline/issue-77)
 
-4. 2025-04-14 —— [【源码学习】vite-plugin-package-config](/timeline/issue-75)
+4. 2025-04-24 —— [服务器上配置校验文件，最简单方便的方法（nginx配置返回content）](/timeline/issue-76)
 
-5. 2025-04-09 —— [import.meta是什么？vite中有哪些import.meta特性?](/timeline/issue-74)
+5. 2025-04-14 —— [【源码学习】vite-plugin-package-config](/timeline/issue-75)
 
-6. 2025-04-09 —— [什么是null原型对象？它有什么作用？](/timeline/issue-72)
+6. 2025-04-09 —— [import.meta是什么？vite中有哪些import.meta特性?](/timeline/issue-74)
 
-7. 2025-03-28 —— [如何引导关注公众号？冷启动热启动场景、自定义样式？](/timeline/issue-71)
+7. 2025-04-09 —— [什么是null原型对象？它有什么作用？](/timeline/issue-72)
 
-8. 2025-03-26 —— [动态新增/删除表单，如何绑定ref使得校验规则生效](/timeline/issue-70)
+8. 2025-03-28 —— [如何引导关注公众号？冷启动热启动场景、自定义样式？](/timeline/issue-71)
 
-9. 2025-01-14 —— [vim的常用命令](/timeline/issue-69)
+9. 2025-03-26 —— [动态新增/删除表单，如何绑定ref使得校验规则生效](/timeline/issue-70)
 
-10. 2025-01-06 —— [如何使用docker部署nginx网站及docker的实用命令](/timeline/issue-68)
+10. 2025-01-14 —— [vim的常用命令](/timeline/issue-69)
 
-11. 2025-01-03 —— [git stash的一些实用命令](/timeline/issue-67)
+11. 2025-01-06 —— [如何使用docker部署nginx网站及docker的实用命令](/timeline/issue-68)
+
+12. 2025-01-03 —— [git stash的一些实用命令](/timeline/issue-67)
 
 ## 2024 年 (共计 28 篇)
 
