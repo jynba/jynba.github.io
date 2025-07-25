@@ -46,6 +46,11 @@ jobs:
           email: 41898282+github-actions[bot]@users.noreply.github.com
 ```
 编写脚本用于汇总issue到readme，详情可见`Scripts/genaralReadme.js`，其中用到了`octonode`库，可查询github仓库文件信息。
+**注意：如果工作流中要用到push的相关，需要在对应的仓库的setting中配置 Workflow permissions 权限**
+
+<img width="1130" height="469" alt="Image" src="https://github.com/user-attachments/assets/a2506d87-fb98-4018-853c-1ad37c9dd5ea" />
+
+<img width="936" height="380" alt="Image" src="https://github.com/user-attachments/assets/56d149c7-495c-4f18-8ede-93df2d79e725" />
 
 * 首次执行需要在Actions中GeneralReadme手动点击run workflow执行，后续可issue更新可自动执行！
 这样，即可实现在issues上记录笔记，然后自动同步到readme文件中，甚至可以同步到博客中！
