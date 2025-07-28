@@ -10,22 +10,23 @@
 - 降低沟通成本：通过自动化流程，前端开发、设计之间减少重复沟通，缩短设计更新到项目落地的时间。
 - 组件按需引入优化： Iconify 组件支持 Vite 的 IconResolver 按需加载，提升开发体验和构建效率。
 
-[figma-iconify-bot项目地址](https://github.com/jynba/figma-iconify-bot)
-
-[icon-demo-app项目地址](https://github.com/jynba/icon-demo-app.git)
 
 ### 已实现
 
-**figma-iconify-bot 项目**：
+**figma-iconify-bot 项目**
+
+[figma-iconify-bot项目地址](https://github.com/jynba/figma-iconify-bot)
+
 - 通过 Figma 插件触发 GitHub Action Dispatch
 - 自动从 Figma 拉取 SVG 图标
 - 使用 `@iconify/tools` 转换为 Iconify JSON
-- 自动更新 GitHub 仓库源代码，发布/更新 npm 包版本
+- 将 iconify json 转成 vue component，如`@element-plus/icons-vue`；项目可通过 resolver 按需引入或 ts 全量引入
+- 自动更新 GitHub 仓库源代码，发布/更新 npm 包版本 (svg/json/vue component 三个版本)
 
-**icon-demo-app 项目**（需要应用的项目demo）：
+**icon-demo-app 项目**（需要应用的项目demo）
+
+[icon-demo-app项目地址](https://github.com/jynba/icon-demo-app.git)
+
+[icon-demo-app演示地址](https://jynba.github.io/icon-demo-app/)
+
 - 添加 renovate 自动mr；项目定时触发renovate，自动保持最新的npm依赖
-
-### 待完善
-
-- 将 iconify json 转成 svg 的组件，如`@element-plus/icons-vue`，通过 vite iconResolver 按需引入。
-- npm发布后自动触发工作流，通知对应项目自动 renovate 自动mr 使得项目始终保持最新的npm依赖；
