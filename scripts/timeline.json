@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "JS动态生成的元素如何查看样式",
+        "link": "/timeline/issue-83"
+      },
+      {
         "text": "自动化从Figma导出图标并生成Iconify的npm包更新到项目",
         "link": "/timeline/issue-82"
       },
