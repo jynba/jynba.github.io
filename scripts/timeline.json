@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "恢复 VSCode/Cursor 误删的文件，时间线/History",
+        "link": "/timeline/issue-84"
+      },
+      {
         "text": "JS动态生成的元素如何查看样式",
         "link": "/timeline/issue-83"
       },

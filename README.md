@@ -6,39 +6,41 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **74** 篇（上次更新: 2025-07-29）
+共计 **73** 篇（上次更新: 2025-11-04）
 
-## 2025 年 (共计 15 篇)
+## 2025 年 (共计 16 篇)
 
-1. 2025-07-29 —— [JS 动态生成的元素如何查看样式](https://github.com/jynba/jynba.github.io/issues/83)
+1. 2025-11-04 —— [恢复 VSCode/Cursor 误删的文件，时间线/History](https://github.com/jynba/jynba.github.io/issues/84)
 
-2. 2025-07-25 —— [自动化从 Figma 导出图标并生成 Iconify 的 npm 包更新到项目](https://github.com/jynba/jynba.github.io/issues/82)
+2. 2025-07-29 —— [JS 动态生成的元素如何查看样式](https://github.com/jynba/jynba.github.io/issues/83)
 
-3. 2025-07-21 —— [使用 patch-package 给 npm 包打补丁](https://github.com/jynba/jynba.github.io/issues/81)
+3. 2025-07-25 —— [自动化从 Figma 导出图标并生成 Iconify 的 npm 包更新到项目](https://github.com/jynba/jynba.github.io/issues/82)
 
-4. 2025-07-10 —— [tapd 状态流转通知钉钉——zapier，一个好用的无代码流程自动化工具](https://github.com/jynba/jynba.github.io/issues/79)
+4. 2025-07-21 —— [使用 patch-package 给 npm 包打补丁](https://github.com/jynba/jynba.github.io/issues/81)
 
-5. 2025-06-19 —— [git worktree 是什么？如何用它减少绝大部分的 git stash 的使用](https://github.com/jynba/jynba.github.io/issues/78)
+5. 2025-07-10 —— [tapd 状态流转通知钉钉——zapier，一个好用的无代码流程自动化工具](https://github.com/jynba/jynba.github.io/issues/79)
 
-6. 2025-04-24 —— [小程序如何连接 MQTT 服务器(配置反向代理)](https://github.com/jynba/jynba.github.io/issues/77)
+6. 2025-06-19 —— [git worktree 是什么？如何用它减少绝大部分的 git stash 的使用](https://github.com/jynba/jynba.github.io/issues/78)
 
-7. 2025-04-24 —— [服务器上配置校验文件，最简单方便的方法（nginx 配置返回 content）](https://github.com/jynba/jynba.github.io/issues/76)
+7. 2025-04-24 —— [小程序如何连接 MQTT 服务器(配置反向代理)](https://github.com/jynba/jynba.github.io/issues/77)
 
-8. 2025-04-14 —— [【源码学习】vite-plugin-package-config](https://github.com/jynba/jynba.github.io/issues/75)
+8. 2025-04-24 —— [服务器上配置校验文件，最简单方便的方法（nginx 配置返回 content）](https://github.com/jynba/jynba.github.io/issues/76)
 
-9. 2025-04-09 —— [import.meta 是什么？vite 中有哪些 import.meta 特性?](https://github.com/jynba/jynba.github.io/issues/74)
+9. 2025-04-14 —— [【源码学习】vite-plugin-package-config](https://github.com/jynba/jynba.github.io/issues/75)
 
-10. 2025-04-09 —— [什么是 null 原型对象？它有什么作用？](https://github.com/jynba/jynba.github.io/issues/72)
+10. 2025-04-09 —— [import.meta 是什么？vite 中有哪些 import.meta 特性?](https://github.com/jynba/jynba.github.io/issues/74)
 
-11. 2025-03-28 —— [如何引导关注公众号？冷启动热启动场景、自定义样式？](https://github.com/jynba/jynba.github.io/issues/71)
+11. 2025-04-09 —— [什么是 null 原型对象？它有什么作用？](https://github.com/jynba/jynba.github.io/issues/72)
 
-12. 2025-03-26 —— [动态新增/删除表单，如何绑定 ref 使得校验规则生效](https://github.com/jynba/jynba.github.io/issues/70)
+12. 2025-03-28 —— [如何引导关注公众号？冷启动热启动场景、自定义样式？](https://github.com/jynba/jynba.github.io/issues/71)
 
-13. 2025-01-14 —— [vim 的常用命令](https://github.com/jynba/jynba.github.io/issues/69)
+13. 2025-03-26 —— [动态新增/删除表单，如何绑定 ref 使得校验规则生效](https://github.com/jynba/jynba.github.io/issues/70)
 
-14. 2025-01-06 —— [如何使用 docker 部署 nginx 网站及 docker 的实用命令](https://github.com/jynba/jynba.github.io/issues/68)
+14. 2025-01-14 —— [vim 的常用命令](https://github.com/jynba/jynba.github.io/issues/69)
 
-15. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
+15. 2025-01-06 —— [如何使用 docker 部署 nginx 网站及 docker 的实用命令](https://github.com/jynba/jynba.github.io/issues/68)
+
+16. 2025-01-03 —— [git stash 的一些实用命令](https://github.com/jynba/jynba.github.io/issues/67)
 
 ## 2024 年 (共计 28 篇)
 
@@ -157,9 +159,3 @@
 28. 2023-09-11 —— [如何使用 GeneralReadMe 自动同步 issue 到 readme](https://github.com/jynba/jynba.github.io/issues/8)
 
 29. 2023-09-11 —— [如何使用子域名 CNAME 到 github page?](https://github.com/jynba/jynba.github.io/issues/7)
-
-## 2021 年 (共计 2 篇)
-
-1. 2021-08-25 —— [git push 踩坑记录](https://github.com/jynba/jynba.github.io/issues/6)
-
-2. 2021-08-25 —— [当你远程仓库已经没有分支了，而你本地还显示对应的远程分支时怎么刷新？](https://github.com/jynba/jynba.github.io/issues/5)
