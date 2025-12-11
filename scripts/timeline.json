@@ -4,6 +4,10 @@
     "collapsed": false,
     "items": [
       {
+        "text": "Git Alias 使用指南，含规范化提交的 Alias（feat / fix）",
+        "link": "/timeline/issue-85"
+      },
+      {
         "text": "恢复 VSCode/Cursor 误删的文件，时间线/History",
         "link": "/timeline/issue-84"
       },

@@ -32,7 +32,9 @@
 ## 误删文件恢复方案
 
 ### 历史文件存储位置
+
 VSCode: `C:\Users\xxx\AppData\Roaming\Code\User\History`
+
 Cursor: `C:\Users\xxx\AppData\Roaming\Cursor\User\History`
 
 ### 恢复步骤
