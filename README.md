@@ -6,7 +6,11 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **76** 篇（上次更新: 2025-12-11）
+共计 **77** 篇（上次更新: 2026-04-03）
+
+## 2026 年 (共计 1 篇)
+
+1. 2026-04-03 —— [Mac 上手指南：必备软件、终端配置与高效使用实践](https://github.com/jynba/jynba.github.io/issues/86)
 
 ## 2025 年 (共计 17 篇)
 
