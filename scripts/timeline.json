@@ -4,6 +4,14 @@
     "collapsed": false,
     "items": [
       {
+        "text": "防抖无法解决重复拉起支付问题？比加锁更优雅的 Promise 单飞方法！",
+        "link": "/timeline/issue-88"
+      },
+      {
+        "text": "🚀 一行代码搞定禁用web开发者工具：disable-devtool",
+        "link": "/timeline/issue-87"
+      },
+      {
         "text": "Mac 上手指南：必备软件、终端配置与高效使用实践",
         "link": "/timeline/issue-86"
       }

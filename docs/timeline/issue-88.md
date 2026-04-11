@@ -1,0 +1,194 @@
+<h2 data-section-id="wzh6gh" data-start="278" data-end="287">一、问题背景</h2>
+
+  :::tip 原文地址
+  [防抖无法解决重复拉起支付问题？比加锁更优雅的 Promise 单飞方法！ | GitHub](https://github.com/jynba/jynba.github.io/issues/88)
+  :::
+  <p data-start="289" data-end="324">我们有一个统一的支付入口 <code data-start="302" data-end="315">preOrderPay</code>，内部流程大致是：</p>
+<pre class="overflow-visible! px-0!" data-start="326" data-end="382"><div class="relative w-full mt-4 mb-1"><div class=""><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-token-bg-elevated-secondary corner-superellipse/1.1 overflow-clip rounded-3xl lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="w-full overflow-x-hidden overflow-y-auto"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼ5 ͼj"><div class="cm-scroller"><div class="cm-content q9tKkq_readonly"><span class="ͼe">postPreOrder</span><span> </span><span class="ͼ8">-&gt;</span><span> </span><span class="ͼe">requestPayment</span><span> </span><span class="ͼ8">-&gt;</span><span> </span><span class="ͼe">getPayResult</span></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></pre>
+<p data-start="384" data-end="394">多个页面都会调用它。</p>
+<p data-start="396" data-end="401">**方法调用已经加了 1s 的防抖，但是还是存在重复调用的情况** 问题在于：</p>
+<blockquote data-start="403" data-end="441">
+<p data-start="405" data-end="441">如果用户在弱网的情况下点击两次支付按钮，触发时间可能由于网络延迟超出防抖限制时间，就会触发两次 <code data-start="427" data-end="440">preOrderPay</code>。</p>
+</blockquote>
+<p data-start="443" data-end="451">于是就可能出现：</p>
+<ul data-start="453" data-end="519">
+<li data-section-id="x5atnv" data-start="453" data-end="480">
+两次 <code data-start="458" data-end="472">postPreOrder</code>（生成两个订单）
+</li>
+<li data-section-id="180i3mz" data-start="481" data-end="510">
+两次 <code data-start="486" data-end="502">requestPayment</code>（拉起两次支付）
+</li>
+<li data-section-id="1fasm7p" data-start="511" data-end="519">
+状态难以控制
+</li>
+</ul>
+<hr data-start="521" data-end="524">
+<h2 data-section-id="133uefb" data-start="526" data-end="546">二、解决方案：Promise 单飞</h2>
+<p data-start="548" data-end="557">核心思路非常简单：</p>
+<blockquote data-start="559" data-end="592">
+<p data-start="561" data-end="592"><strong data-start="561" data-end="592">同一时间只允许存在一个“进行中的支付 Promise”</strong></p>
+</blockquote>
+<h3 data-section-id="17r94ji" data-start="594" data-end="602">实现方式</h3>
+<p data-start="604" data-end="615">在模块级维护一个变量：</p>
+<pre class="overflow-visible! px-0!" data-start="617" data-end="685"><div class="relative w-full mt-4 mb-1"><div class=""><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-token-bg-elevated-secondary corner-superellipse/1.1 overflow-clip rounded-3xl lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="w-full overflow-x-hidden overflow-y-auto"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼ5 ͼj"><div class="cm-scroller"><div class="cm-content q9tKkq_readonly"><span class="ͼ8">let</span><span> </span><span class="ͼe">currentPreOrderPayPromise</span><span>: </span><span class="ͼe">Promise</span><span>&lt;</span><span class="ͼe">any</span><span>&gt; </span><span class="ͼ8">|</span><span> </span><span class="ͼb">null</span><span> </span><span class="ͼ8">=</span><span> </span><span class="ͼb">null</span><span>;</span></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></pre>
+<p data-start="687" data-end="706">然后改造 <code data-start="692" data-end="705">preOrderPay</code>：</p>
+<pre class="overflow-visible! px-0!" data-start="708" data-end="1149"><div class="relative w-full mt-4 mb-1"><div class=""><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-token-bg-elevated-secondary corner-superellipse/1.1 overflow-clip rounded-3xl lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="w-full overflow-x-hidden overflow-y-auto"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼ5 ͼj"><div class="cm-scroller"><div class="cm-content q9tKkq_readonly"><span class="ͼ8">export</span><span> </span><span class="ͼ8">function</span><span> </span><span class="ͼe">preOrderPay</span><span>() {</span><br><span>  </span><span class="ͼ6">// 如果已经有支付在进行，直接复用</span><br><span>  </span><span class="ͼ8">if</span><span> (</span><span class="ͼe">currentPreOrderPayPromise</span><span>) {</span><br><span>    </span><span class="ͼ8">return</span><span> </span><span class="ͼe">currentPreOrderPayPromise</span><span>;</span><br><span>  }</span><br><br><span>  </span><span class="ͼe">currentPreOrderPayPromise</span><span> </span><span class="ͼ8">=</span><span> (</span><span class="ͼ8">async</span><span> () =&gt; {</span><br><span>    </span><span class="ͼ8">try</span><span> {</span><br><span>      </span><span class="ͼ8">const</span><span> </span><span class="ͼe">order</span><span> </span><span class="ͼ8">=</span><span> </span><span class="ͼ8">await</span><span> </span><span class="ͼe">postPreOrder</span><span>();</span><br><span>      </span><span class="ͼ8">await</span><span> </span><span class="ͼe">requestPayment</span><span>(</span><span class="ͼe">order</span><span>);</span><br><span>      </span><span class="ͼ8">return</span><span> </span><span class="ͼ8">await</span><span> </span><span class="ͼe">getPayResult</span><span>(</span><span class="ͼe">order</span><span>);</span><br><span>    } </span><span class="ͼ8">finally</span><span> {</span><br><span>      </span><span class="ͼ6">// 无论成功失败，都释放</span><br><span>      </span><span class="ͼe">currentPreOrderPayPromise</span><span> </span><span class="ͼ8">=</span><span> </span><span class="ͼb">null</span><span>;</span><br><span>    }</span><br><span>  })();</span><br><br><span>  </span><span class="ͼ8">return</span><span> </span><span class="ͼe">currentPreOrderPayPromise</span><span>;</span><br><span>}</span></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></pre>
+<hr data-start="1151" data-end="1154">
+<h2 data-section-id="mgd3wp" data-start="1156" data-end="1167">三、执行流程拆解</h2>
+<h3 data-section-id="tyfisp" data-start="1169" data-end="1178">第一次点击</h3>
+<ol data-start="1180" data-end="1286">
+<li data-section-id="1f5ybuz" data-start="1180" data-end="1219">
+<code data-start="1183" data-end="1219">currentPreOrderPayPromise === null</code>
+</li>
+<li data-section-id="b010bm" data-start="1220" data-end="1239">
+创建一个完整支付 Promise
+</li>
+<li data-section-id="1f7ufwh" data-start="1240" data-end="1274">
+赋值给 <code data-start="1247" data-end="1274">currentPreOrderPayPromise</code>
+</li>
+<li data-section-id="15pu6n6" data-start="1275" data-end="1286">
+开始执行支付流程
+</li>
+</ol>
+<hr data-start="1288" data-end="1291">
+<h3 data-section-id="1yzj4w" data-start="1293" data-end="1307">第二次点击（关键点）</h3>
+<ol data-start="1309" data-end="1394">
+<li data-section-id="1e67cr2" data-start="1309" data-end="1348">
+发现 <code data-start="1315" data-end="1342">currentPreOrderPayPromise</code> 已存在
+</li>
+<li data-section-id="1lq6ssy" data-start="1349" data-end="1366">
+<strong data-start="1352" data-end="1366">不再重新执行支付流程</strong>
+</li>
+<li data-section-id="wnydnz" data-start="1367" data-end="1394">
+<strong data-start="1370" data-end="1394">直接 return 这个 Promise</strong>
+</li>
+</ol>
+<p data-start="1396" data-end="1404">👉 结果就是：</p>
+<blockquote data-start="1406" data-end="1421">
+<p data-start="1408" data-end="1421">两次调用共享同一个支付结果</p>
+</blockquote>
+<hr data-start="1423" data-end="1426">
+<h3 data-section-id="1e953lp" data-start="1428" data-end="1436">支付结束</h3>
+<p data-start="1438" data-end="1452">在 <code data-start="1440" data-end="1449">finally</code> 中：</p>
+<pre class="overflow-visible! px-0!" data-start="1454" data-end="1497"><div class="relative w-full mt-4 mb-1"><div class=""><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-token-bg-elevated-secondary corner-superellipse/1.1 overflow-clip rounded-3xl lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="w-full overflow-x-hidden overflow-y-auto"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼ5 ͼj"><div class="cm-scroller"><div class="cm-content q9tKkq_readonly"><span class="ͼe">currentPreOrderPayPromise</span><span> </span><span class="ͼ8">=</span><span> </span><span class="ͼb">null</span><span>;</span></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></pre>
+<p data-start="1499" data-end="1514">👉 下一次支付才允许重新开始</p>
+<hr data-start="1516" data-end="1519">
+<h2 data-section-id="rysxp8" data-start="1521" data-end="1537">四、这个方案本质在做什么？</h2>
+<p data-start="1539" data-end="1551">不是“按钮防抖”，而是：</p>
+<blockquote data-start="1553" data-end="1574">
+<p data-start="1555" data-end="1574"><strong data-start="1555" data-end="1574">在“支付公共入口”做串行化控制</strong></p>
+</blockquote>
+<p data-start="1576" data-end="1582">核心能力是：</p>
+<ul data-start="1584" data-end="1636">
+<li data-section-id="125oym1" data-start="1584" data-end="1603">
+同一时间只允许一条支付链路执行
+</li>
+<li data-section-id="tv6pl" data-start="1604" data-end="1623">
+后续请求不会新开流程，而是复用
+</li>
+<li data-section-id="r6a00v" data-start="1624" data-end="1636">
+流程结束后再放行
+</li>
+</ul>
+<hr data-start="1638" data-end="1641">
+<h2 data-section-id="1cx4knq" data-start="1643" data-end="1658">五、和“传统加锁”的区别</h2>
+<p data-start="1660" data-end="1675">很多人第一反应是用一个布尔锁：</p>
+<pre class="overflow-visible! px-0!" data-start="1677" data-end="1794"><div class="relative w-full mt-4 mb-1"><div class=""><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-token-bg-elevated-secondary corner-superellipse/1.1 overflow-clip rounded-3xl lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="w-full overflow-x-hidden overflow-y-auto"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼ5 ͼj"><div class="cm-scroller"><div class="cm-content q9tKkq_readonly"><span class="ͼ8">if</span><span> (</span><span class="ͼe">isPaying</span><span>) {</span><br><span>  </span><span class="ͼ8">return</span><span> </span><span class="ͼe">toast</span><span>(</span><span class="ͼc">'请勿重复点击'</span><span>);</span><br><span>}</span><br><span class="ͼe">isPaying</span><span> </span><span class="ͼ8">=</span><span> </span><span class="ͼb">true</span><span>;</span><br><br><span class="ͼ8">try</span><span> {</span><br><span>  ...</span><br><span>} </span><span class="ͼ8">finally</span><span> {</span><br><span>  </span><span class="ͼe">isPaying</span><span> </span><span class="ͼ8">=</span><span> </span><span class="ͼb">false</span><span>;</span><br><span>}</span></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></pre>
+<h3 data-section-id="1yasal1" data-start="1796" data-end="1810">两种方案的本质区别：</h3>
+<div class="TyagGW_tableContainer"><div tabindex="-1" class="group TyagGW_tableWrapper flex flex-col-reverse w-fit">
+方案 | 后续请求处理方式
+-- | --
+普通锁（isPaying） | ❌ 直接拒绝
+Promise 单飞 | ✅ 合并请求
+
+</div></div>
+<hr data-start="1908" data-end="1911">
+<h2 data-section-id="1yz251u" data-start="1913" data-end="1933">六、为什么支付场景更适合“单飞”？</h2>
+<h3 data-section-id="1u3h2ax" data-start="1935" data-end="1952">1. 重复点击 ≠ 新需求</h3>
+<p data-start="1954" data-end="1979">用户点两次支付，本质上还是<strong data-start="1967" data-end="1978">同一次支付行为</strong>。</p>
+<p data-start="1981" data-end="2006">👉 所以更合理的方式是“合并”，而不是“拒绝”。</p>
+<hr data-start="2008" data-end="2011">
+<h3 data-section-id="16krwoj" data-start="2013" data-end="2027">2. 对调用方更友好</h3>
+<p data-start="2029" data-end="2036">普通锁会带来：</p>
+<ul data-start="2038" data-end="2062">
+<li data-section-id="1sisg59" data-start="2038" data-end="2052">
+需要处理“已锁定”的异常
+</li>
+<li data-section-id="1bcjqxd" data-start="2053" data-end="2062">
+UI 逻辑复杂
+</li>
+</ul>
+<p data-start="2064" data-end="2068">而单飞：</p>
+<ul data-start="2070" data-end="2105">
+<li data-section-id="3coc5v" data-start="2070" data-end="2093">
+所有调用方拿到的都是同一个 Promise
+</li>
+<li data-section-id="1qwtmec" data-start="2094" data-end="2105">
+不需要额外分支处理
+</li>
+</ul>
+<hr data-start="2107" data-end="2110">
+<h3 data-section-id="cyo829" data-start="2112" data-end="2128">3. 改动更小，覆盖更全</h3>
+<p data-start="2130" data-end="2150">只需要改造 <code data-start="2136" data-end="2149">preOrderPay</code>：</p>
+<ul data-start="2152" data-end="2178">
+<li data-section-id="1s8igir" data-start="2152" data-end="2164">
+所有页面自动生效
+</li>
+<li data-section-id="1cxubvf" data-start="2165" data-end="2178">
+不需要逐个按钮处理
+</li>
+</ul>
+<hr data-start="2180" data-end="2183">
+<h2 data-section-id="cz2ryo" data-start="2185" data-end="2193">七、局限性</h2>
+<p data-start="2195" data-end="2206">这个方案也不是完美的。</p>
+<h3 data-section-id="eluzu2" data-start="2208" data-end="2218">❗ 内存级锁</h3>
+<pre class="overflow-visible! px-0!" data-start="2220" data-end="2267"><div class="relative w-full mt-4 mb-1"><div class=""><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-token-bg-elevated-secondary corner-superellipse/1.1 overflow-clip rounded-3xl lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="w-full overflow-x-hidden overflow-y-auto"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ͼ5 ͼj"><div class="cm-scroller"><div class="cm-content q9tKkq_readonly"><span class="ͼ8">let</span><span> </span><span class="ͼe">currentPreOrderPayPromise</span><span> </span><span class="ͼ8">=</span><span> </span><span class="ͼb">null</span><span>;</span></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></pre>
+<p data-start="2269" data-end="2273">意味着：</p>
+<ul data-start="2275" data-end="2309">
+<li data-section-id="3bp2dn" data-start="2275" data-end="2290">
+只在当前小程序实例有效
+</li>
+<li data-section-id="12or3me" data-start="2291" data-end="2309">
+页面重进 / 进程重建后失效
+</li>
+</ul>
+<p data-start="2311" data-end="2330">👉 不能作为<strong data-start="2318" data-end="2330">跨会话的幂等保障</strong></p>
+<hr data-start="2332" data-end="2335">
+<h2 data-section-id="p28dxe" data-start="2337" data-end="2352">八、最佳实践（推荐组合）</h2>
+<p data-start="2354" data-end="2377">实际项目中，<strong data-start="2360" data-end="2369">不要二选一</strong>，而是组合使用：</p>
+<h3 data-section-id="1j7edrm" data-start="2379" data-end="2399">✅ 公共层：Promise 单飞</h3>
+<ul data-start="2401" data-end="2425">
+<li data-section-id="1gkbn9a" data-start="2401" data-end="2413">
+真正防住重复支付
+</li>
+<li data-section-id="q3hvj0" data-start="2414" data-end="2425">
+保证业务一致性
+</li>
+</ul>
+<h3 data-section-id="d3wt6z" data-start="2427" data-end="2451">✅ 页面层：按钮禁用 / loading</h3>
+<ul data-start="2453" data-end="2477">
+<li data-section-id="lx46cr" data-start="2453" data-end="2464">
+给用户明确反馈
+</li>
+<li data-section-id="10iinn8" data-start="2465" data-end="2477">
+避免“疯狂点击”
+</li>
+</ul>
+<hr data-start="2479" data-end="2482">
+<h2 data-section-id="94lwr5" data-start="2484" data-end="2491">九、总结</h2>
+<p data-start="2493" data-end="2503">一句话总结这个方案：</p>
+<blockquote data-start="2505" data-end="2536">
+<p data-start="2507" data-end="2536"><strong data-start="2507" data-end="2536">用 Promise 把“重复请求”变成“共享结果”</strong></p>
+</blockquote>
+<p data-start="2538" data-end="2545">相比传统加锁：</p>
+<ul data-start="2547" data-end="2578">
+<li data-section-id="80vdkx" data-start="2547" data-end="2554">
+更优雅
+</li>
+<li data-section-id="w7cbpi" data-start="2555" data-end="2566">
+更贴近业务语义
+</li>
+<li data-section-id="1x8ogbl" data-start="2567" data-end="2578">
+对调用方更友好
+</li>
+</ul>

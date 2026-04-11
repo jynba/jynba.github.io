@@ -6,11 +6,15 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/jynba.github.io/issues/new)
 
-共计 **77** 篇（上次更新: 2026-04-03）
+共计 **79** 篇（上次更新: 2026-04-11）
 
-## 2026 年 (共计 1 篇)
+## 2026 年 (共计 3 篇)
 
-1. 2026-04-03 —— [Mac 上手指南：必备软件、终端配置与高效使用实践](https://github.com/jynba/jynba.github.io/issues/86)
+1. 2026-04-11 —— [防抖无法解决重复拉起支付问题？比加锁更优雅的 Promise 单飞方法！](https://github.com/jynba/jynba.github.io/issues/88)
+
+2. 2026-04-11 —— [🚀 一行代码搞定禁用 web 开发者工具：disable-devtool](https://github.com/jynba/jynba.github.io/issues/87)
+
+3. 2026-04-03 —— [Mac 上手指南：必备软件、终端配置与高效使用实践](https://github.com/jynba/jynba.github.io/issues/86)
 
 ## 2025 年 (共计 17 篇)
 
